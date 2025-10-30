@@ -147,43 +147,6 @@
     );
   };
 
-  function renderPublications(publications) {
-    const reposContainer = document.getElementById("repos");
-    const sortedPublications = publications.sort((a, b) => b.stats.citations - a.stats.citations);
-    const reposHTML = sortedPublications
-      .map(
-        (repo) => `
-      <div class="repo-card" style="flex: 1 0 48%; display: flex; flex-direction: column; justify-content: space-between; border-radius: 12px; padding: 16px; font-size: 14px; background: linear-gradient(135deg, #4CCEFF, #00AEEF); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; transition: transform 0.2s ease-in-out; cursor: pointer;">
-        <a href="${repo.url}" target="_blank" style="text-decoration: none; color: black; display: block; height: 100%;">
-          <h4 class="repo-heading" style="margin: 0px; font-size: 18px; font-weight: bold;">${repo.title}</h4>
-          <p class="repo-description" style="margin-top: 8px; font-size: 12px; color: rgb(85, 85, 85);">${repo.description}</p>
-          <div style="display: flex; align-items: center; gap: 16px; margin-top: 12px; font-size: 12px; color: rgb(102, 102, 102);">
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="https://img.icons8.com/ios-filled/20/financial-growth-analysis.png" alt="research score">
-              ${repo.stats.researchInterest}
-            </div>
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="https://img.icons8.com/ios-glyphs/16/quote-right.png" alt="citation">
-              ${repo.stats.citations}
-            </div>
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <img src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/24/external-eye-graphic-design-tanah-basah-glyph-tanah-basah.png" alt="views">
-              ${repo.stats.reads}
-            </div>
-          </div>
-        </a>
-      </div>
-    `
-      )
-      .join("");
-    reposContainer.innerHTML = `<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between;">${reposHTML}</div>`;
-  }
-
-  function calculateResearchInterest(publications) {
-    const totalResearchInterest = publications.reduce((total, repo) => total + repo.stats.researchInterest, 0);
-    researchGateProfile.stats.researchInterest = totalResearchInterest.toFixed(1);
-  }
-
   $(function () {
     fullHeight();
     counterWayPoint();
@@ -193,8 +156,6 @@
     navigationSection();
     mobileMenuOutsideClick();
     detectDayNightMode();
-    calculateResearchInterest(publications);
-    renderPublications(publications);
   });
 })();
 
