@@ -4,63 +4,41 @@ window.addEventListener("DOMContentLoaded", async function () {
         return resp.json();
     }
 
-    document.querySelectorAll(".stack-card").forEach(async function (el) {
-        const userId = el.getAttribute("user-id");
-
-        const response = await get(
-            `https://api.stackexchange.com/2.2/users/${userId}?site=stackoverflow`
-        );
-        const user = response.items[0];
-        const {
-            profile_image,
-            website_url,
-            link,
-            display_name,
-            reputation,
-            user_id,
-        } = user;
-        const { gold, silver, bronze } = user.badge_counts;
-
-        const profileLink = website_url || link;
-
+    // NOTE: ResearchGate does not provide a public API to fetch user data dynamically.
+    // The data is currently static and needs to be updated manually in user-data/user-data.js.
+    function createResearchGateCard(profile) {
+        const el = document.querySelector(".researchgate-card");
         el.innerHTML = `
-        <a href="${profileLink}" target="_blank" style="text-decoration: none; color: black; display: block; border-radius: 12px; padding: 16px; font-size: 14px; background: linear-gradient(135deg, #4CCEFF, #00AEEF); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
+        <a href="${profile.url}" target="_blank" style="text-decoration: none; color: black; display: block; border-radius: 12px; padding: 16px; font-size: 14px; background: linear-gradient(135deg, #4CCEFF, #00AEEF); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
             <div style="display: flex; align-items: center; gap: 12px;">
-                <img style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #fff;" src="${profile_image}" alt="Profile image"></img>
+                <img style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #fff;" src="${profile.avatar}" alt="Profile image"></img>
                 <div style="flex-grow: 1;">
-                    <h3 style="margin: 0; font-size: 18px; font-weight: bold;">${display_name}</h3>
+                    <h3 style="margin: 0; font-size: 18px; font-weight: bold;">${profile.name}</h3>
                     <p style="margin: 4px 0 0; font-size: 12px; color: #555;">
-                        @${link
-                .replace("https://", "")
-                .replace(`/users/${user_id}`, "")}
+                        @${profile.url.replace("https://www.", "")}
                     </p>
                 </div>
             </div>
             <div style="margin-top: 16px; display: flex; justify-content: space-between; text-align: center;">
                 <div>
-                    <p style="font-size: 12px; color: #666; margin: 0;">REPUTATION</p>
-                    <p style="font-size: 20px; font-weight: bold; color: #222;">${reputation}</p>
+                    <p style="font-size: 12px; color: #666; margin: 0;">RESEARCH INTEREST</p>
+                    <p style="font-size: 20px; font-weight: bold; color: #222;">${profile.stats.researchInterest}</p>
                 </div>
                 <div>
-                    <p style="font-size: 12px; color: #666; margin: 0;">GOLD</p>
-                    <p style="font-size: 20px; font-weight: bold; color: #222;">${gold}</p>
-                </div>
-                                <div>
-                    <p style="font-size: 12px; color: #666; margin: 0;">SILVER</p>
-                    <p style="font-size: 20px; font-weight: bold; color: #222;">${silver}</p>
+                    <p style="font-size: 12px; color: #666; margin: 0;">CITATIONS</p>
+                    <p style="font-size: 20px; font-weight: bold; color: #222;">${profile.stats.citations}</p>
                 </div>
                 <div>
-                    <p style="font-size: 12px; color: #666; margin: 0;">BRONZE</p>
-                    <p style="font-size: 20px; font-weight: bold; color: #222;">${bronze}</p>
+                    <p style="font-size: 12px; color: #666; margin: 0;">H-INDEX</p>
+                    <p style="font-size: 20px; font-weight: bold; color: #222;">${profile.stats.hIndex}</p>
                 </div>
             </div>
         </a>
         `;
-    });
+    }
 
-    document.querySelectorAll(".github-card").forEach(async function (el) {
-        const username = el.getAttribute("username");
-
+    async function createGitHubCard(username) {
+        const el = document.querySelector(".github-card");
         const response = await get(`https://api.github.com/users/${username}`);
         const { name, avatar_url, public_repos, followers, html_url, following } =
             response;
@@ -92,5 +70,8 @@ window.addEventListener("DOMContentLoaded", async function () {
             </div>
         </a>
         `;
-    });
+    }
+
+    createResearchGateCard(researchGateProfile);
+    createGitHubCard(githubProfile.username);
 });
