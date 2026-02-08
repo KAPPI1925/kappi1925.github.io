@@ -211,7 +211,7 @@
     counterWayPoint();
     contentWayPoint();
     burgerMenu();
-    touchSwipeMenu();
+    // touchSwipeMenu(); // Disabled swipe gesture to open sidebar
     clickMenu();
     navigationSection();
     mobileMenuOutsideClick();
