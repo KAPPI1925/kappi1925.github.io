@@ -157,14 +157,11 @@
   };
 
   var navActive = function (section) {
-    var $el = $("#navbar > ul");
+    var $el = $("#nav-menu");
     $el.find("li").removeClass("active");
-    $el.each(function () {
-      $(this)
-        .find('a[data-nav-section="' + section + '"]')
-        .closest("li")
-        .addClass("active");
-    });
+    $el.find('a[data-nav-section="' + section + '"]')
+      .closest("li")
+      .addClass("active");
   };
 
   var navigationSection = function () {
@@ -279,6 +276,26 @@ document.addEventListener('DOMContentLoaded', function () {
         left: Math.max(0, targetScroll),
         behavior: 'smooth'
       });
+    });
+  });
+
+  // Scroll to top button functionality
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+  
+  // Scroll to top when button is clicked
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
 });
