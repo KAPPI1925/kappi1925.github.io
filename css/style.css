@@ -456,8 +456,6 @@ figure figcaption {
 	body.offcanvas {
 		overflow: hidden !important;
 	}
-
-	overflow-x: hidden !important;
 }
 
 #colorlib-main {
@@ -637,7 +635,6 @@ button {
 
 .resume-content img {
 	display: none;
-}
 }
 
 .resume-content img {
@@ -1958,7 +1955,8 @@ body.offcanvas .colorlib-nav-toggle {
 	padding: 0;
 }
 
-< !-----projectcss------------>#projects {
+/* projectcss */
+#projects {
 	padding: 50px 15px;
 	border-bottom: 1px solid #dcd9d9;
 	text-align: center;
@@ -3099,7 +3097,6 @@ body.offcanvas .colorlib-nav-toggle {
 		transform: none !important;
 		margin-left: 0 !important;
 	}
-}
 }
 
 .colorlib-nav-toggle.active i::before,
