@@ -1020,6 +1020,102 @@ body.offcanvas .colorlib-nav-toggle {
 	font-family: "Montserrat", Georgia, serif;
 }
 
+/* About Content Box with Animation */
+.about-content-box {
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	padding: 40px;
+	border-radius: 20px;
+	box-shadow: 0 8px 32px rgba(0, 174, 239, 0.15),
+		0 4px 16px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	position: relative;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	animation: floatAnimation 6s ease-in-out infinite;
+}
+
+.about-content-box::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background: linear-gradient(45deg,
+			transparent,
+			rgba(0, 174, 239, 0.1),
+			transparent);
+	animation: flowAnimation 8s linear infinite;
+}
+
+.about-content-box::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg,
+			transparent,
+			#00AEEF,
+			transparent);
+	animation: slideAnimation 3s ease-in-out infinite;
+}
+
+.about-content-box:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 40px rgba(0, 174, 239, 0.25),
+		0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-content-box #bio {
+	position: relative;
+	z-index: 1;
+}
+
+@keyframes floatAnimation {
+
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes flowAnimation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes slideAnimation {
+
+	0%,
+	100% {
+		transform: translateX(-100%);
+	}
+
+	50% {
+		transform: translateX(100%);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.about-content-box {
+		padding: 25px;
+		border-radius: 15px;
+	}
+}
+
 .hire {
 	padding: 2em;
 	background: #00AEEF;
