@@ -159,9 +159,22 @@
   var navActive = function (section) {
     var $el = $("#nav-menu");
     $el.find("li").removeClass("active");
-    $el.find('a[data-nav-section="' + section + '"]')
-      .closest("li")
-      .addClass("active");
+    var $activeLink = $el.find('a[data-nav-section="' + section + '"]');
+    $activeLink.closest("li").addClass("active");
+
+    var navWrapper = document.querySelector(".nav-scroll-wrapper");
+    if (navWrapper && $activeLink.length) {
+      var listItem = $activeLink.closest("li")[0];
+      var itemLeft = listItem.offsetLeft;
+      var itemWidth = listItem.offsetWidth;
+      var wrapperWidth = navWrapper.offsetWidth;
+      var targetScroll = itemLeft - (wrapperWidth * 0.2);
+
+      navWrapper.scrollTo({
+        left: Math.max(0, targetScroll),
+        behavior: "smooth",
+      });
+    }
   };
 
   var navigationSection = function () {
