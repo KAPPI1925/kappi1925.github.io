@@ -1218,6 +1218,124 @@ body.offcanvas .colorlib-nav-toggle {
 	background: rgba(255, 159, 64, 0.35);
 }
 
+/* Academic Contributions Section */
+.contribution-category {
+	margin-bottom: 35px;
+}
+
+.category-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #00AEEF;
+	color: #000;
+	text-align: left;
+}
+
+.contribution-list {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.contribution-item {
+	background: rgba(255, 255, 255, 0.85);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	border-left: 4px solid #00AEEF;
+	transition: all 0.3s ease;
+}
+
+.contribution-item:hover {
+	transform: translateX(5px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+	border-left-width: 6px;
+}
+
+.contribution-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0 0 10px 0;
+	line-height: 1.4;
+}
+
+.contribution-title a {
+	color: #00AEEF;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.contribution-title a:hover {
+	color: #0099d6;
+	text-decoration: underline;
+}
+
+.contribution-meta {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 12px;
+	line-height: 1.6;
+}
+
+.contribution-meta strong {
+	color: #333;
+	font-weight: 600;
+}
+
+.contribution-abstract {
+	font-size: 15px;
+	line-height: 1.7;
+	margin-bottom: 12px;
+	color: #444;
+	text-align: justify;
+}
+
+.contribution-stats {
+	display: flex;
+	gap: 20px;
+	font-size: 13px;
+	color: #888;
+	font-weight: 500;
+}
+
+.contribution-stats span {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.no-contributions {
+	color: #999;
+	font-style: italic;
+	padding: 20px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.02);
+	border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+	.contribution-item {
+		padding: 15px;
+	}
+
+	.category-title {
+		font-size: 20px;
+	}
+
+	.contribution-title {
+		font-size: 16px;
+	}
+
+	.contribution-meta,
+	.contribution-abstract {
+		font-size: 14px;
+	}
+}
+
 .hire {
 	padding: 2em;
 	background: #00AEEF;

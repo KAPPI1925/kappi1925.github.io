@@ -19,8 +19,10 @@
   <script src="js/modernizr-2.6.2.min.js"></script>
   <script type="module" src="index.js"></script>
   <script src="user-data/user-data.js"></script>
+  <script src="user-data/academic-contributions.js"></script>
   <script src="js/profile-card.js"></script>
   <script src="js/render-publications.js"></script>
+  <script src="js/render-academic-contributions.js"></script>
 </head>
 
 <body>
@@ -162,100 +164,57 @@
             </div>
           </div>
         </section>
-        <section class="colorlib-profile" data-section="profile-card">
-          <div class="colorlib-narrow-content">
-            <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-              <div class="profile-cards">
-                <div class="col">
-                  <div class="stack-card" user-id="29431615">
-                    <a href="https://stackoverflow.com/users/29431615/kamalesh-kanna-s" target="_blank"
-                      style="text-decoration: none;color: black;display: block;border-radius: 12px;padding: 16px;font-size: 14px;background: linear-gradient(135deg, #4CCEFF, #00AEEF);box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);transition: transform 0.2s ease-in-out;">
-                      <div style="display: flex; align-items: center; gap: 12px;">
-                        <img style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #fff;"
-                          src="./images/logo1.png" alt="Profile image">
-                        <div style="flex-grow: 1;">
-                          <h3 style="margin: 0; font-size: 18px; font-weight: bold;">Kamalesh Kanna S</h3>
-                          <p style="margin: 4px 0 0; font-size: 12px; color: #555;">
-                            @stackoverflow.com/kamalesh-kanna-s
-                          </p>
-                        </div>
-                      </div>
-                      <div style="margin-top: 16px; display: flex; justify-content: space-between; text-align: center;">
-                        <div>
-                          <p style="font-size: 12px; color: #666; margin: 0;">REPUTATION</p>
-                          <p style="font-size: 20px; font-weight: bold; color: #222;">1</p>
-                        </div>
-                        <div>
-                          <p style="font-size: 12px; color: #666; margin: 0;">GOLD</p>
-                          <p style="font-size: 20px; font-weight: bold; color: #222;">0</p>
-                        </div>
-                        <div>
-                          <p style="font-size: 12px; color: #666; margin: 0;">SILVER</p>
-                          <p style="font-size: 20px; font-weight: bold; color: #222;">0</p>
-                        </div>
-                        <div>
-                          <p style="font-size: 12px; color: #666; margin: 0;">BRONZE</p>
-                          <p style="font-size: 20px; font-weight: bold; color: #222;">0</p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="github-card" username="KAPPI1925">
-                    <a href="https://github.com/KAPPI1925" target="_blank"
-                      style="text-decoration: none;color: black;display: block;border-radius: 12px;padding: 16px;font-size: 14px;background: linear-gradient(135deg, #4CCEFF, #00AEEF);box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);transition: transform 0.2s ease-in-out;">
-                      <div style="display: flex; align-items: center; gap: 12px;">
-                        <img style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #fff;"
-                          src="https://avatars.githubusercontent.com/u/88694166?v=4" alt="Profile image">
-                        <div style="flex-grow: 1;">
-                          <h3 style="margin: 0; font-size: 18px; font-weight: bold;">Kamalesh Kanna</h3>
-                          <p style="margin: 4px 0 0; font-size: 12px; color: #555;">
-                            @github.com/KAPPI1925
-                          </p>
-                        </div>
-                      </div>
-                      <div style="margin-top: 16px; display: flex; justify-content: space-between; text-align: center;">
-                        <div>
-                          <p style="font-size: 12px; color: #666; margin: 0;">REPOSITORIES</p>
-                          <p style="font-size: 20px; font-weight: bold; color: #222;">1</p>
-                        </div>
-                        <div>
-                          <p style="font-size: 12px; color: #666; margin: 0;">FOLLOWERS</p>
-                          <p style="font-size: 20px; font-weight: bold; color: #222;">0</p>
-                        </div>
-                        <div>
-                          <p style="font-size: 12px; color: #666; margin: 0;">FOLLOWING</p>
-                          <p style="font-size: 20px; font-weight: bold; color: #222;">3</p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         <section class="colorlib-experience no-print" data-section="article">
           <div class="colorlib-narrow-content">
-            <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
+            <div class="row row-bottom-padded-sm">
               <div class="about-desc">
                 <a href="https://www.researchgate.net/profile/Kamalesh-Kanna/research" target="_blank"
-                  style="color: inherit">
+                  style="color: inherit; text-decoration: none;">
                   <h1>
-                    My <span style="color:#00AEEF">Publications</span>
+                    ACADEMIC <span style="color:#00AEEF">CONTRIBUTIONS</span>
                     <i class="fa fa-external-link" aria-hidden="true" style="font-size: 30px"></i>
                   </h1>
                 </a>
               </div>
             </div>
-            <ul id="accordion" class="accordion animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-              <li class="open">
-                <ul id="repos" class="" style="display: block; padding: 10px">
-                  <!-- Publications will be rendered here by js/render-publications.js -->
-                </ul>
-              </li>
-            </ul>
+
+            <div id="academic-contributions">
+              <!-- Research Articles -->
+              <div class="contribution-category">
+                <h2 class="category-title">📄 Research Articles</h2>
+                <div id="research-articles" class="contribution-list"></div>
+              </div>
+
+              <!-- Review Articles -->
+              <div class="contribution-category">
+                <h2 class="category-title">📝 Review Articles</h2>
+                <div id="review-articles" class="contribution-list"></div>
+              </div>
+
+              <!-- Books -->
+              <div class="contribution-category">
+                <h2 class="category-title">📚 Books</h2>
+                <div id="books" class="contribution-list"></div>
+              </div>
+
+              <!-- Book Chapters -->
+              <div class="contribution-category">
+                <h2 class="category-title">📖 Book Chapters</h2>
+                <div id="book-chapters" class="contribution-list"></div>
+              </div>
+
+              <!-- Conference Papers -->
+              <div class="contribution-category">
+                <h2 class="category-title">🎤 Conference Papers/Presentations</h2>
+                <div id="conference-papers" class="contribution-list"></div>
+              </div>
+
+              <!-- Others -->
+              <div class="contribution-category">
+                <h2 class="category-title">📋 Others</h2>
+                <div id="others" class="contribution-list"></div>
+              </div>
+            </div>
           </div>
         </section>
         <section class="colorlib-experience" data-section="education">
