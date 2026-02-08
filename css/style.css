@@ -1,28 +1,28 @@
 :root {
-	/* Desktop Font Sizes */
-	--font-size-body: 20px;
+	/* Desktop Font Sizes - Base 16px with improved readability */
+	--font-size-body: 16px;
 	/* All paragraphs and body text */
-	--font-size-h1: 40px;
-	/* Main headings */
-	--font-size-h2: 30px;
-	/* Section titles */
-	--font-size-h3: 24px;
-	/* Subsection titles */
-	--font-size-h4: 20px;
-	/* Smaller headings */
-	--font-size-small: 14px;
-	/* Smaller text like skill tags */
-	--font-size-tiny: 14px;
-	/* Smallest text */
+	--font-size-h1: 3rem;
+	/* Main headings (48px) */
+	--font-size-h2: 2.5rem;
+	/* Section titles (40px) */
+	--font-size-h3: 2rem;
+	/* Subsection titles (32px) */
+	--font-size-h4: 1.5rem;
+	/* Smaller headings (24px) */
+	--font-size-small: 0.875rem;
+	/* Smaller text like skill tags/chips (14px) */
+	--font-size-tiny: 0.75rem;
+	/* Smallest text (12px) */
 
 	/* Mobile Font Sizes */
-	--mobile-font-size-body: 14px;
-	--mobile-font-size-h1: 22px;
-	--mobile-font-size-h2: 18px;
-	--mobile-font-size-h3: 16px;
-	--mobile-font-size-h4: 14px;
-	--mobile-font-size-small: 13px;
-	--mobile-font-size-tiny: 12px;
+	--mobile-font-size-body: 16px;
+	--mobile-font-size-h1: 1.875rem;
+	--mobile-font-size-h2: 1.625rem;
+	--mobile-font-size-h3: 1.375rem;
+	--mobile-font-size-h4: 1.125rem;
+	--mobile-font-size-small: 0.875rem;
+	--mobile-font-size-tiny: 0.75rem;
 }
 
 * {
@@ -514,46 +514,23 @@ img {
 	height: auto !important;
 }
 
-/* Global font size reductions for mobile */
-h1 {
-	font-size: 22px !important;
-}
+/* Responsive elements will use CSS variables defined in :root and media queries */
+/* h1, h2, h3, h4 already inherit from base styles */
+/* p elements inherit default font-size-body */
 
-h2 {
-	font-size: 18px !important;
-}
-
-h3 {
-	font-size: 16px !important;
-}
-
-h4 {
-	font-size: 14px !important;
-}
-
-p {
-	font-size: 14px !important;
-}
-
-/* Section content reductions */
-.colorlib-me-section {
-	font-size: 14px !important;
-}
-
-.colorlib-narrow-content {
-	font-size: 14px !important;
-}
-
+/* Section content uses variable-based sizing */
+.colorlib-me-section,
+.colorlib-narrow-content,
 .about-text {
-	font-size: 14px !important;
+	font-size: inherit;
 }
 
 .skill-title {
-	font-size: 14px !important;
+	font-size: var(--font-size-h4);
 }
 
 .skill-tag {
-	font-size: 13px !important;
+	font-size: var(--font-size-small);
 }
 
 /* Skills section responsive */
@@ -575,62 +552,62 @@ p {
 }
 
 .skill-tag {
-	padding: 6px 12px !important;
-	font-size: 12px !important;
+	padding: 6px 12px;
+	font-size: var(--font-size-small);
 }
 
 .contribution-item {
-	font-size: 14px !important;
+	font-size: inherit;
 }
 
 .contribution-item h3 {
-	font-size: 15px !important;
+	font-size: var(--font-size-h4);
 }
 
 .contribution-meta {
-	font-size: 12px !important;
+	font-size: var(--font-size-tiny);
 }
 
 .contribution-abstract {
-	font-size: 13px !important;
+	font-size: var(--font-size-small);
 }
 
 .education-table {
-	font-size: 14px !important;
+	font-size: inherit;
 }
 
 .education-table th {
-	font-size: 14px !important;
+	font-size: var(--font-size-small);
 }
 
 .education-table td {
-	font-size: 13px !important;
-	padding: 10px 8px !important;
+	font-size: var(--font-size-small);
+	padding: 10px 8px;
 }
 
 .certification-category h3 {
-	font-size: 15px !important;
+	font-size: var(--font-size-h4);
 }
 
 .cert-title {
-	font-size: 14px !important;
+	font-size: var(--font-size-small);
 }
 
 .cert-year {
-	font-size: 12px !important;
+	font-size: var(--font-size-tiny);
 }
 
 .provider-title {
-	font-size: 13px !important;
+	font-size: var(--font-size-small);
 }
 
 /* Links and buttons */
 a {
-	font-size: inherit !important;
+	font-size: inherit;
 }
 
 button {
-	font-size: 13px !important;
+	font-size: var(--font-size-small);
 }
 
 .resume-content img {
