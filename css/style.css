@@ -392,6 +392,162 @@ button {
 	display: none;
 }
 
+#colorlib-main {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow-x: hidden !important;
+}
+
+.colorlib-narrow-content {
+	width: 100% !important;
+	max-width: 100% !important;
+	padding: 20px 15px !important;
+	box-sizing: border-box !important;
+}
+
+section {
+	width: 100% !important;
+	max-width: 100% !important;
+	padding: 20px 15px !important;
+	box-sizing: border-box !important;
+	overflow-x: hidden !important;
+}
+
+.row {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	overflow-x: hidden !important;
+}
+
+.education-table {
+	width: 100% !important;
+	max-width: 100% !important;
+	overflow-x: auto !important;
+	display: block !important;
+}
+
+.education-table table {
+	width: 100% !important;
+	min-width: auto !important;
+}
+
+.contribution-item,
+.certification-item,
+.skill-box {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
+	overflow-x: hidden !important;
+}
+
+img {
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+/* Responsive elements will use CSS variables defined in :root and media queries */
+/* h1, h2, h3, h4 already inherit from base styles */
+/* p elements inherit default font-size-body */
+
+/* Section content uses variable-based sizing */
+.colorlib-me-section,
+.colorlib-narrow-content,
+.about-text {
+	font-size: inherit;
+}
+
+.skill-title {
+	font-size: var(--font-size-h4);
+}
+
+.skill-tag {
+	font-size: var(--font-size-small);
+}
+
+/* Skills section responsive */
+.skills-grid {
+	grid-template-columns: 1fr !important;
+	gap: 15px !important;
+	width: 100% !important;
+	padding: 0 !important;
+}
+
+.skill-category-box {
+	width: 100% !important;
+	padding: 15px !important;
+	margin: 0 !important;
+}
+
+.skill-tags {
+	gap: 8px !important;
+}
+
+.skill-tag {
+	padding: 6px 12px;
+	font-size: var(--font-size-small);
+}
+
+.contribution-item {
+	font-size: inherit;
+}
+
+.contribution-item h3 {
+	font-size: var(--font-size-h4);
+}
+
+.contribution-meta {
+	font-size: var(--font-size-tiny);
+}
+
+.contribution-abstract {
+	font-size: var(--font-size-small);
+}
+
+.education-table {
+	font-size: inherit;
+}
+
+.education-table th {
+	font-size: var(--font-size-small);
+}
+
+.education-table td {
+	font-size: var(--font-size-small);
+	padding: 10px 8px;
+}
+
+.certification-category h3 {
+	font-size: var(--font-size-h4);
+}
+
+.cert-title {
+	font-size: var(--font-size-small);
+}
+
+.cert-year {
+	font-size: var(--font-size-tiny);
+}
+
+.provider-title {
+	font-size: var(--font-size-small);
+}
+
+/* Links and buttons */
+a {
+	font-size: inherit;
+}
+
+button {
+	font-size: var(--font-size-small);
+}
+
+.resume-content img {
+	display: none;
+}
+
 .resume-content img {
 	margin: 0 10px;
 	width: 100%;
