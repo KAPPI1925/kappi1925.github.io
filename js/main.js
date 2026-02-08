@@ -245,7 +245,7 @@ function detectDayNightMode() {
 function scrollNav(direction) {
   const navWrapper = document.querySelector('.nav-scroll-wrapper');
   const scrollAmount = 200; // pixels to scroll
-  
+
   if (direction === 'left') {
     navWrapper.scrollBy({
       left: -scrollAmount,
@@ -260,21 +260,21 @@ function scrollNav(direction) {
 }
 
 // Auto-scroll navigation when item is clicked
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const navWrapper = document.querySelector('.nav-scroll-wrapper');
   const navItems = document.querySelectorAll('#nav-menu li a');
-  
-  navItems.forEach(function(item) {
-    item.addEventListener('click', function() {
+
+  navItems.forEach(function (item) {
+    item.addEventListener('click', function () {
       const listItem = this.parentElement;
       const itemLeft = listItem.offsetLeft;
       const itemWidth = listItem.offsetWidth;
       const wrapperWidth = navWrapper.offsetWidth;
-      
+
       // Scroll to position the clicked item towards the left (about 20% from left edge)
       // This leaves room to see more items to the right
       const targetScroll = itemLeft - (wrapperWidth * 0.2);
-      
+
       navWrapper.scrollTo({
         left: Math.max(0, targetScroll),
         behavior: 'smooth'
