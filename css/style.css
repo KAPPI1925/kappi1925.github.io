@@ -456,187 +456,188 @@ figure figcaption {
 	body.offcanvas {
 		overflow: hidden !important;
 	}
-		overflow-x: hidden !important;
-	}
 
-	#colorlib-main {
-		width: 100% !important;
-		max-width: 100% !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		overflow-x: hidden !important;
-	}
+	overflow-x: hidden !important;
+}
 
-	.colorlib-narrow-content {
-		width: 100% !important;
-		max-width: 100% !important;
-		padding: 20px 15px !important;
-		box-sizing: border-box !important;
-	}
+#colorlib-main {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow-x: hidden !important;
+}
 
-	section {
-		width: 100% !important;
-		max-width: 100% !important;
-		padding: 20px 15px !important;
-		box-sizing: border-box !important;
-		overflow-x: hidden !important;
-	}
+.colorlib-narrow-content {
+	width: 100% !important;
+	max-width: 100% !important;
+	padding: 20px 15px !important;
+	box-sizing: border-box !important;
+}
 
-	.row {
-		width: 100% !important;
-		max-width: 100% !important;
-		margin: 0 !important;
-		overflow-x: hidden !important;
-	}
+section {
+	width: 100% !important;
+	max-width: 100% !important;
+	padding: 20px 15px !important;
+	box-sizing: border-box !important;
+	overflow-x: hidden !important;
+}
 
-	.education-table {
-		width: 100% !important;
-		max-width: 100% !important;
-		overflow-x: auto !important;
-		display: block !important;
-	}
+.row {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	overflow-x: hidden !important;
+}
 
-	.education-table table {
-		width: 100% !important;
-		min-width: auto !important;
-	}
+.education-table {
+	width: 100% !important;
+	max-width: 100% !important;
+	overflow-x: auto !important;
+	display: block !important;
+}
 
-	.contribution-item,
-	.certification-item,
-	.skill-box {
-		width: 100% !important;
-		max-width: 100% !important;
-		box-sizing: border-box !important;
-		overflow-x: hidden !important;
-	}
+.education-table table {
+	width: 100% !important;
+	min-width: auto !important;
+}
 
-	img {
-		max-width: 100% !important;
-		height: auto !important;
-	}
+.contribution-item,
+.certification-item,
+.skill-box {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box !important;
+	overflow-x: hidden !important;
+}
 
-	/* Global font size reductions for mobile */
-	h1 {
-		font-size: 22px !important;
-	}
+img {
+	max-width: 100% !important;
+	height: auto !important;
+}
 
-	h2 {
-		font-size: 18px !important;
-	}
+/* Global font size reductions for mobile */
+h1 {
+	font-size: 22px !important;
+}
 
-	h3 {
-		font-size: 16px !important;
-	}
+h2 {
+	font-size: 18px !important;
+}
 
-	h4 {
-		font-size: 14px !important;
-	}
+h3 {
+	font-size: 16px !important;
+}
 
-	p {
-		font-size: 14px !important;
-	}
+h4 {
+	font-size: 14px !important;
+}
 
-	/* Section content reductions */
-	.colorlib-me-section {
-		font-size: 14px !important;
-	}
+p {
+	font-size: 14px !important;
+}
 
-	.colorlib-narrow-content {
-		font-size: 14px !important;
-	}
+/* Section content reductions */
+.colorlib-me-section {
+	font-size: 14px !important;
+}
 
-	.about-text {
-		font-size: 14px !important;
-	}
+.colorlib-narrow-content {
+	font-size: 14px !important;
+}
 
-	.skill-title {
-		font-size: 14px !important;
-	}
+.about-text {
+	font-size: 14px !important;
+}
 
-	.skill-tag {
-		font-size: 13px !important;
-	}
+.skill-title {
+	font-size: 14px !important;
+}
 
-	/* Skills section responsive */
-	.skills-grid {
-		grid-template-columns: 1fr !important;
-		gap: 15px !important;
-		width: 100% !important;
-		padding: 0 !important;
-	}
+.skill-tag {
+	font-size: 13px !important;
+}
 
-	.skill-category-box {
-		width: 100% !important;
-		padding: 15px !important;
-		margin: 0 !important;
-	}
+/* Skills section responsive */
+.skills-grid {
+	grid-template-columns: 1fr !important;
+	gap: 15px !important;
+	width: 100% !important;
+	padding: 0 !important;
+}
 
-	.skill-tags {
-		gap: 8px !important;
-	}
+.skill-category-box {
+	width: 100% !important;
+	padding: 15px !important;
+	margin: 0 !important;
+}
 
-	.skill-tag {
-		padding: 6px 12px !important;
-		font-size: 12px !important;
-	}
+.skill-tags {
+	gap: 8px !important;
+}
 
-	.contribution-item {
-		font-size: 14px !important;
-	}
+.skill-tag {
+	padding: 6px 12px !important;
+	font-size: 12px !important;
+}
 
-	.contribution-item h3 {
-		font-size: 15px !important;
-	}
+.contribution-item {
+	font-size: 14px !important;
+}
 
-	.contribution-meta {
-		font-size: 12px !important;
-	}
+.contribution-item h3 {
+	font-size: 15px !important;
+}
 
-	.contribution-abstract {
-		font-size: 13px !important;
-	}
+.contribution-meta {
+	font-size: 12px !important;
+}
 
-	.education-table {
-		font-size: 14px !important;
-	}
+.contribution-abstract {
+	font-size: 13px !important;
+}
 
-	.education-table th {
-		font-size: 14px !important;
-	}
+.education-table {
+	font-size: 14px !important;
+}
 
-	.education-table td {
-		font-size: 13px !important;
-		padding: 10px 8px !important;
-	}
+.education-table th {
+	font-size: 14px !important;
+}
 
-	.certification-category h3 {
-		font-size: 15px !important;
-	}
+.education-table td {
+	font-size: 13px !important;
+	padding: 10px 8px !important;
+}
 
-	.cert-title {
-		font-size: 14px !important;
-	}
+.certification-category h3 {
+	font-size: 15px !important;
+}
 
-	.cert-year {
-		font-size: 12px !important;
-	}
+.cert-title {
+	font-size: 14px !important;
+}
 
-	.provider-title {
-		font-size: 13px !important;
-	}
+.cert-year {
+	font-size: 12px !important;
+}
 
-	/* Links and buttons */
-	a {
-		font-size: inherit !important;
-	}
+.provider-title {
+	font-size: 13px !important;
+}
 
-	button {
-		font-size: 13px !important;
-	}
+/* Links and buttons */
+a {
+	font-size: inherit !important;
+}
 
-	.resume-content img {
-		display: none;
-	}
+button {
+	font-size: 13px !important;
+}
+
+.resume-content img {
+	display: none;
+}
 }
 
 .resume-content img {
@@ -3098,7 +3099,7 @@ body.offcanvas .colorlib-nav-toggle {
 		transform: none !important;
 		margin-left: 0 !important;
 	}
-	}
+}
 }
 
 .colorlib-nav-toggle.active i::before,
