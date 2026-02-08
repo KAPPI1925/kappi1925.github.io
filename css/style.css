@@ -1221,13 +1221,23 @@ body.offcanvas .colorlib-nav-toggle {
 /* Academic Contributions Section */
 .contribution-category {
 	margin-bottom: 35px;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 15px;
+	padding: 25px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.contribution-category:hover {
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	transform: translateY(-2px);
 }
 
 .category-title {
 	font-size: 24px;
 	font-weight: 700;
-	margin-bottom: 15px;
-	padding-bottom: 10px;
+	margin-bottom: 20px;
+	padding-bottom: 12px;
 	border-bottom: 3px solid #00AEEF;
 	color: #000;
 	text-align: left;
@@ -1236,24 +1246,25 @@ body.offcanvas .colorlib-nav-toggle {
 .contribution-list {
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 0;
 }
 
 .contribution-item {
-	background: rgba(255, 255, 255, 0.85);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	border-radius: 12px;
-	padding: 20px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	border-left: 4px solid #00AEEF;
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(0, 174, 239, 0.2);
 	transition: all 0.3s ease;
 }
 
+.contribution-item:last-child {
+	border-bottom: none;
+}
+
 .contribution-item:hover {
-	transform: translateX(5px);
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-	border-left-width: 6px;
+	background: rgba(0, 174, 239, 0.03);
+	padding-left: 10px;
+	margin-left: -10px;
+	margin-right: -10px;
+	padding-right: 10px;
 }
 
 .contribution-title {
@@ -1261,6 +1272,32 @@ body.offcanvas .colorlib-nav-toggle {
 	font-weight: 600;
 	margin: 0 0 10px 0;
 	line-height: 1.4;
+	cursor: pointer;
+	color: #00AEEF;
+	transition: color 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contribution-title:hover {
+	color: #0099d6;
+}
+
+.contribution-title .toggle-icon {
+	font-size: 14px;
+	color: #00AEEF;
+	transition: transform 0.3s ease;
+}
+
+.contribution-toggle {
+	user-select: none;
+}
+
+.contribution-content {
+	overflow: hidden;
+	transition: all 0.3s ease;
+	margin-top: 10px;
 }
 
 .contribution-title a {
@@ -1274,6 +1311,31 @@ body.offcanvas .colorlib-nav-toggle {
 	text-decoration: underline;
 }
 
+.contribution-authors {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.contribution-authors i {
+	color: #00AEEF;
+}
+
+.contribution-authors a {
+	color: #333;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.contribution-authors a:hover {
+	color: #00AEEF;
+	text-decoration: underline;
+}
+
 .contribution-meta {
 	font-size: 14px;
 	color: #666;
@@ -1284,6 +1346,18 @@ body.offcanvas .colorlib-nav-toggle {
 .contribution-meta strong {
 	color: #333;
 	font-weight: 600;
+}
+
+.contribution-meta .doi-link {
+	color: #00AEEF;
+	text-decoration: none;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.contribution-meta .doi-link:hover {
+	color: #0099d6;
+	text-decoration: underline;
 }
 
 .contribution-abstract {
@@ -1308,6 +1382,27 @@ body.offcanvas .colorlib-nav-toggle {
 	gap: 5px;
 }
 
+.read-button {
+	display: inline-block;
+	margin-top: 15px;
+	padding: 10px 20px;
+	background: linear-gradient(135deg, #00AEEF 0%, #0099d6 100%);
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(0, 174, 239, 0.3);
+}
+
+.read-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 174, 239, 0.4);
+	color: white;
+	text-decoration: none;
+}
+
 .no-contributions {
 	color: #999;
 	font-style: italic;
@@ -1315,6 +1410,123 @@ body.offcanvas .colorlib-nav-toggle {
 	text-align: center;
 	background: rgba(0, 0, 0, 0.02);
 	border-radius: 8px;
+}
+
+/* Education Table Styling */
+.education-table-wrapper {
+	margin: 20px 0;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 12px;
+	padding: 0;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+	position: relative;
+	--mouse-x: -300px;
+	--mouse-y: -300px;
+}
+
+.education-table-wrapper::before {
+	content: '';
+	position: absolute;
+	left: var(--mouse-x);
+	top: var(--mouse-y);
+	width: 300px;
+	height: 300px;
+	background: radial-gradient(circle, rgba(0, 174, 239, 0.08) 0%, transparent 90%);
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.2s ease;
+}
+
+.education-table-wrapper:hover::before {
+	opacity: 1;
+}
+
+.education-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 16px !important;
+	position: relative;
+	z-index: 2;
+	background: transparent;
+}
+
+.education-table thead {
+	background: linear-gradient(135deg, #00AEEF 0%, #0099d6 100%);
+	color: white;
+}
+
+.education-table thead th {
+	padding: 15px 20px;
+	text-align: left;
+	font-weight: 600;
+	font-size: 16px !important;
+	letter-spacing: 0.5px;
+}
+
+.education-table thead th:first-child {
+	padding-left: 25px;
+}
+
+.education-table thead th:last-child {
+	padding-right: 25px;
+}
+
+.education-table tbody tr {
+	border-bottom: 1px solid rgba(0, 174, 239, 0.15);
+	transition: background 0.3s ease;
+}
+
+.education-table tbody tr:last-child {
+	border-bottom: none;
+}
+
+.education-table tbody tr:hover {
+	background: rgba(0, 174, 239, 0.05);
+}
+
+.education-table tbody td {
+	padding: 18px 20px;
+	color: #333;
+	font-size: 16px !important;
+}
+
+.education-table tbody td:first-child {
+	font-weight: 600;
+	color: #00AEEF;
+	padding-left: 25px;
+}
+
+.education-table tbody td:last-child {
+	padding-right: 25px;
+}
+
+.education-table tbody td:nth-child(3) {
+	font-weight: 600;
+	color: #0099d6;
+}
+
+@media screen and (max-width: 768px) {
+	.education-table-wrapper {
+		overflow-x: auto;
+	}
+
+	.education-table {
+		font-size: 16px !important;
+		min-width: 600px;
+	}
+
+	.education-table thead th {
+		padding: 15px 20px;
+		font-size: 17px !important;
+	}
+
+	.education-table tbody td {
+		padding: 18px 20px;
+		font-size: 15px !important;
+	}
 }
 
 @media screen and (max-width: 768px) {

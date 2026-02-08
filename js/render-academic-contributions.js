@@ -1,31 +1,58 @@
 // Render Academic Contributions from JSON data
 
-function renderContributionItem(item, type) {
+function renderContributionItem(item, type, index) {
+  const itemId = `${type}-${index}`;
   let metaInfo = '';
 
+  // Authors link
+  const authorsHtml = item.authors ? `
+    <div class="contribution-authors">
+      <i class="fa fa-user"></i> <a href="${item.authorsUrl || item.url}" target="_blank" rel="noopener noreferrer">${item.authors}</a>
+    </div>
+  ` : '';
+
   if (type === 'research' || type === 'review') {
+    // Auto-detect DOI vs ISBN
+    const identifierLabel = item.isbn ? 'ISBN' : 'DOI';
+    const identifierValue = item.isbn || item.doi;
+    const identifierUrl = item.isbn
+      ? `https://isbnsearch.org/isbn/${item.isbn.replace(/-/g, '')}`
+      : (item.doi ? `https://doi.org/${item.doi}` : '');
+
     metaInfo = `
             <div class="contribution-meta">
                 <span><strong>Journal:</strong> ${item.journal}</span> • 
                 <span><strong>Year:</strong> ${item.year}</span>
-                ${item.doi ? ` • <span><strong>DOI:</strong> ${item.doi}</span>` : ''}
+                ${identifierValue ? ` • <span><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></span>` : ''}
             </div>
         `;
   } else if (type === 'bookChapter') {
+    const identifierLabel = item.isbn ? 'ISBN' : 'DOI';
+    const identifierValue = item.isbn || item.doi;
+    const identifierUrl = item.isbn
+      ? `https://isbnsearch.org/isbn/${item.isbn.replace(/-/g, '')}`
+      : (item.doi ? `https://doi.org/${item.doi}` : '');
+
     metaInfo = `
             <div class="contribution-meta">
                 <span><strong>Book:</strong> ${item.bookTitle}</span> • 
                 <span><strong>Publisher:</strong> ${item.publisher}</span> • 
                 <span><strong>Year:</strong> ${item.year}</span>
-                ${item.isbn ? ` • <span><strong>ISBN:</strong> ${item.isbn}</span>` : ''}
+                ${identifierValue ? ` • <span><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></span>` : ''}
             </div>
         `;
   } else if (type === 'book') {
+    const identifierLabel = item.isbn ? 'ISBN' : 'DOI';
+    const identifierValue = item.isbn || item.doi;
+    const identifierUrl = item.isbn
+      ? `https://isbnsearch.org/isbn/${item.isbn.replace(/-/g, '')}`
+      : (item.doi ? `https://doi.org/${item.doi}` : '');
+
     metaInfo = `
             <div class="contribution-meta">
                 <span><strong>Publisher:</strong> ${item.publisher}</span> • 
                 <span><strong>Year:</strong> ${item.year}</span>
-                ${item.isbn ? ` • <span><strong>ISBN:</strong> ${item.isbn}</span>` : ''}
+                ${identifierValue ? ` • <span><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></span>` : ''}
             </div>
         `;
   } else if (type === 'conference') {
@@ -46,25 +73,36 @@ function renderContributionItem(item, type) {
         `;
   }
 
-  const stats = (item.citations !== undefined || item.reads !== undefined) ? `
-        <div class="contribution-stats">
-            ${item.citations !== undefined ? `<span>📊 Citations: ${item.citations}</span>` : ''}
-            ${item.reads !== undefined ? `<span>👁️ Reads: ${item.reads}</span>` : ''}
-        </div>
-    ` : '';
-
   return `
         <div class="contribution-item">
-            <h3 class="contribution-title">
-                <a href="${item.url}" target="_blank" rel="noopener noreferrer">
-                    ${item.title} <i class="fa fa-external-link" style="font-size: 14px;"></i>
-                </a>
+            <h3 class="contribution-title contribution-toggle" onclick="toggleContribution('${itemId}')">
+                ${item.title} <i class="fa fa-chevron-down toggle-icon" id="icon-${itemId}"></i>
             </h3>
-            ${metaInfo}
-            <p class="contribution-abstract">${item.abstract}</p>
-            ${stats}
+            <div class="contribution-content" id="${itemId}" style="display: none;">
+                ${authorsHtml}
+                ${metaInfo}
+                <p class="contribution-abstract">${item.abstract}</p>
+                <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="read-button">
+                    <i class="fa fa-external-link"></i> Read
+                </a>
+            </div>
         </div>
     `;
+}
+
+function toggleContribution(id) {
+  const content = document.getElementById(id);
+  const icon = document.getElementById(`icon-${id}`);
+
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
+    icon.classList.remove('fa-chevron-down');
+    icon.classList.add('fa-chevron-up');
+  } else {
+    content.style.display = 'none';
+    icon.classList.remove('fa-chevron-up');
+    icon.classList.add('fa-chevron-down');
+  }
 }
 
 function renderAcademicContributions() {
@@ -77,7 +115,7 @@ function renderAcademicContributions() {
   const researchContainer = document.getElementById('research-articles');
   if (researchContainer && academicContributions.researchArticles.length > 0) {
     researchContainer.innerHTML = academicContributions.researchArticles
-      .map(item => renderContributionItem(item, 'research'))
+      .map((item, index) => renderContributionItem(item, 'research', index))
       .join('');
   } else if (researchContainer) {
     researchContainer.innerHTML = '<p class="no-contributions">No research articles yet.</p>';
@@ -87,7 +125,7 @@ function renderAcademicContributions() {
   const reviewContainer = document.getElementById('review-articles');
   if (reviewContainer && academicContributions.reviewArticles.length > 0) {
     reviewContainer.innerHTML = academicContributions.reviewArticles
-      .map(item => renderContributionItem(item, 'review'))
+      .map((item, index) => renderContributionItem(item, 'review', index))
       .join('');
   } else if (reviewContainer) {
     reviewContainer.innerHTML = '<p class="no-contributions">No review articles yet.</p>';
@@ -97,7 +135,7 @@ function renderAcademicContributions() {
   const booksContainer = document.getElementById('books');
   if (booksContainer && academicContributions.books.length > 0) {
     booksContainer.innerHTML = academicContributions.books
-      .map(item => renderContributionItem(item, 'book'))
+      .map((item, index) => renderContributionItem(item, 'book', index))
       .join('');
   } else if (booksContainer) {
     booksContainer.innerHTML = '<p class="no-contributions">No books yet.</p>';
@@ -107,7 +145,7 @@ function renderAcademicContributions() {
   const chaptersContainer = document.getElementById('book-chapters');
   if (chaptersContainer && academicContributions.bookChapters.length > 0) {
     chaptersContainer.innerHTML = academicContributions.bookChapters
-      .map(item => renderContributionItem(item, 'bookChapter'))
+      .map((item, index) => renderContributionItem(item, 'bookChapter', index))
       .join('');
   } else if (chaptersContainer) {
     chaptersContainer.innerHTML = '<p class="no-contributions">No book chapters yet.</p>';
@@ -117,7 +155,7 @@ function renderAcademicContributions() {
   const conferenceContainer = document.getElementById('conference-papers');
   if (conferenceContainer && academicContributions.conferencePapers.length > 0) {
     conferenceContainer.innerHTML = academicContributions.conferencePapers
-      .map(item => renderContributionItem(item, 'conference'))
+      .map((item, index) => renderContributionItem(item, 'conference', index))
       .join('');
   } else if (conferenceContainer) {
     conferenceContainer.innerHTML = '<p class="no-contributions">No conference papers yet.</p>';
@@ -127,7 +165,7 @@ function renderAcademicContributions() {
   const othersContainer = document.getElementById('others');
   if (othersContainer && academicContributions.others.length > 0) {
     othersContainer.innerHTML = academicContributions.others
-      .map(item => renderContributionItem(item, 'other'))
+      .map((item, index) => renderContributionItem(item, 'other', index))
       .join('');
   } else if (othersContainer) {
     othersContainer.innerHTML = '<p class="no-contributions">No other contributions yet.</p>';

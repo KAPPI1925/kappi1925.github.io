@@ -311,4 +311,22 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth'
     });
   });
+
+  // Education table mouse spotlight effect
+  const tableWrapper = document.querySelector('.education-table-wrapper');
+  if (tableWrapper) {
+    tableWrapper.addEventListener('mousemove', function (e) {
+      const rect = this.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      this.style.setProperty('--mouse-x', x + 'px');
+      this.style.setProperty('--mouse-y', y + 'px');
+    });
+
+    tableWrapper.addEventListener('mouseleave', function () {
+      this.style.setProperty('--mouse-x', '-300px');
+      this.style.setProperty('--mouse-y', '-300px');
+    });
+  }
 });
