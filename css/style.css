@@ -1153,7 +1153,7 @@ body.offcanvas .colorlib-nav-toggle {
 .skill-tag {
 	padding: 8px 16px;
 	border-radius: 999px;
-	font-size: 14px;
+	font-size: 20px;
 	font-weight: 600;
 	color: #0a0a0a;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
@@ -1268,7 +1268,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .contribution-title {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 600;
 	margin: 0 0 10px 0;
 	line-height: 1.4;
@@ -1337,7 +1337,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .contribution-meta {
-	font-size: 14px;
+	font-size: 20px;
 	color: #666;
 	margin-bottom: 12px;
 	line-height: 1.6;
@@ -1361,7 +1361,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .contribution-abstract {
-	font-size: 15px;
+	font-size: 20px;
 	line-height: 1.7;
 	margin-bottom: 12px;
 	color: #444;
@@ -1447,7 +1447,7 @@ body.offcanvas .colorlib-nav-toggle {
 .education-table {
 	width: 100%;
 	border-collapse: collapse;
-	font-size: 16px !important;
+	font-size: 20px !important;
 	position: relative;
 	z-index: 2;
 	background: transparent;
@@ -1462,7 +1462,7 @@ body.offcanvas .colorlib-nav-toggle {
 	padding: 15px 20px;
 	text-align: left;
 	font-weight: 600;
-	font-size: 16px !important;
+	font-size: 20px !important;
 	letter-spacing: 0.5px;
 }
 
@@ -1490,7 +1490,7 @@ body.offcanvas .colorlib-nav-toggle {
 .education-table tbody td {
 	padding: 18px 20px;
 	color: #333;
-	font-size: 16px !important;
+	font-size: 20px !important;
 }
 
 .education-table tbody td:first-child {
@@ -3261,12 +3261,42 @@ strong {
 }
 
 .provider-title {
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: 600;
 	color: #00AEEF;
 	margin-bottom: 15px;
-	padding-left: 10px;
-	border-left: 4px solid #00AEEF;
+	position: relative;
+	display: inline-block;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+.provider-title::after {
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background: linear-gradient(90deg, #00AEEF, #0099d6, #00AEEF);
+	animation: lineAnimation 2s ease-in-out infinite;
+}
+
+@keyframes lineAnimation {
+	0% {
+		width: 0;
+		left: 0;
+	}
+
+	50% {
+		width: 100%;
+		left: 0;
+	}
+
+	100% {
+		width: 0;
+		left: 100%;
+	}
 }
 
 .certs-container {
@@ -3299,9 +3329,9 @@ strong {
 .cert-title {
 	flex: 1;
 	cursor: pointer;
-	color: #00AEEF;
-	font-weight: 500;
-	font-size: 15px;
+	color: #000;
+	font-weight: 400;
+	font-size: 20px;
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -3316,6 +3346,20 @@ strong {
 .cert-title i {
 	color: #00AEEF;
 	font-size: 16px;
+}
+
+.featured-cert-title {
+	color: #000 !important;
+	font-size: 20px !important;
+	font-weight: 400 !important;
+}
+
+.featured-cert-title:hover {
+	color: #0099d6 !important;
+}
+
+.featured-cert-title i {
+	color: #00AEEF;
 }
 
 .cert-year {
@@ -3346,6 +3390,7 @@ strong {
 	from {
 		opacity: 0;
 	}
+
 	to {
 		opacity: 1;
 	}
@@ -3368,6 +3413,7 @@ strong {
 		transform: translateY(50px);
 		opacity: 0;
 	}
+
 	to {
 		transform: translateY(0);
 		opacity: 1;

@@ -4,7 +4,7 @@ const certificationsData = {
   webCourses: {
     ESRI: [
       { title: "Getting Started with Spatial Analysis", year: "2025", certificatePath: "certifications/esri/spatial-analysis.jpg" },
-      { title: "GIS Basics", year: "2023", certificatePath: "certifications/esri/gis-basics.jpg" },
+      { title: "GIS Basics", year: "2023", certificatePath: "certifications/esri/vegetation_chart.png" },
       { title: "ArcGIS Online Basics", year: "2023", certificatePath: "certifications/esri/arcgis-online.jpg" },
       { title: "ArcGIS Pro Basics", year: "2023", certificatePath: "certifications/esri/arcgis-pro.jpg" },
       { title: "Getting Started with Data Management", year: "2023", certificatePath: "certifications/esri/data-management.jpg" },

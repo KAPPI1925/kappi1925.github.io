@@ -4,7 +4,7 @@ function openCertificateModal(certificatePath, title) {
   const modal = document.getElementById('certificateModal');
   const modalImage = document.getElementById('modalCertificateImage');
   const modalTitle = document.getElementById('modalCertificateTitle');
-  
+
   modalTitle.textContent = title;
   modalImage.src = certificatePath;
   modal.style.display = 'flex';
@@ -17,8 +17,8 @@ function closeCertificateModal() {
 
 function renderCertificationCategory(category, items) {
   return items.map((cert, index) => `
-    <div class="cert-item">
-      <div class="cert-title" onclick="openCertificateModal('${cert.certificatePath}', '${cert.title}')">
+    <div class="cert-item ${index === 0 ? 'featured-cert' : ''}">
+      <div class="cert-title ${index === 0 ? 'featured-cert-title' : ''}" onclick="openCertificateModal('${cert.certificatePath}', '${cert.title}')">
         <i class="fa fa-certificate"></i> ${cert.title}
       </div>
       <div class="cert-year">${cert.year}</div>
@@ -91,7 +91,7 @@ function renderCertifications() {
 }
 
 // Close modal when clicking outside
-window.addEventListener('click', function(event) {
+window.addEventListener('click', function (event) {
   const modal = document.getElementById('certificateModal');
   if (event.target === modal) {
     closeCertificateModal();
@@ -99,6 +99,6 @@ window.addEventListener('click', function(event) {
 });
 
 // Load certifications when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   renderCertifications();
 });
