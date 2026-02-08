@@ -37,18 +37,36 @@
           aria-expanded="false" aria-controls="navbar"><i></i></a>
         <nav id="colorlib-main-menu" role="navigation" class="navbar">
           <div id="navbar" class="collapse">
-            <ul>
-              <li><a href="#" data-nav-section="about">About</a></li>
-              <li><a href="#" data-nav-section="skills">Skills</a></li>
-              <li>
-                <a href="#" data-nav-section="article">My Publications</a>
-              </li>
-              <li>
-                <a href="#" data-nav-section="education">My Education</a>
-              </li>
-              <li><a href="#" data-nav-section="contact">Contact</a></li>
-              <li><a href="https://x.com/kamalesh0109">Download CV</a></li>
-            </ul>
+            <div class="nav-scroll-container">
+              <button class="nav-scroll-btn nav-scroll-left" onclick="scrollNav('left')" aria-label="Scroll left">
+                <i class="fa fa-chevron-left"></i>
+              </button>
+              <div class="nav-scroll-wrapper">
+                <ul id="nav-menu">
+                  <li><a href="#" data-nav-section="about">About</a></li>
+                  <li><a href="#" data-nav-section="skills">Skills</a></li>
+                  <li><a href="#" data-nav-section="article">My Publications</a></li>
+                  <li><a href="#" data-nav-section="education">Education</a></li>
+                  <li><a href="#" data-nav-section="certificates">Certificates</a></li>
+                  <li><a href="#" data-nav-section="awards">Awards</a></li>
+                  <li><a href="#" data-nav-section="membership">Membership</a></li>
+                  <li><a href="#" data-nav-section="license">License</a></li>
+                  <li><a href="#" data-nav-section="courses">Courses</a></li>
+                  <li><a href="#" data-nav-section="trainings">Trainings</a></li>
+                  <li><a href="#" data-nav-section="webinars">Webinars</a></li>
+                  <li><a href="#" data-nav-section="workshops">Workshops</a></li>
+                  <li><a href="#" data-nav-section="conferences">Conferences</a></li>
+                  <li><a href="#" data-nav-section="invited-talks">Invited Talks</a></li>
+                  <li><a href="#" data-nav-section="guest-lectures">Guest Lectures</a></li>
+                  <li><a href="#" data-nav-section="workshops-conducted">Workshops Conducted</a></li>
+                  <li><a href="#" data-nav-section="contact">Contact</a></li>
+                  <li><a href="https://x.com/kamalesh0109">Download CV</a></li>
+                </ul>
+              </div>
+              <button class="nav-scroll-btn nav-scroll-right" onclick="scrollNav('right')" aria-label="Scroll right">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </nav>
       </div>

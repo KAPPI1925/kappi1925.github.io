@@ -328,6 +328,7 @@ figure figcaption {
 	align-items: center;
 	height: 100%;
 	margin-left: auto;
+	max-width: 70%;
 }
 
 #colorlib-aside #colorlib-main-menu .collapse {
@@ -336,6 +337,63 @@ figure figcaption {
 	height: 100%;
 	align-items: center;
 	justify-content: flex-end;
+}
+
+.nav-scroll-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.nav-scroll-wrapper {
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	display: flex;
+	flex: 1;
+	height: 100%;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.nav-scroll-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+.nav-scroll-btn {
+	background: #00AEEF;
+	border: none;
+	color: white;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+	z-index: 2;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-scroll-btn:hover {
+	background: #0099d6;
+	transform: scale(1.1);
+}
+
+.nav-scroll-btn:active {
+	transform: scale(0.95);
+}
+
+.nav-scroll-left {
+	margin-right: 10px;
+}
+
+.nav-scroll-right {
+	margin-left: 10px;
 }
 
 #colorlib-aside #colorlib-main-menu ul {
@@ -347,14 +405,48 @@ figure figcaption {
 	width: auto;
 	align-items: center;
 	height: 100%;
-	justify-content: flex-end;
+	justify-content: flex-start;
+	white-space: nowrap;
 }
 
 @media screen and (max-width: 768px) {
+	#colorlib-aside #colorlib-main-menu {
+		max-width: 100%;
+	}
+
+	.nav-scroll-container {
+		flex-direction: row;
+	}
+
+	.nav-scroll-wrapper {
+		flex-direction: column;
+		overflow-y: auto;
+		overflow-x: hidden;
+		max-height: 400px;
+	}
+
+	.nav-scroll-btn {
+		width: 30px;
+		height: 30px;
+		align-self: center;
+	}
+
+	.nav-scroll-left {
+		margin-right: 10px;
+		margin-bottom: 0;
+	}
+
+	.nav-scroll-right {
+		margin-left: 10px;
+		margin-top: 0;
+	}
+
 	#colorlib-aside #colorlib-main-menu ul {
-		margin: 0 0 2em 0;
+		margin: 0;
 		flex-direction: column;
 		align-items: flex-start;
+		width: 100%;
+		white-space: normal;
 	}
 }
 
