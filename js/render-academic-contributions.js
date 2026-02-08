@@ -7,7 +7,7 @@ function renderContributionItem(item, type, index) {
   // Authors link
   const authorsHtml = item.authors ? `
     <div class="contribution-authors">
-      <i class="fa fa-user"></i> <a href="${item.authorsUrl || item.url}" target="_blank" rel="noopener noreferrer">${item.authors}</a>
+      <i class="fa fa-user"></i> ${item.authors}
     </div>
   ` : '';
 
