@@ -20,12 +20,12 @@ function renderContributionItem(item, type, index) {
       : (item.doi ? `https://doi.org/${item.doi}` : '');
 
     metaInfo = `
-            <div class="contribution-meta">
-                <span><strong>Journal:</strong> ${item.journal}</span> • 
-                <span><strong>Year:</strong> ${item.year}</span>
-                ${identifierValue ? ` • <span><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></span>` : ''}
-            </div>
-        `;
+        <div class="contribution-meta">
+          <div><strong>Journal:</strong> ${item.journal}</div>
+          <div><strong>Year:</strong> ${item.year}</div>
+          ${identifierValue ? `<div><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></div>` : ''}
+        </div>
+      `;
   } else if (type === 'bookChapter') {
     const identifierLabel = item.isbn ? 'ISBN' : 'DOI';
     const identifierValue = item.isbn || item.doi;
@@ -34,13 +34,13 @@ function renderContributionItem(item, type, index) {
       : (item.doi ? `https://doi.org/${item.doi}` : '');
 
     metaInfo = `
-            <div class="contribution-meta">
-                <span><strong>Book:</strong> ${item.bookTitle}</span> • 
-                <span><strong>Publisher:</strong> ${item.publisher}</span> • 
-                <span><strong>Year:</strong> ${item.year}</span>
-                ${identifierValue ? ` • <span><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></span>` : ''}
-            </div>
-        `;
+        <div class="contribution-meta">
+          <div><strong>Book:</strong> ${item.bookTitle}</div>
+          <div><strong>Publisher:</strong> ${item.publisher}</div>
+          <div><strong>Year:</strong> ${item.year}</div>
+          ${identifierValue ? `<div><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></div>` : ''}
+        </div>
+      `;
   } else if (type === 'book') {
     const identifierLabel = item.isbn ? 'ISBN' : 'DOI';
     const identifierValue = item.isbn || item.doi;
@@ -49,28 +49,28 @@ function renderContributionItem(item, type, index) {
       : (item.doi ? `https://doi.org/${item.doi}` : '');
 
     metaInfo = `
-            <div class="contribution-meta">
-                <span><strong>Publisher:</strong> ${item.publisher}</span> • 
-                <span><strong>Year:</strong> ${item.year}</span>
-                ${identifierValue ? ` • <span><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></span>` : ''}
-            </div>
-        `;
+        <div class="contribution-meta">
+          <div><strong>Publisher:</strong> ${item.publisher}</div>
+          <div><strong>Year:</strong> ${item.year}</div>
+          ${identifierValue ? `<div><strong>${identifierLabel}:</strong> <a href="${identifierUrl}" target="_blank" rel="noopener noreferrer" class="doi-link">${identifierValue}</a></div>` : ''}
+        </div>
+      `;
   } else if (type === 'conference') {
     metaInfo = `
-            <div class="contribution-meta">
-                <span><strong>Conference:</strong> ${item.conference}</span> • 
-                <span><strong>Location:</strong> ${item.location}</span> • 
-                <span><strong>Year:</strong> ${item.year}</span>
-                ${item.presentationType ? ` • <span><strong>Type:</strong> ${item.presentationType}</span>` : ''}
-            </div>
-        `;
+        <div class="contribution-meta">
+          <div><strong>Conference:</strong> ${item.conference}</div>
+          <div><strong>Location:</strong> ${item.location}</div>
+          <div><strong>Year:</strong> ${item.year}</div>
+          ${item.presentationType ? `<div><strong>Type:</strong> ${item.presentationType}</div>` : ''}
+        </div>
+      `;
   } else if (type === 'other') {
     metaInfo = `
-            <div class="contribution-meta">
-                <span><strong>Type:</strong> ${item.type}</span> • 
-                <span><strong>Year:</strong> ${item.year}</span>
-            </div>
-        `;
+        <div class="contribution-meta">
+          <div><strong>Type:</strong> ${item.type}</div>
+          <div><strong>Year:</strong> ${item.year}</div>
+        </div>
+      `;
   }
 
   return `

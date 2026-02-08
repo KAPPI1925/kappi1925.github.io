@@ -1735,6 +1735,14 @@ body.offcanvas .colorlib-nav-toggle {
 	line-height: 1.6;
 }
 
+.contribution-meta > div {
+	margin-bottom: 4px;
+}
+
+.contribution-meta > div:last-child {
+	margin-bottom: 0;
+}
+
 .contribution-meta strong {
 	color: #333;
 	font-weight: 600;

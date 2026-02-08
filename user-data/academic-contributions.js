@@ -5,7 +5,7 @@ const academicContributions = {
   researchArticles: [
     {
       title: "Assessment of Land Use and Land Cover Mapping Using Object-Based Classification Techniques for the Eastern Districts of Tamil Nadu",
-      authors: "Karthikkumar A, R Kumaraperumal, S Pazhanivelan, D Muthumanickam, K P Ragunath, S Selvakumar, Kamalesh Kanna Shanmuganathan",
+      authors: "Karthikkumar A, R Kumaraperumal, S Pazhanivelan, D Muthumanickam, K P Ragunath, S Selvakumar, <b> Kamalesh Kanna Shanmuganathan </b>",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "https://doi.org/10.14719/pst.6260",
       year: "2025",
@@ -15,7 +15,7 @@ const academicContributions = {
     },
     {
       title: "Data mining techniques for LULC analysis using sparse labels and multisource data integration for the hilly terrain of Nilgiris district, Tamil Nadu, India",
-      authors: "Ramalingam Kumaraperumal, Moorthi Nivas Raj, Pazhanivelan, M. Jagadesh, Duraisamy Selvi, Dhanaraju Muthumanickam, Ramasamy Jagadeeswaran, A. Karthikkumar, Kamalesh Kanna Shanmuganathan",
+      authors: "Kumaraperumal, NivasRaj, Pazhanivelan, Jagadesh, Duraisamy, Muthumanickam, Jagadeeswaran, Karthikkumar,<b> Kamalesh Kanna S </b>",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "https://doi.org/10.1007/s12145-024-01586-y",
       year: "2024",
@@ -28,7 +28,7 @@ const academicContributions = {
   reviewArticles: [
     {
       title: "YOLO deep learning algorithm for object detection in agriculture: a review",
-      authors: "Kamalesh Kanna Shanmuganathan, Kumaraperumal Ramalingam, Sellaperumal Pazhanivelan, Ramasamy Jagadeeswaran, P. C. Prabu",
+      authors: "<b> Kamalesh Kanna Shanmuganathan </b>, Kumaraperumal Ramalingam, Sellaperumal Pazhanivelan, Ramasamy Jagadeeswaran, P. C. Prabu",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "https://doi.org/10.4081/jae.2024.1641",
       year: "2024",
@@ -41,7 +41,7 @@ const academicContributions = {
   books: [
     {
       title: "Soil Resource Characterization and Evaluation of the Coimbatore Forest Division",
-      authors: "Kamalesh Kanna Shanmuganathan",
+      authors: "<b> Kamalesh Kanna Shanmuganathan </b>",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "#",
       year: "2025",
@@ -54,7 +54,7 @@ const academicContributions = {
   bookChapters: [
     {
       title: "Remote Sensing Applications in Sustainable Agriculture and Food Systems",
-      authors: "Devasri Moovendran, Arunpandi Palpandi, Kamalesh Kanna Shanmuganathan, Vasanthakumar Muruganantham",
+      authors: "Devasri Moovendran, Arunpandi Palpandi, <b> Kamalesh Kanna Shanmuganathan </b>, Vasanthakumar Muruganantham",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "#",
       year: "2025",
@@ -65,7 +65,7 @@ const academicContributions = {
     },
     {
       title: "Soil Moisture Evaluation by Artificial Intelligence and Computer Vision",
-      authors: "Manimaran Gajendiran, Avinash Kanagaraj, Mageshen Vr, Kamalesh Kanna Shanmuganathan, Aswitha Kannan",
+      authors: "Manimaran Gajendiran, Avinash Kanagaraj, Mageshen Vr, <b> Kamalesh Kanna Shanmuganathan </b>, Aswitha Kannan",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "https://doi.org/10.1201/9781003518778-16",
       year: "2025",
@@ -79,7 +79,7 @@ const academicContributions = {
   conferencePapers: [
     {
       title: "Soil Order Classification Using Deep Learning Architecture and Multimodal Covariate Integration",
-      authors: "N. R. Moorthi, K. Ramalingam, M. Dhanraju, J. Ramasamy, P. Prajesh, Kamalesh Kanna Shanmuganathan",
+      authors: "N. R. Moorthi, K. Ramalingam, M. Dhanraju, J. Ramasamy, P. Prajesh, <b> Kamalesh Kanna Shanmuganathan </b>",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "https://doi.org/10.1109/InGARSS61818.2024.10984388",
       year: "2024",
@@ -91,7 +91,7 @@ const academicContributions = {
     },
     {
       title: "Deep Learning for Jasmine Bud Classification: Advancing Smart Agriculture Through Yolo-Based Vision Systems",
-      authors: "Kamalesh Kanna Shanmuganathan, Keerthivasan M",
+      authors: "<b> Kamalesh Kanna Shanmuganathan </b>, Keerthivasan M",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "#",
       year: "2025",
@@ -105,7 +105,7 @@ const academicContributions = {
   others: [
     {
       title: "Reviewer - Journal of the Indian Society of Remote Sensing",
-      authors: "Kamalesh Kanna Shanmuganathan",
+      authors: "<b> Kamalesh Kanna Shanmuganathan </b>",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "https://www.springer.com/journal/12524",
       year: "2024-Current",
