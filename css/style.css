@@ -2,27 +2,27 @@
 	/* Desktop Font Sizes - Base 16px with improved readability */
 	--font-size-body: 16px;
 	/* All paragraphs and body text */
-	--font-size-h1: 3rem;
+	--font-size-h1: 48px;
 	/* Main headings (48px) */
-	--font-size-h2: 2.5rem;
+	--font-size-h2: 40px;
 	/* Section titles (40px) */
-	--font-size-h3: 2rem;
+	--font-size-h3: 32px;
 	/* Subsection titles (32px) */
-	--font-size-h4: 1.5rem;
+	--font-size-h4: 24px;
 	/* Smaller headings (24px) */
-	--font-size-small: 0.875rem;
+	--font-size-small: 14px;
 	/* Smaller text like skill tags/chips (14px) */
-	--font-size-tiny: 0.75rem;
+	--font-size-tiny: 12px;
 	/* Smallest text (12px) */
 
 	/* Mobile Font Sizes */
 	--mobile-font-size-body: 16px;
-	--mobile-font-size-h1: 1.875rem;
-	--mobile-font-size-h2: 1.625rem;
-	--mobile-font-size-h3: 1.375rem;
-	--mobile-font-size-h4: 1.125rem;
-	--mobile-font-size-small: 0.875rem;
-	--mobile-font-size-tiny: 0.75rem;
+	--mobile-font-size-h1: 30px;
+	--mobile-font-size-h2: 26px;
+	--mobile-font-size-h3: 22px;
+	--mobile-font-size-h4: 18px;
+	--mobile-font-size-small: 14px;
+	--mobile-font-size-tiny: 12px;
 }
 
 * {
@@ -479,6 +479,22 @@ section {
 	padding: 20px 15px !important;
 	box-sizing: border-box !important;
 	overflow-x: hidden !important;
+}
+
+section.colorlib-about {
+	overflow-x: visible !important;
+}
+
+.colorlib-about,
+.colorlib-about .colorlib-narrow-content,
+.colorlib-about .row {
+	overflow: visible !important;
+}
+
+.colorlib-skills,
+.colorlib-skills .colorlib-narrow-content,
+.colorlib-skills .row {
+	overflow: visible !important;
 }
 
 .row {
@@ -1267,16 +1283,26 @@ body.offcanvas .colorlib-nav-toggle {
 .colorlib-services,
 .colorlib-footer,
 .colorlib-contact {
-	padding-top: 3em;
-	padding-bottom: 0em;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
 	clear: both;
 	width: 100%;
 	display: block;
 	scroll-margin-top: 100px;
 }
 
+.colorlib-about {
+	padding-top: 5em;
+	padding-bottom: 3px;
+}
+
 .profile-cards {
 	display: flex;
+}
+
+.about-spacer {
+	height: 100px;
+	width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1291,8 +1317,8 @@ body.offcanvas .colorlib-nav-toggle {
 	.colorlib-installation,
 	.colorlib-services,
 	.colorlib-contact {
-		padding-top: 2em;
-		padding-bottom: 0em;
+		padding-top: 1em;
+		padding-bottom: 0.5em;
 	}
 
 	.colorlib-blogs {
@@ -1371,7 +1397,8 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .about-desc h1 {
-	margin-bottom: 20px;
+	margin-bottom: 0;
+	margin-top: 0;
 	font-size: 38px;
 	font-weight: 600;
 	font-family: "Montserrat", Georgia, serif;
@@ -1382,10 +1409,12 @@ body.offcanvas .colorlib-nav-toggle {
 	background: rgba(255, 255, 255, 0.85);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	padding: 40px;
+	padding: 20px 40px;
+	margin: 20px 0;
 	border-radius: 20px;
-	box-shadow: 0 8px 32px rgba(0, 174, 239, 0.15),
-		0 4px 16px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 32px rgba(0, 174, 239, 0.2),
+		0 4px 16px rgba(0, 0, 0, 0.15),
+		0 15px 40px rgba(0, 174, 239, 0.12);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	position: relative;
 	overflow: hidden;
@@ -1410,7 +1439,7 @@ body.offcanvas .colorlib-nav-toggle {
 .about-content-box::after {
 	content: '';
 	position: absolute;
-	bottom: 0;
+	bottom: 5px;
 	left: 0;
 	width: 100%;
 	height: 3px;
@@ -1419,6 +1448,7 @@ body.offcanvas .colorlib-nav-toggle {
 			#00AEEF,
 			transparent);
 	animation: slideAnimation 3s ease-in-out infinite;
+	pointer-events: none;
 }
 
 .about-content-box:hover {
@@ -1785,6 +1815,9 @@ body.offcanvas .colorlib-nav-toggle {
 	position: relative;
 	--mouse-x: -300px;
 	--mouse-y: -300px;
+	width: 100% !important;
+	box-sizing: border-box !important;
+	display: block !important;
 }
 
 .education-table-wrapper::before {
@@ -1807,12 +1840,14 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .education-table {
-	width: 100%;
+	width: 100% !important;
 	border-collapse: collapse;
 	font-size: 20px !important;
 	position: relative;
 	z-index: 2;
 	background: transparent;
+	display: table !important;
+	table-layout: auto;
 }
 
 .education-table thead {
@@ -1821,19 +1856,20 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .education-table thead th {
-	padding: 15px 20px;
+	padding: 15px 10px;
 	text-align: left;
 	font-weight: 600;
 	font-size: 20px !important;
 	letter-spacing: 0.5px;
+	word-break: break-word;
 }
 
 .education-table thead th:first-child {
-	padding-left: 25px;
+	padding-left: 15px;
 }
 
 .education-table thead th:last-child {
-	padding-right: 25px;
+	padding-right: 15px;
 }
 
 .education-table tbody tr {
@@ -1850,19 +1886,20 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .education-table tbody td {
-	padding: 18px 20px;
+	padding: 15px 10px;
 	color: #333;
 	font-size: 20px !important;
+	word-break: break-word;
 }
 
 .education-table tbody td:first-child {
 	font-weight: 600;
 	color: #00AEEF;
-	padding-left: 25px;
+	padding-left: 15px;
 }
 
 .education-table tbody td:last-child {
-	padding-right: 25px;
+	padding-right: 15px;
 }
 
 .education-table tbody td:nth-child(3) {
