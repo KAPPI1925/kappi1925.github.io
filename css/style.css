@@ -3945,3 +3945,432 @@ strong {
 		font-size: 16px;
 	}
 }
+
+/* ============================================
+   DARK MODE STYLES - COMPREHENSIVE
+   ============================================ */
+
+/* Body and Main Background */
+.dark-mode {
+	background-color: #0a0a0a !important;
+	color: #e0e0e0 !important;
+}
+
+/* Header and Navigation */
+.dark-mode #colorlib-aside {
+	background: #1a1a1a !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .mobile-header {
+	background: #1a1a1a !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .mobile-header-title {
+	color: #e0e0e0 !important;
+}
+
+/* Mobile Sidebar */
+.dark-mode body.offcanvas #colorlib-aside {
+	background: #1a1a1a !important;
+}
+
+.dark-mode #colorlib-aside #nav-menu li {
+	border-bottom: 1px solid #2a2a2a !important;
+}
+
+.dark-mode #colorlib-aside #nav-menu li a {
+	color: #e0e0e0 !important;
+}
+
+.dark-mode #colorlib-aside #nav-menu li a:hover {
+	background: rgba(0, 174, 239, 0.15) !important;
+}
+
+.dark-mode #colorlib-aside #nav-menu li.active a,
+.dark-mode #colorlib-aside #nav-menu li a.active {
+	color: #00AEEF !important;
+	background: rgba(0, 174, 239, 0.2) !important;
+}
+
+/* About Section - White Box */
+.dark-mode .about-content-box {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	box-shadow: 0 8px 32px rgba(0, 174, 239, 0.15),
+		0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .about-content-box:hover {
+	box-shadow: 0 12px 40px rgba(0, 174, 239, 0.2),
+		0 6px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark-mode .about-content-box #bio {
+	color: #e0e0e0 !important;
+}
+
+/* Skills Section - White Boxes */
+.dark-mode .skill-category-box {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .skill-category-title {
+	color: #00AEEF !important;
+}
+
+.dark-mode .skill-tag {
+	background: rgba(0, 174, 239, 0.15) !important;
+	color: #e0e0e0 !important;
+	border: 1px solid rgba(0, 174, 239, 0.4) !important;
+}
+
+.dark-mode .skill-tag:hover {
+	background: rgba(0, 174, 239, 0.25) !important;
+	transform: translateY(-2px) !important;
+}
+
+/* Tables - Education and other tables */
+.dark-mode .education-table-wrapper {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+}
+
+.dark-mode .education-table table {
+	background: transparent !important;
+}
+
+.dark-mode .education-table th {
+	background: rgba(0, 174, 239, 0.2) !important;
+	color: #00AEEF !important;
+	border-bottom: 2px solid rgba(0, 174, 239, 0.5) !important;
+}
+
+.dark-mode .education-table td {
+	color: #e0e0e0 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-mode .education-table tr:hover {
+	background: rgba(0, 174, 239, 0.1) !important;
+}
+
+/* Certifications Section - White Boxes */
+.dark-mode .certification-category {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .certification-category:hover {
+	box-shadow: 0 8px 25px rgba(0, 174, 239, 0.2) !important;
+}
+
+.dark-mode .category-heading {
+	color: #00AEEF !important;
+}
+
+.dark-mode .provider-title {
+	color: #e0e0e0 !important;
+	border-bottom: 1px solid rgba(0, 174, 239, 0.3) !important;
+}
+
+.dark-mode .cert-title {
+	color: #e0e0e0 !important;
+}
+
+.dark-mode .cert-year {
+	color: #999 !important;
+}
+
+.dark-mode .cert-item:hover {
+	background: rgba(0, 174, 239, 0.1) !important;
+}
+
+/* Certificate Modal */
+.dark-mode .modal-content {
+	background-color: #1a1a1a !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dark-mode #modalCertificateTitle {
+	color: #00AEEF !important;
+}
+
+/* Repository Cards */
+.dark-mode .repo-card {
+	background-color: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .repo-card:hover {
+	box-shadow: 0 6px 18px rgba(0, 174, 239, 0.2) !important;
+}
+
+.dark-mode .repo-heading {
+	color: #00AEEF !important;
+}
+
+.dark-mode .repo-description {
+	color: #b0b0b0 !important;
+}
+
+.dark-mode .repo-language,
+.dark-mode .repo-stars,
+.dark-mode .repo-forks {
+	color: #999 !important;
+}
+
+/* Timeline and Projects */
+.dark-mode .project {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+}
+
+.dark-mode .project-info h3 {
+	color: #00AEEF !important;
+}
+
+.dark-mode .project-info p {
+	color: #b0b0b0 !important;
+}
+
+.dark-mode .timeline-label {
+	background: linear-gradient(135deg, #1a4d5e, #00576b) !important;
+	color: #e0e0e0 !important;
+}
+
+.dark-mode .timeline-icon {
+	box-shadow: 0 0 0 5px #2a2a2a !important;
+}
+
+/* Blog Entries */
+.dark-mode .blog-entry {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+}
+
+.dark-mode .blog-entry .blog-text {
+	color: #e0e0e0 !important;
+}
+
+.dark-mode .blog-entry h3 a {
+	color: #00AEEF !important;
+}
+
+/* Contribution Items */
+.dark-mode .contribution-item {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .contribution-item:hover {
+	box-shadow: 0 6px 18px rgba(0, 174, 239, 0.2) !important;
+}
+
+.dark-mode .contribution-item h3 {
+	color: #00AEEF !important;
+}
+
+.dark-mode .contribution-meta {
+	color: #999 !important;
+}
+
+.dark-mode .contribution-abstract {
+	color: #b0b0b0 !important;
+}
+
+/* Headings */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+	color: #00AEEF !important;
+}
+
+/* Paragraph text */
+.dark-mode p {
+	color: #e0e0e0 !important;
+}
+
+/* Strong and emphasis */
+.dark-mode strong {
+	color: #00AEEF !important;
+}
+
+/* HR dividers */
+.dark-mode hr {
+	border-top: 1px solid rgba(0, 174, 239, 0.3) !important;
+}
+
+/* Panel components */
+.dark-mode .panel-heading a.collapsed {
+	background: #2a2a2a !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	color: #e0e0e0 !important;
+}
+
+.dark-mode .panel-body {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	color: #e0e0e0 !important;
+}
+
+/* Counter sections */
+.dark-mode .colorlib-counters .icon i {
+	background: #2a2a2a !important;
+	color: #00AEEF !important;
+}
+
+/* Links */
+.dark-mode a {
+	color: #00AEEF !important;
+}
+
+.dark-mode a:hover {
+	color: #4CCEFF !important;
+}
+
+/* Footer Dark Mode */
+.dark-mode .colorlib-footer {
+	color: #e0e0e0 !important;
+}
+
+.dark-mode .col-title {
+	color: #000 !important;
+}
+
+.dark-mode .col-list a {
+	color: #000 !important;
+}
+
+.dark-mode .col-list a:hover {
+	color: #000 !important;
+	text-decoration: underline !important;
+}
+
+.dark-mode .copyright-text {
+	color: #000 !important;
+}
+
+.dark-mode .copyright-text p {
+	color: #000 !important;
+}
+
+/* Contribution Category Dark Mode */
+.dark-mode .contribution-category {
+	background: rgba(30, 30, 30, 0.95) !important;
+	border: 1px solid rgba(0, 174, 239, 0.3) !important;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-mode .contribution-category:hover {
+	box-shadow: 0 8px 25px rgba(0, 174, 239, 0.2) !important;
+}
+
+.dark-mode .category-title {
+	color: #00AEEF !important;
+	border-bottom: 3px solid #00AEEF !important;
+}
+
+.dark-mode .contribution-item {
+	border-bottom: 1px solid rgba(0, 174, 239, 0.2) !important;
+	background: transparent !important;
+}
+
+.dark-mode .contribution-item:hover {
+	background: rgba(0, 174, 239, 0.1) !important;
+}
+
+.dark-mode .contribution-title {
+	color: #00AEEF !important;
+}
+
+.dark-mode .contribution-title:hover {
+	color: #4CCEFF !important;
+}
+
+.dark-mode .contribution-title .toggle-icon {
+	color: #00AEEF !important;
+}
+
+.dark-mode .contribution-title a {
+	color: #00AEEF !important;
+}
+
+.dark-mode .contribution-title a:hover {
+	color: #4CCEFF !important;
+}
+
+.dark-mode .contribution-authors {
+	color: #b0b0b0 !important;
+}
+
+.dark-mode .contribution-authors a {
+	color: #e0e0e0 !important;
+}
+
+.dark-mode .contribution-authors a:hover {
+	color: #00AEEF !important;
+}
+
+.dark-mode .contribution-meta {
+	color: #b0b0b0 !important;
+}
+
+.dark-mode .contribution-meta strong {
+	color: #00AEEF !important;
+}
+
+.dark-mode .contribution-meta .doi-link {
+	color: #00AEEF !important;
+}
+
+.dark-mode .contribution-abstract {
+	color: #e0e0e0 !important;
+}
+
+.dark-mode .read-button {
+	background: #00AEEF !important;
+	color: #fff !important;
+}
+
+.dark-mode .read-button:hover {
+	background: #4CCEFF !important;
+	color: #000 !important;
+}
+
+/* Mobile specific dark mode fixes */
+@media screen and (max-width: 768px) {
+	.dark-mode #colorlib-aside {
+		background: #1a1a1a !important;
+	}
+
+	.dark-mode body.offcanvas #colorlib-aside {
+		background: #1a1a1a !important;
+	}
+
+	.dark-mode .about-content-box {
+		background: rgba(30, 30, 30, 0.98) !important;
+	}
+
+	.dark-mode .skill-category-box {
+		background: rgba(30, 30, 30, 0.98) !important;
+	}
+
+	.dark-mode .certification-category {
+		background: rgba(30, 30, 30, 0.98) !important;
+	}
+
+	.dark-mode .contribution-category {
+		background: rgba(30, 30, 30, 0.98) !important;
+	}
+}
