@@ -4284,10 +4284,15 @@ strong {
 .dark-mode .contribution-item {
 	border-bottom: 1px solid rgba(0, 174, 239, 0.2) !important;
 	background: transparent !important;
+	border-radius: 8px !important;
+	border: none !important;
+	margin-bottom: 10px !important;
+	padding: 15px !important;
 }
 
 .dark-mode .contribution-item:hover {
 	background: rgba(0, 174, 239, 0.1) !important;
+	border-radius: 8px !important;
 }
 
 .dark-mode .contribution-title {
