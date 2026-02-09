@@ -240,14 +240,34 @@ Accordion.prototype.dropdown = function (e) {
 
 var accordion = new Accordion($("#accordion"), false);
 
-function enableDarkMode() {
+// Dark mode toggle functionality
+function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
+  const isDarkMode = document.body.classList.contains("dark-mode");
+
+  // Update icon
+  const icon = document.querySelector('#darkModeToggle i');
+  if (isDarkMode) {
+    icon.classList.remove('fa-moon-o');
+    icon.classList.add('fa-sun-o');
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    icon.classList.remove('fa-sun-o');
+    icon.classList.add('fa-moon-o');
+    localStorage.setItem('darkMode', 'disabled');
+  }
 }
 
-function detectDayNightMode() {
-  const hours = new Date().getHours();
-  if (hours <= 6 || hours >= 22) {
-    enableDarkMode();
+// Initialize dark mode from localStorage
+function initDarkMode() {
+  const darkMode = localStorage.getItem('darkMode');
+  if (darkMode === 'enabled') {
+    document.body.classList.add('dark-mode');
+    const icon = document.querySelector('#darkModeToggle i');
+    if (icon) {
+      icon.classList.remove('fa-moon-o');
+      icon.classList.add('fa-sun-o');
+    }
   }
 }
 
@@ -291,6 +311,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
+
+  // Initialize dark mode from localStorage
+  initDarkMode();
+
+  // Dark mode toggle button functionality
+  const darkModeToggleBtn = document.getElementById('darkModeToggle');
+  darkModeToggleBtn.addEventListener('click', toggleDarkMode);
 
   // Scroll to top button functionality
   const scrollToTopBtn = document.getElementById('scrollToTop');
