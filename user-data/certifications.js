@@ -3,7 +3,7 @@
 const certificationsData = {
   webCourses: {
     ESRI: [
-      { title: "Getting Started with Spatial Analysis", year: "2025", certificatePath: ["certifications/Course and Softwares/ESRI/Web Course - ESRI - Getting Started with Spatial Analysis_page_1.jpg", "certifications/Course and Softwares/ESRI/Web Course - ESRI - Getting Started with Spatial Analysis_page_1.jpg"] },
+      { title: "Getting Started with Spatial Analysis", year: "2025", certificatePath: "certifications/Course and Softwares/ESRI/Web Course - ESRI - Getting Started with Spatial Analysis_page_1.jpg" },
       { title: "GIS Basics", year: "2023", certificatePath: "certifications/Course and Softwares/ESRI/Web Course - ESRI - GIS Basics_page_1.jpg" },
       { title: "ArcGIS Online Basics", year: "2023", certificatePath: "certifications/Course and Softwares/ESRI/Web Course - ESRI - ArcGIS Online Basics_page_1.jpg" },
       { title: "ArcGIS Pro Basics", year: "2023", certificatePath: "certifications/Course and Softwares/ESRI/Web Course - ESRI - ArcGIS Pro Basics_page_1.jpg" },
@@ -68,6 +68,6 @@ const certificationsData = {
     { title: "Soil Survey and Digital Mapping using Remote Sensing - Practical hands-on Digital Mapping of the Western Ghats Forest Soil Resources using QGIS (GPSIAM)", year: "2025", certificatePath: "certifications/invited-talks/soil-survey-qgis.jpg" }
   ],
   hackathon: [
-    { title: "Drone Phenomics Hackathon", year: "2026", certificatePath: "certifications/Hackathon/Hackathon Fairground 2026.jpg" }
+    { title: "Drone Phenomics Hackathon", year: "2026", certificatePath: ["certifications/Hackathon/Hackathon Fairground 2026.jpg", "certifications/Hackathon/Hackathon Fairground 2026 group.jpeg"] }
   ]
 };
