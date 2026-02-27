@@ -1,12 +1,21 @@
-// Render Certifications
+// Global storage for cert data
+window.certDataStore = {};
+let certDataCounter = 0;
 
-function openCertificateModal(certificatePath, title) {
+function openCertificateModal(certificatePaths, title) {
   const modal = document.getElementById('certificateModal');
-  const modalImage = document.getElementById('modalCertificateImage');
+  const modalImagesContainer = document.getElementById('modalCertificateImagesContainer');
   const modalTitle = document.getElementById('modalCertificateTitle');
 
   modalTitle.textContent = title;
-  modalImage.src = certificatePath;
+  
+  // Handle both single path (string) and multiple paths (array)
+  const paths = Array.isArray(certificatePaths) ? certificatePaths : [certificatePaths];
+  
+  // Generate image HTML for all paths
+  const imagesHTML = paths.map(path => `<img src="${path}" alt="${title}" class="certificate-image">`).join('');
+  modalImagesContainer.innerHTML = imagesHTML;
+  
   modal.style.display = 'flex';
 }
 
@@ -16,14 +25,28 @@ function closeCertificateModal() {
 }
 
 function renderCertificationCategory(category, items) {
-  return items.map((cert, index) => `
+  return items.map((cert, index) => {
+    // Support both certificatePath (string/array) and certificatePaths (array)
+    let paths = [];
+    if (cert.certificatePaths) {
+      paths = cert.certificatePaths;
+    } else if (cert.certificatePath) {
+      paths = Array.isArray(cert.certificatePath) ? cert.certificatePath : [cert.certificatePath];
+    }
+    
+    // Store cert data globally
+    const certId = 'cert_' + (++certDataCounter);
+    window.certDataStore[certId] = { paths, title: cert.title };
+    
+    return `
     <div class="cert-item ${index === 0 ? 'featured-cert' : ''}">
-      <div class="cert-title ${index === 0 ? 'featured-cert-title' : ''}" onclick="openCertificateModal('${cert.certificatePath}', '${cert.title}')">
+      <div class="cert-title ${index === 0 ? 'featured-cert-title' : ''}" onclick="openCertificateModal(window.certDataStore['${certId}'].paths, window.certDataStore['${certId}'].title)" style="cursor: pointer;">
         <i class="fa fa-certificate"></i> ${cert.title}
       </div>
       <div class="cert-year">${cert.year}</div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 function renderCertifications() {
