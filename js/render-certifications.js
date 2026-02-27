@@ -88,6 +88,13 @@ function renderCertifications() {
   if (invitedTalksContainer) {
     invitedTalksContainer.innerHTML = invitedTalksHtml;
   }
+
+  // Hackathons
+  const hackathonHtml = renderCertificationCategory('Hackathons', certificationsData.hackathon);
+  const hackathonContainer = document.getElementById('hackathon');
+  if (hackathonContainer) {
+    hackathonContainer.innerHTML = hackathonHtml;
+  }
 }
 
 // Close modal when clicking outside
