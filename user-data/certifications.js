@@ -54,6 +54,7 @@ const certificationsData = {
     { title: "Pharmacovigilance – Department of Industrial Biotechnology and Faculty of Agricultural Science", year: "2020", certificatePath: "certifications/Webniar/Webinar - Bharath university - Biotech_page_1.jpg" }
   ],
   workshops: [
+    { title: " State Level Awareness Workshop & CBT on e-Governance Standards & Guidelines", year: "2026", certificatePath: "certifications\Workshop\Workshop - MeiT GoI 2026.jpg" },
     { title: "Empowering Early Career Researchers in Advancing Climate Resilient Agriculture Research and Collaboration (KSNUAHS - NRI, UK & ICSSR)", year: "2026", certificatePath: "certifications/Workshop/Workshop - CRARC Shivamogaa 2026_page_1.jpg" },
     { title: "Meeting the Essentials of Academic Deliberation in Graduate Seminar and Thesis Examination (TNAU - DNRM)", year: "2023", certificatePath: "certifications/Workshop/Workshop - NRM ENS_page_1.jpg" },
     { title: "Edible Mushroom Cultivation for Self-Employment (SRSIAT)", year: "2019", certificatePath: "certifications/Workshop/Workshop - mushroom_page_1.jpg" }
@@ -65,5 +66,8 @@ const certificationsData = {
   ],
   invitedTalks: [
     { title: "Soil Survey and Digital Mapping using Remote Sensing - Practical hands-on Digital Mapping of the Western Ghats Forest Soil Resources using QGIS (GPSIAM)", year: "2025", certificatePath: "certifications/invited-talks/soil-survey-qgis.jpg" }
+  ],
+  hackathon: [
+    { title: "DronePhenomics Hackathon", year: "2026", certificatePath: "certifications\Hackathon\Hackathon Fairground 2026.jpg" }
   ]
 };
