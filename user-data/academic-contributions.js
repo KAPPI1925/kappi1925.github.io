@@ -38,6 +38,18 @@ const academicContributions = {
     }
   ],
 
+  popularArticles: [
+    {
+      title: "YOLO in Floriculture: The Next Big Shift in Smart Flower Farming",
+      authors: "Keerthivasan Ragupathi, <b> Kamalesh Kanna S </b>, Nithish Kumar G, Akshya A",
+      authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
+      url: "https://www.researchgate.net/publication/398995759_YOLO_in_Floriculture_The_Next_Big_Shift_in_Smart_Flower_Farming",
+      year: "2025",
+      publisher: "Floriculture Today",
+      abstract: "Indian floriculture has expanded rapidly over the past decade, yet the industry continues to lose profits due to labour shortages, inconsistent grading, late disease detection, and unpredictable yield patterns. More than 25-35% of flower losses occur before flowers even reach the market because human inspection cannot always detect early problems or maintain consistent quality checks during peak production. At the same time, the global agri-tech sector is shifting toward automation, computer vision, and real-time monitoring. Among these technologies, YOLO (You Only Look Once) stands out for its speed, accuracy, and practicality as an advanced object detection model capable of identifying and locating visual features within seconds."
+    }
+  ],
+
   books: [
     {
       title: "Soil Resource Characterization and Evaluation of the Coimbatore Forest Division",

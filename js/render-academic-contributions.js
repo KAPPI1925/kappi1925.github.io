@@ -71,6 +71,13 @@ function renderContributionItem(item, type, index) {
           <div><strong>Year:</strong> ${item.year}</div>
         </div>
       `;
+  } else if (type === 'popular') {
+    metaInfo = `
+        <div class="contribution-meta">
+          <div><strong>Publisher:</strong> ${item.publisher}</div>
+          <div><strong>Year:</strong> ${item.year}</div>
+        </div>
+      `;
   }
 
   return `
@@ -129,6 +136,16 @@ function renderAcademicContributions() {
       .join('');
   } else if (reviewContainer) {
     reviewContainer.innerHTML = '<p class="no-contributions">No review articles yet.</p>';
+  }
+
+  // Render Popular Articles
+  const popularContainer = document.getElementById('popular-articles');
+  if (popularContainer && academicContributions.popularArticles && academicContributions.popularArticles.length > 0) {
+    popularContainer.innerHTML = academicContributions.popularArticles
+      .map((item, index) => renderContributionItem(item, 'popular', index))
+      .join('');
+  } else if (popularContainer) {
+    popularContainer.innerHTML = '<p class="no-contributions">No popular articles yet.</p>';
   }
 
   // Render Books
