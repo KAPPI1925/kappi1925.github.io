@@ -16,12 +16,18 @@ function openCertificateModal(certificatePaths, title) {
   const imagesHTML = paths.map(path => `<img src="${path}" alt="${title}" class="certificate-image">`).join('');
   modalImagesContainer.innerHTML = imagesHTML;
   
+  // Prevent background scrolling
+  document.body.style.overflow = 'hidden';
+  
   modal.style.display = 'flex';
 }
 
 function closeCertificateModal() {
   const modal = document.getElementById('certificateModal');
   modal.style.display = 'none';
+  
+  // Restore background scrolling
+  document.body.style.overflow = '';
 }
 
 function renderCertificationCategory(category, items) {
@@ -70,51 +76,51 @@ function renderCertifications() {
     webCoursesContainer.innerHTML = webCoursesHtml;
   }
 
-  // Courses
+  // Courses (standalone section)
   const coursesHtml = renderCertificationCategory('Courses', certificationsData.courses);
-  const coursesContainer = document.getElementById('courses');
+  const coursesContainer = document.getElementById('courses-standalone');
   if (coursesContainer) {
     coursesContainer.innerHTML = coursesHtml;
   }
 
-  // Trainings
+  // Trainings (standalone section)
   const trainingsHtml = renderCertificationCategory('Trainings', certificationsData.trainings);
-  const trainingsContainer = document.getElementById('trainings');
+  const trainingsContainer = document.getElementById('trainings-standalone');
   if (trainingsContainer) {
     trainingsContainer.innerHTML = trainingsHtml;
   }
 
-  // Webinars
+  // Webinars (standalone section)
   const webinarsHtml = renderCertificationCategory('Webinars', certificationsData.webinars);
-  const webinarsContainer = document.getElementById('webinars');
+  const webinarsContainer = document.getElementById('webinars-standalone');
   if (webinarsContainer) {
     webinarsContainer.innerHTML = webinarsHtml;
   }
 
-  // Workshops
+  // Workshops (standalone section)
   const workshopsHtml = renderCertificationCategory('Workshops', certificationsData.workshops);
-  const workshopsContainer = document.getElementById('workshops');
+  const workshopsContainer = document.getElementById('workshops-standalone');
   if (workshopsContainer) {
     workshopsContainer.innerHTML = workshopsHtml;
   }
 
-  // Conferences
+  // Conferences (standalone section)
   const conferencesHtml = renderCertificationCategory('Conferences', certificationsData.conferences);
-  const conferencesContainer = document.getElementById('conferences');
+  const conferencesContainer = document.getElementById('conferences-standalone');
   if (conferencesContainer) {
     conferencesContainer.innerHTML = conferencesHtml;
   }
 
-  // Invited Talks
+  // Invited Talks (standalone section)
   const invitedTalksHtml = renderCertificationCategory('Invited Talks', certificationsData.invitedTalks);
-  const invitedTalksContainer = document.getElementById('invited-talks');
+  const invitedTalksContainer = document.getElementById('invited-talks-standalone');
   if (invitedTalksContainer) {
     invitedTalksContainer.innerHTML = invitedTalksHtml;
   }
 
-  // Hackathons
+  // Hackathons (standalone section)
   const hackathonHtml = renderCertificationCategory('Hackathons', certificationsData.hackathon);
-  const hackathonContainer = document.getElementById('hackathon');
+  const hackathonContainer = document.getElementById('hackathon-standalone');
   if (hackathonContainer) {
     hackathonContainer.innerHTML = hackathonHtml;
   }
@@ -125,6 +131,16 @@ window.addEventListener('click', function (event) {
   const modal = document.getElementById('certificateModal');
   if (event.target === modal) {
     closeCertificateModal();
+  }
+});
+
+// Close modal when pressing ESC key
+window.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' || event.keyCode === 27) {
+    const modal = document.getElementById('certificateModal');
+    if (modal && modal.style.display === 'flex') {
+      closeCertificateModal();
+    }
   }
 });
 

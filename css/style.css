@@ -3838,6 +3838,7 @@ strong {
 	justify-content: center;
 	align-items: center;
 	animation: fadeIn 0.3s ease;
+	overflow: hidden;
 }
 
 @keyframes fadeIn {
