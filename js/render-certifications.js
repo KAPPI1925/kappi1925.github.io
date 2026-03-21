@@ -8,24 +8,24 @@ function openCertificateModal(certificatePaths, title) {
   const modalTitle = document.getElementById('modalCertificateTitle');
 
   modalTitle.textContent = title;
-  
+
   // Handle both single path (string) and multiple paths (array)
   const paths = Array.isArray(certificatePaths) ? certificatePaths : [certificatePaths];
-  
+
   // Generate image HTML for all paths
   const imagesHTML = paths.map(path => `<img src="${path}" alt="${title}" class="certificate-image">`).join('');
   modalImagesContainer.innerHTML = imagesHTML;
-  
+
   // Prevent background scrolling
   document.body.style.overflow = 'hidden';
-  
+
   modal.style.display = 'flex';
 }
 
 function closeCertificateModal() {
   const modal = document.getElementById('certificateModal');
   modal.style.display = 'none';
-  
+
   // Restore background scrolling
   document.body.style.overflow = '';
 }
@@ -39,11 +39,11 @@ function renderCertificationCategory(category, items) {
     } else if (cert.certificatePath) {
       paths = Array.isArray(cert.certificatePath) ? cert.certificatePath : [cert.certificatePath];
     }
-    
+
     // Store cert data globally
     const certId = 'cert_' + (++certDataCounter);
     window.certDataStore[certId] = { paths, title: cert.title };
-    
+
     return `
     <div class="cert-item ${index === 0 ? 'featured-cert' : ''}">
       <div class="cert-title ${index === 0 ? 'featured-cert-title' : ''}" onclick="openCertificateModal(window.certDataStore['${certId}'].paths, window.certDataStore['${certId}'].title)" style="cursor: pointer;">
