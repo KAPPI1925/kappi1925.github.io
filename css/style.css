@@ -3824,6 +3824,151 @@ strong {
 	width: 160px;
 }
 
+/* Academic Contributions - Left/Right Layout with Image Preview */
+.academic-contribution-item {
+	margin-bottom: 24px;
+	padding: 18px;
+	background: #f9f9f9;
+	border-radius: 12px;
+	transition: all 0.3s ease;
+	border: 1px solid #e0e0e0;
+}
+
+.academic-contribution-item:hover {
+	box-shadow: 0 4px 12px rgba(0, 174, 239, 0.15);
+	border-color: #00AEEF;
+}
+
+.academic-content {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+}
+
+.academic-left {
+	flex: 1;
+	min-width: 0;
+}
+
+.academic-title {
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+	margin: 0 0 10px 0;
+	word-wrap: break-word;
+	line-height: 1.4;
+}
+
+.academic-authors {
+	font-size: 11px;
+	color: #666;
+	margin-bottom: 8px;
+	line-height: 1.5;
+}
+
+.academic-metadata {
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.academic-year,
+.academic-meta {
+	color: #00AEEF;
+	margin: 3px 0;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.academic-abstract {
+	font-size: 13px;
+	color: #555;
+	line-height: 1.5;
+	margin: 0;
+	text-align: justify;
+}
+
+.academic-right {
+	flex: 0 0 auto;
+	width: 140px;
+}
+
+.academic-image-card {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 3/4;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+	transition: all 0.3s ease;
+	background: white;
+	border: 2px solid #e0e0e0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.academic-image-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 10px 24px rgba(0, 174, 239, 0.25);
+	border-color: #00AEEF;
+}
+
+.academic-image-card.placeholder {
+	flex-direction: column;
+	gap: 8px;
+	cursor: pointer !important;
+	background: #f0f0f0;
+	color: #999;
+	font-size: 12px;
+}
+
+.academic-image-card.placeholder i {
+	font-size: 32px;
+	color: #bbb;
+}
+
+.academic-image-card.placeholder span {
+	text-align: center;
+	font-weight: 500;
+}
+
+.academic-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+	.academic-content {
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.academic-right {
+		width: 100px;
+		align-self: center;
+	}
+
+	.academic-image-card {
+		aspect-ratio: 3/4;
+	}
+
+	.academic-title {
+		font-size: 17px;
+	}
+
+	.academic-abstract {
+		font-size: 12px;
+	}
+
+	.academic-authors {
+		font-size: 10px;
+	}
+}
+
 .others-image-card {
 	position: relative;
 	width: 100%;
