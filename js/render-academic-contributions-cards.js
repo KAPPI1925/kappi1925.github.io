@@ -66,7 +66,7 @@ function renderAcademicContributionItem(item, category) {
   const truncatedAbstract = item.abstract ? (item.abstract.substring(0, 200) + "...") : "";
 
   // Link button
-  const linkButton = item.url && item.url !== "#" 
+  const linkButton = item.url && item.url !== "#"
     ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="academic-read-button">
          <i class="fa fa-external-link"></i> Read
        </a>`
