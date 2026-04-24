@@ -55,6 +55,42 @@ function renderCertificationCategory(category, items) {
   }).join('');
 }
 
+function renderOthersItems(items) {
+  return items.map((item, index) => {
+    // Support both certificatePath and certificatePaths
+    let paths = [];
+    if (item.certificatePaths) {
+      paths = item.certificatePaths;
+    } else if (item.certificatePath) {
+      paths = Array.isArray(item.certificatePath) ? item.certificatePath : [item.certificatePath];
+    }
+
+    // Store cert data globally
+    const certId = 'cert_' + (++certDataCounter);
+    window.certDataStore[certId] = { paths, title: item.title };
+
+    return `
+    <div class="others-item">
+      <div class="others-content">
+        <div class="others-left">
+          <h3 class="others-title">${item.title}</h3>
+          <div class="others-meta">
+            <p class="others-type"><strong>Type:</strong> ${item.type}</p>
+            <p class="others-year"><strong>Year:</strong> ${item.year}</p>
+          </div>
+          <p class="others-description">${item.description}</p>
+        </div>
+        <div class="others-right">
+          <div class="others-image-card" onclick="openCertificateModal(window.certDataStore['${certId}'].paths, window.certDataStore['${certId}'].title)" style="cursor: pointer;">
+            <img src="${paths[0]}" alt="${item.title}" class="others-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  }).join('');
+}
+
 function renderCertifications() {
   if (typeof certificationsData === 'undefined') {
     console.error('Certifications data not loaded');
@@ -123,6 +159,20 @@ function renderCertifications() {
   const hackathonContainer = document.getElementById('hackathon-standalone');
   if (hackathonContainer) {
     hackathonContainer.innerHTML = hackathonHtml;
+  }
+
+  // Awards (standalone section)
+  const awardsHtml = renderCertificationCategory('Awards', certificationsData.awards);
+  const awardsContainer = document.getElementById('awards-standalone');
+  if (awardsContainer) {
+    awardsContainer.innerHTML = awardsHtml;
+  }
+
+  // Others (special rendering for expandable cards with image preview)
+  const othersHtml = renderOthersItems(certificationsData.others || []);
+  const othersContainer = document.getElementById('others');
+  if (othersContainer) {
+    othersContainer.innerHTML = othersHtml;
   }
 }
 

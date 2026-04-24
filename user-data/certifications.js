@@ -70,5 +70,18 @@ const certificationsData = {
   ],
   hackathon: [
     { title: "Drone Phenomics Hackathon", year: "2026", certificatePath: ["certifications/Hackathon/Hackathon Fairground 2026.jpg", "certifications/Hackathon/Hackathon Fairground 2026 group.jpeg"] }
+  ],
+  awards: [
+    { title: "ICMAAS 2025 - Young Academician Award", year: "2025", certificatePath: "certifications/Awards/ICMAAS 2025 - Young Academician Award.jpg" },
+    { title: "SimplyGIS - Champion", year: "2025", certificatePath: "certifications/Awards/SimplyGIS - Champion Kamalesh Kanna S.jpg" }
+  ],
+  others: [
+    {
+      title: "Peer Reviewer - Journal of the Indian Society of Remote Sensing",
+      type: "Peer Reviewer",
+      year: "2025",
+      description: "Serving as a peer reviewer for the Journal of the Indian Society of Remote Sensing (Springer), contributing to the quality assessment and advancement of remote sensing research publications.",
+      certificatePath: "certifications/Reviewer certificate/Spinger 2025 reviewer certificate_page_1.jpg"
+    }
   ]
 };
