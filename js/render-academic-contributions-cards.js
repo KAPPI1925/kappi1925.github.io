@@ -65,6 +65,13 @@ function renderAcademicContributionItem(item, category) {
   // Truncate abstract to 200 chars
   const truncatedAbstract = item.abstract ? (item.abstract.substring(0, 200) + "...") : "";
 
+  // Link button
+  const linkButton = item.url && item.url !== "#" 
+    ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="academic-read-button">
+         <i class="fa fa-external-link"></i> Read
+       </a>`
+    : "";
+
   // Image section
   const imageSection = isPlaceholder
     ? `<div class="academic-image-card placeholder" onclick="openAcademicModal(window.academicDataStore['${dataId}'].certificatePath, window.academicDataStore['${dataId}'].title)" style="cursor: pointer;">
@@ -85,6 +92,7 @@ function renderAcademicContributionItem(item, category) {
             ${metadata}
           </div>
           <p class="academic-abstract">${truncatedAbstract}</p>
+          ${linkButton}
         </div>
         <div class="academic-right">
           ${imageSection}

@@ -73,11 +73,12 @@ const academicContributions = {
       title: "Remote Sensing Applications in Sustainable Agriculture and Food Systems",
       authors: "Devasri Moovendran, Arunpandi Palpandi, <b> Kamalesh Kanna Shanmuganathan </b>, Vasanthakumar Muruganantham",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
-      url: "#",
+      url: "https://www.researchgate.net/publication/391700516_Remote_Sensing_Applications_in_Sustainable_Agriculture_and_Food_Systems",
       year: "2025",
       bookTitle: "Advances in Sustainable Agriculture and Food Systems",
       publisher: "Academic Publisher",
       isbn: "978-93-342-0566-4",
+      certificatePath: "images/covers/Book chapter - Remote Sensing Applications in Sustainable Agriculture and Food Systems.png",
       abstract: "Remote sensing is a transformative tool in sustainable agriculture, enabling precise monitoring and management of crops, soil, and water resources. By integrating Geographic Information Systems (GIS), the Internet of Things (IoT), and Artificial Intelligence (AI), remote sensing enhances precision farming, optimizes resource use, and improves food security. The evolution of remote sensing in agriculture has advanced from aerial photography to satellite-based monitoring. India’s space agency ISRO has contributed significantly through satellites like RISAT-1, Cartosat-1, and Resourcesat-2, aiding in crop identification, yield prediction, and climate variability assessment. Key techniques include optical, multispectral, hyperspectral, microwave, and thermal sensing, which help detect crop stress, monitor soil moisture, and map flood risks. Precision agriculture, supported by Digital Soil Mapping (DSM), allows site-specific crop management, reducing resource wastage and environmental impact. Remote sensing also plays a crucial role in drought and flood risk assessments, providing real-time rainfall, soil moisture, and vegetation monitoring. India’s Drought Early Warning System (DEWS) and satellite-based flood mapping have improved disaster preparedness and mitigation. Artificial Intelligence (AI) and machine learning further expand remote sensing capabilities, enabling automated disease detection, yield estimation, and climate monitoring. IoT-enabled sensor networks enhance real-time data collection for better farm management. Despite high costs and data limitations, policy initiatives like the National Action Plan on Climate Change (NAPCC) and the United Nations Sustainable Development Goals (SDGs) promote remote sensing for sustainable agriculture. In conclusion, remote sensing revolutionizes agriculture by fostering sustainability, improving climate resilience, and optimizing productivity. Future advancements in AI, hyperspectral imaging, and IoT driven remote sensing will further enhance agricultural efficiency and global food security."
     },
     {
@@ -89,7 +90,7 @@ const academicContributions = {
       bookTitle: "Artificial Intelligence and Computer Vision for Ecological Informatics",
       publisher: "CRC Press",
       doi: "10.1201/9781003518778-16",
-      certificatePath: "#",
+      certificatePath: "images/covers/Book chapter - Soil Moisture Evaluation by Artificial Intelligence and Computer Vision.jpg",
       abstract: "Soil moisture evaluation plays a crucial role in agriculture, forestry, hydrology, and climate science, essential for sustainability. Recently, Artificial Intelligence (AI) and computer vision have reshaped ecological informatics, offering advanced tools for assessing soil moisture. This chapter explores AI and computer vision approaches applied to soil moisture evaluation, addressing the limitations of labour-intensive ground-based sensors and traditional gravimetric methods. By leveraging AI-driven machine learning and deep learning, along with computer vision techniques such as neural networks that process complex data patterns from remote sensing platforms like satellites and drones, it allows for scale-dependent soil moisture evaluation. The chapter also discusses practical applications across various fields, including precision agriculture, forestry management, and water resource management. Limitations such as ensuring data quality, addressing calibration issues, and navigating ethical concerns that could be overcome by integrating hybrid models will be discussed. Further advances in algorithms, better integration with IoT, and addressing current challenges promise to further revolutionize soil moisture evaluation, supporting broader ecological sustainability goals. By examining these cutting-edge approaches, this chapter aims to provide insights into the role of AI and computer vision in soil moisture evaluation."
     }
   ],
@@ -112,11 +113,11 @@ const academicContributions = {
       title: "Deep Learning for Jasmine Bud Classification: Advancing Smart Agriculture Through Yolo-Based Vision Systems",
       authors: "<b> Kamalesh Kanna Shanmuganathan </b>, Keerthivasan M",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
-      url: "#",
+      url: "https://www.researchgate.net/publication/398109797_DEEP_LEARNING_FOR_JASMINE_BUD_CLASSIFICATION_ADVANCING_SMART_AGRICULTURE_THROUGH_YOLO-BASED_VISION_SYSTEMS",
       year: "2025",
       conference: "Agricultural Graduate Student Conference",
       location: "Tamil Nadu Agricultural University",
-      certificatePath: "#",
+      certificatePath: "images/covers/Conference Presentations - Deep Learning for Jasmine Bud Classification.png",
       abstract: "This study develops a real-time vision system for automated classification of jasmine buds using YOLO-based deep learning models. The work addresses a major bottleneck in jasmine supply chains—manual bud sorting, which is slow, inconsistent, and highly dependent on skilled labor. The research evaluates multiple YOLO variants (YOLOv5, YOLOv7, and YOLOv8) for detecting and classifying jasmine buds at different developmental stages under variable field and packhouse lighting conditions. A curated dataset of jasmine bud images was annotated for size category, maturity stage, and quality grade. Models were trained and optimized using data augmentation, hyperparameter tuning, and lightweight architectures to enable deployment on edge devices. Performance was assessed using mean Average Precision (mAP), precision–recall metrics, inference latency, and robustness to occlusion and background noise. The best-performing YOLO architecture demonstrated high detection accuracy with real-time inference suitable for integration into automated grading lines, low-cost sorting devices, and mobile decision-support tools for farmers. The system has practical applications in floriculture supply chains, helping improve grading consistency, reduce postharvest losses, and support scalable precision agriculture solutions for jasmine growers.",
       presentationType: "Oral"
     }
