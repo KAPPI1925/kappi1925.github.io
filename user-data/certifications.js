@@ -47,6 +47,11 @@ const certificationsData = {
       { title: "Tech Explorer Job Simulation (Commonwealth Bank)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - Commonwealth Bank - Tech Explorer Job Simulation_page_1.jpg" },
       { title: "Data Visualisation Empowering Business (TATA)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - TATA - Data Visualisation Empowering Business_page_1.jpg" },
       { title: "Markets Quantitative Analysis (Citi)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - Citi - Markets Quantitative Analysis _page_1.jpg" }
+    ],
+    Others: [
+      { title: "Know more about DFPD - II", year: "2026", certificatePath: "certifications/Others/2026 Know more about DFPD - II.png" },
+      { title: "National Organ Donation Awareness Quiz", year: "2026", certificatePath: "certifications/Others/2026 National Organ Donation Awareness Quiz.png" },
+      { title: "Viksit Rajasthan @2047 Quiz", year: "2026", certificatePath: "certifications/Others/2026 Viksit Rajasthan @2047 Quiz.png" }
     ]
   },
   courses: [
@@ -81,10 +86,5 @@ const certificationsData = {
   awards: [
     { title: "ICMAAS 2025 - Young Academician Award", year: "2025", certificatePath: "certifications/Awards/ICMAAS 2025 - Young Academician Award.jpg" },
     { title: "SimplyGIS - Champion", year: "2025", certificatePath: "certifications/Awards/SimplyGIS - Champion Kamalesh Kanna S.jpg" }
-  ],
-  others: [
-    { title: "Know more about DFPD - II", year: "2026", certificatePath: "certifications/Others/2026 Know more about DFPD - II.png" },
-    { title: "National Organ Donation Awareness Quiz", year: "2026", certificatePath: "certifications/Others/2026 National Organ Donation Awareness Quiz.png" },
-    { title: "Viksit Rajasthan @2047 Quiz", year: "2026", certificatePath: "certifications/Others/2026 Viksit Rajasthan @2047 Quiz.png" }
   ]
 };

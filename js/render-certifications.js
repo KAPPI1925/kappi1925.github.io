@@ -131,9 +131,6 @@ function renderCertifications() {
   if (awardsContainer) {
     awardsContainer.innerHTML = awardsHtml;
   }
-
-  // Note: Others section is now rendered from academicContributions.others 
-  // by render-academic-contributions-cards.js (do not render here to avoid conflict)
 }
 
 // Close modal when clicking outside
