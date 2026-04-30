@@ -39,7 +39,14 @@ const certificationsData = {
     ],
     SelfPaced: [
       { title: "Roadmap to Become a Machine Learning Engineer (Scaler)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/Scalar - Roadmap to Machine Learning Engineer.png" },
-      { title: "GenAI Powered Data Analytics Job Simulation (TATA-Forage)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/TATA - GenAI Data Anlaysis_page_1.jpg" }
+      { title: "GenAI Powered Data Analytics Job Simulation (TATA)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/TATA - GenAI Data Anlaysis_page_1.jpg" },
+      { title: "AI Upskilling certificate (Qualcomm Academy)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Qualcomm - AI-Upskilling-certificate_page_1.jpg" },
+      { title: "UX Design Advanced Job Simulation (LLOYDS)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - Lloyds - UX Design Advanced Job Simulation_page_1.jpg" },
+      { title: "Quantitative Research Job Simulation (JPMorgan Chase)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - JPMorgan - Quantitative Research Job Simulation_page_1.jpg" },
+      { title: "Data Analytics Job Simulation (Delottie)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - Deloitte - Data Analytics Job Simulation_page_1.jpg" },
+      { title: "Tech Explorer Job Simulation (Commonwealth Bank)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - Commonwealth Bank - Tech Explorer Job Simulation_page_1.jpg" },
+      { title: "Data Visualisation Empowering Business (TATA)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - TATA - Data Visualisation Empowering Business_page_1.jpg" },
+      { title: "Markets Quantitative Analysis (Citi)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Forage - Citi - Markets Quantitative Analysis _page_1.jpg" }
     ]
   },
   courses: [
@@ -76,12 +83,8 @@ const certificationsData = {
     { title: "SimplyGIS - Champion", year: "2025", certificatePath: "certifications/Awards/SimplyGIS - Champion Kamalesh Kanna S.jpg" }
   ],
   others: [
-    {
-      title: "Peer Reviewer - Journal of the Indian Society of Remote Sensing",
-      type: "Peer Reviewer",
-      year: "2025",
-      description: "Serving as a peer reviewer for the Journal of the Indian Society of Remote Sensing (Springer), contributing to the quality assessment and advancement of remote sensing research publications.",
-      certificatePath: "certifications/Reviewer certificate/Spinger 2025 reviewer certificate_page_1.jpg"
-    }
+    { title: "Know more about DFPD - II", year: "2026", certificatePath: "certifications/Others/2026 Know more about DFPD - II.png" },
+    { title: "National Organ Donation Awareness Quiz", year: "2026", certificatePath: "certifications/Others/2026 National Organ Donation Awareness Quiz.png" },
+    { title: "Viksit Rajasthan @2047 Quiz", year: "2026", certificatePath: "certifications/Others/2026 Viksit Rajasthan @2047 Quiz.png" }
   ]
 };

@@ -129,9 +129,10 @@ const academicContributions = {
       authors: "<b> Kamalesh Kanna Shanmuganathan </b>",
       authorsUrl: "https://www.researchgate.net/profile/Kamalesh-Kanna-Shanmuganathan",
       url: "https://orcid.org/0009-0003-8971-9221",
-      year: "2024-Current",
+      year: "2025",
       type: "Peer Reviewer",
-      abstract: "Serving as a peer reviewer for the Journal of the Indian Society of Remote Sensing (Springer), contributing to the quality assessment and advancement of remote sensing research publications."
+      abstract: "Serving as a peer reviewer for the Journal of the Indian Society of Remote Sensing (Springer), contributing to the quality assessment and advancement of remote sensing research publications.",
+      certificatePath: "certifications/Reviewer certificate/Spinger 2025 reviewer certificate_page_1.jpg"
     }
   ]
 };
