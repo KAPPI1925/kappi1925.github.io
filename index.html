@@ -1,639 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN3VRTCG2T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Kamalesh Kanna S — Ph.D. Research Scholar in Remote Sensing & GIS at TNAU. Specializing in precision agriculture, deep learning for geospatial applications, and digital soil mapping.">
+  <meta name="keywords"
+    content="Remote Sensing, GIS, Precision Agriculture, Deep Learning, Digital Soil Mapping, TNAU, Geospatial, YOLO, U-Net">
+  <meta name="author" content="Kamalesh Kanna S">
 
-    gtag('config', 'G-NN3VRTCG2T');
-  </script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Kamalesh Kanna S - Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio webpage of Kamalesh Kanna" />
-  <meta name="keywords" content="portfolio,website,personal website,github,projects,computer science and engineering" />
-  <meta name="author" content="Kamalesh Kanna" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="icon" type="image/gif" href="./images/kamalesh.gif" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/animate.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kamalesh Kanna S — RS/GIS Portfolio">
+  <meta property="og:description" content="Ph.D. Research Scholar | Remote Sensing & GIS | TNAU">
+  <meta property="og:type" content="website">
 
-  <script src="js/modernizr-2.6.2.min.js"></script>
-  <script type="module" src="index.js"></script>
-  <script src="user-data/user-data.js"></script>
-  <script src="user-data/academic-contributions.js"></script>
-  <script src="user-data/certifications.js"></script>
-  <script src="js/profile-card.js"></script>
-  <script src="js/render-publications.js"></script>
-  <script src="js/render-academic-contributions-cards.js"></script>
-  <script src="js/render-certifications.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo1.png">
+
+  <title>Kamalesh Kanna S — RS/GIS Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
-  <!-- Mobile Header (visible only on mobile) -->
-  <div class="mobile-header">
-    <div class="mobile-header-title">Kamalesh Kanna S</div>
-    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
-      aria-expanded="false" aria-controls="navbar"><i></i></a>
-  </div>
+<body class="page-loading">
 
-  <div id="colorlib-page">
-    <header id="colorlib-aside" role="banner" class="no-print animate-box" data-animate-effect="fadeInDown">
-      <div class="header-content">
-        <div class="logo-section">
-          <div class="header-profile-img">
-            <img alt="profile-img" src="./images/kamalesh.gif" />
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon"><i class="fas fa-satellite"></i></span>
+        <span>KAPPI1925<span class="text-accent">.</span>Portfolio</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#research" data-section="research">Research</a></li>
+        <li><a href="#publications" data-section="publications">Publications</a></li>
+        <li><a href="#education" data-section="education">Education</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#activities" data-section="activities">Certifications</a></li>
+        <li><a href="#awards" data-section="awards">Awards</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+  <div class="mobile-nav-panel" id="mobile-nav-panel"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-effects">
+      <div class="orbit-ring">
+        <div class="orbit-dot"></div>
+      </div>
+      <div class="orbit-ring">
+        <div class="orbit-dot"></div>
+      </div>
+      <div class="orbit-ring">
+        <div class="orbit-dot"></div>
+      </div>
+    </div>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-greeting">👋 Hello, I'm</div>
+          <h1 class="hero-name">Kamalesh Kanna <span class="highlight">S</span></h1>
+          <div class="hero-title-wrapper">
+            <div class="hero-title">
+              <span id="typing-text"></span>
+              <span class="cursor"></span>
+            </div>
           </div>
-          <h1 id="colorlib-logo"><a href="./index.html">Kamalesh Kanna S</a></h1>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-target="6">0</div>
+              <div class="stat-label">Publications</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="19">0</div>
+              <div class="stat-label">Citations</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="1">0</div>
+              <div class="stat-label">h-Index</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="20.4" data-float="true" data-suffix="+">0</div>
+              <div class="stat-label">Research Interest</div>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="#publications" class="btn btn-primary">
+              <i class="fas fa-file-alt"></i> View Publications
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Get in Touch
+            </a>
+          </div>
         </div>
-        <nav id="colorlib-main-menu" role="navigation" class="navbar">
-          <div id="navbar" class="collapse">
-            <div class="nav-scroll-container">
-              <button class="nav-scroll-btn nav-scroll-left" onclick="scrollNav('left')" aria-label="Scroll left">
-                <i class="fa fa-chevron-left"></i>
-              </button>
-              <div class="nav-scroll-wrapper">
-                <ul id="nav-menu">
-                  <li><a href="#" data-nav-section="about">About</a></li>
-                  <li><a href="#" data-nav-section="skills">Skills</a></li>
-                  <li><a href="#" data-nav-section="article">Academic Contributions</a></li>
-                  <li><a href="#" data-nav-section="education">Education</a></li>
-                  <li><a href="#" data-nav-section="certificates">Certificates</a></li>
-                  <li><a href="#" data-nav-section="awards">Awards</a></li>
-                  <li><a href="#" data-nav-section="membership">Membership</a></li>
-                  <li><a href="#" data-nav-section="license">License</a></li>
-                  <li><a href="#" data-nav-section="courses">Courses</a></li>
-                  <li><a href="#" data-nav-section="trainings">Trainings</a></li>
-                  <li><a href="#" data-nav-section="webinars">Webinars</a></li>
-                  <li><a href="#" data-nav-section="workshops">Workshops</a></li>
-                  <li><a href="#" data-nav-section="conferences">Conferences</a></li>
-                  <li><a href="#" data-nav-section="invited-talks">Invited Talks</a></li>
-                  <li><a href="#" data-nav-section="hackathon">Hackathons</a></li>
-                  <li><a href="#" data-nav-section="guest-lectures">Guest Lectures</a></li>
-                  <li><a href="#" data-nav-section="workshops-conducted">Workshops Conducted</a></li>
-                  <li><a href="#" data-nav-section="contact">Contact</a></li>
-                  <li><a href="https://x.com/kamalesh0109">Download CV</a></li>
-                </ul>
-              </div>
-              <button class="nav-scroll-btn nav-scroll-right" onclick="scrollNav('right')" aria-label="Scroll right">
-                <i class="fa fa-chevron-right"></i>
-              </button>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div class="container-wrap">
-      <div id="colorlib-main">
-        <div class="about-spacer"></div>
-        <section class="colorlib-about" data-section="about">
-          <div class="colorlib-narrow-content">
-            <div class="row animate-box" data-animate-effect="fadeInLeft">
-              <div class="about-desc">
-                <h1>About</h1>
-                <div class="about-content-box">
-                  <div id="bio">I am Kamalesh Kanna S, a professional with a strong academic foundation and versatile
-                    skills in agriculture, geospatial technologies, and creative media. I hold a B.Sc. (Hons) in
-                    Agriculture from Tamil Nadu Agricultural University (TNAU) and an M.Sc. (Ag.) in Remote Sensing and
-                    GIS from TNAU, Coimbatore.
-                    With expertise in GIS, remote sensing, video editing, and content creation, I combine technical
-                    precision with creative expression. As a passionate YouTuber and digital storyteller, I enjoy
-                    crafting
-                    content that simplifies complex concepts for diverse audiences. My professional interests include
-                    exploring deep learning applications in geospatial analysis, advancing precision agriculture
-                    practices, and pushing the boundaries of digital editing.
-                    My goal is to excel as a leading professional in GIS and remote sensing by delivering efficient and
-                    impactful solutions in my work. Along the way, I have enriched my expertise by attending workshops,
-                    conferences, and online webinars hosted by renowned organizations like NRSC and ESRI.
-                    Explore my portfolio to learn more about my journey, projects, and achievements. Whether you're
-                    looking to collaborate or simply learn more about my work, feel free to connect. Let’s create
-                    something amazing together!
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="colorlib-skills" data-section="skills">
-          <div class="colorlib-narrow-content">
-            <div class="row row-bottom-padded-sm">
-              <div class="about-desc">
-                <h1>Skills</h1>
-              </div>
-            </div>
-            <div id="skills" class="row">
-              <div class="col-md-12">
-                <div class="skills-grid">
-                  <div class="skill-category-box">
-                    <h3 class="skill-category-title">🛰️ Remote Sensing and GIS</h3>
-                    <div class="skill-tags">
-                      <span class="skill-tag tag-1">ArcGIS Pro</span>
-                      <span class="skill-tag tag-2">QGIS</span>
-                      <span class="skill-tag tag-3">SAGA GIS</span>
-                      <span class="skill-tag tag-4">eCognition</span>
-                      <span class="skill-tag tag-5">Earth Engine</span>
-                      <span class="skill-tag tag-6">Pix4D</span>
-                    </div>
-                  </div>
-
-                  <div class="skill-category-box">
-                    <h3 class="skill-category-title">💻 Programming</h3>
-                    <div class="skill-tags">
-                      <span class="skill-tag tag-2">Python</span>
-                      <span class="skill-tag tag-4">RStudio</span>
-                      <span class="skill-tag tag-1">Kotlin</span>
-                      <span class="skill-tag tag-5">VS Code</span>
-                    </div>
-                  </div>
-
-                  <div class="skill-category-box">
-                    <h3 class="skill-category-title">✏️ Graphics Designing</h3>
-                    <div class="skill-tags">
-                      <span class="skill-tag tag-3">Photoshop</span>
-                      <span class="skill-tag tag-6">Illustrator</span>
-                      <span class="skill-tag tag-2">InDesign</span>
-                    </div>
-                  </div>
-
-                  <div class="skill-category-box">
-                    <h3 class="skill-category-title">✂️ Video Editing</h3>
-                    <div class="skill-tags">
-                      <span class="skill-tag tag-4">Premiere Pro</span>
-                      <span class="skill-tag tag-1">After Effects</span>
-                      <span class="skill-tag tag-5">Audition</span>
-                    </div>
-                  </div>
-
-                  <div class="skill-category-box">
-                    <h3 class="skill-category-title">📸 Photography</h3>
-                    <div class="skill-tags">
-                      <span class="skill-tag tag-6">Photography</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="colorlib-experience no-print" data-section="article">
-          <div class="colorlib-narrow-content">
-            <div class="row row-bottom-padded-sm">
-              <div class="about-desc">
-                <a href="https://www.researchgate.net/profile/Kamalesh-Kanna/research" target="_blank"
-                  style="color: inherit; text-decoration: none;">
-                  <h1>
-                    ACADEMIC <span style="color:#00AEEF">CONTRIBUTIONS</span>
-                    <i class="fa fa-external-link" aria-hidden="true" style="font-size: 30px"></i>
-                  </h1>
-                </a>
-              </div>
-            </div>
-
-            <div id="academic-contributions">
-              <!-- Research Articles -->
-              <div class="contribution-category">
-                <h2 class="category-title">📄 Research Articles</h2>
-                <div id="research-articles" class="contribution-list"></div>
-              </div>
-
-              <!-- Review Articles -->
-              <div class="contribution-category">
-                <h2 class="category-title">📝 Review Articles</h2>
-                <div id="review-articles" class="contribution-list"></div>
-              </div>
-
-              <!-- Popular Articles -->
-              <div class="contribution-category">
-                <h2 class="category-title">📰 Popular Articles</h2>
-                <div id="popular-articles" class="contribution-list"></div>
-              </div>
-
-              <!-- Books -->
-              <div class="contribution-category">
-                <h2 class="category-title">📚 Books</h2>
-                <div id="books" class="contribution-list"></div>
-              </div>
-
-              <!-- Book Chapters -->
-              <div class="contribution-category">
-                <h2 class="category-title">📖 Book Chapters</h2>
-                <div id="book-chapters" class="contribution-list"></div>
-              </div>
-
-              <!-- Conference Papers -->
-              <div class="contribution-category">
-                <h2 class="category-title">🎤 Conference Papers/Presentations</h2>
-                <div id="conference-papers" class="contribution-list"></div>
-              </div>
-
-              <!-- Reviewers -->
-              <div class="contribution-category">
-                <h2 class="category-title">👤 Reviewer</h2>
-                <div id="others" class="contribution-list"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="colorlib-experience" data-section="education">
-          <div class="colorlib-narrow-content">
-            <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-              <div class="about-desc">
-                <h1>My <span style="color: #00AEEF">Education</span></h1>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 animate-box fadeInUp animated">
-                <div class="education-table-wrapper">
-                  <table class="education-table">
-                    <thead>
-                      <tr>
-                        <th>Education</th>
-                        <th>College/University</th>
-                        <th>Mark [%]</th>
-                        <th>Year</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>PhD.</td>
-                        <td>Tamil Nadu Agricultural University</td>
-                        <td>-</td>
-                        <td>2027</td>
-                      </tr>
-                      <tr>
-                        <td>M. Sc.</td>
-                        <td>Tamil Nadu Agricultural University</td>
-                        <td>87.40</td>
-                        <td>2024</td>
-                      </tr>
-                      <tr>
-                        <td>B.Sc.</td>
-                        <td>SRS Institute of Agricultural and Technology</td>
-                        <td>76.50</td>
-                        <td>2022</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="colorlib-experience" data-section="certificates">
-          <div class="colorlib-narrow-content">
-            <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-              <div class="about-desc">
-                <h1>My <span style="color: #00AEEF">Certifications</span></h1>
-              </div>
-            </div>
-
-            <!-- Web Courses -->
-            <div class="certification-category animate-box fadeInUp animated">
-              <h2 class="category-heading">Web Courses</h2>
-              <div id="web-courses" class="certs-container"></div>
-            </div>
-
-          </div>
-      </div>
-      </section>
-
-      <!-- Certificate Modal -->
-      <div id="certificateModal" class="certificate-modal">
-        <div class="modal-content">
-          <button class="close-btn" onclick="closeCertificateModal()">
-            <i class="fa fa-times"></i>
-          </button>
-          <h2 id="modalCertificateTitle"></h2>
-          <div id="modalCertificateImagesContainer" class="certificate-images-container"></div>
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-border"></div>
+          <img src="assets/images/kamalesh.gif" alt="Kamalesh Kanna S" class="hero-image"
+            onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><rect fill=%22%231e293b%22 width=%22300%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%2394a3b8%22 font-size=%2264%22>👨‍🔬</text></svg>'">
         </div>
       </div>
-      <section class="colorlib-experience" data-section="awards">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Awards</span></h1>
-              <p>Awards and recognitions will be displayed here.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="membership">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Memberships</span></h1>
-              <p>Professional memberships and affiliations will be displayed here.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="license">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Licenses</span></h1>
-              <p>Professional licenses and credentials will be displayed here.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="courses">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Courses</span></h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
-              <div class="certification-category">
-                <div id="courses-standalone" class="certs-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="trainings">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Trainings</span></h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
-              <div class="certification-category">
-                <div id="trainings-standalone" class="certs-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="webinars">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Webinars</span></h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
-              <div class="certification-category">
-                <div id="webinars-standalone" class="certs-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="workshops">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Workshops</span></h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
-              <div class="certification-category">
-                <div id="workshops-standalone" class="certs-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="conferences">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Conferences</span></h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
-              <div class="certification-category">
-                <div id="conferences-standalone" class="certs-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="invited-talks">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Invited Talks, Guest Lectures & Workshops Conducted</span></h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
-              <div class="certification-category">
-                <div id="invited-talks-standalone" class="certs-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="hackathon">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Hackathons</span></h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 animate-box fadeInUp animated" data-animate-effect="fadeInUp">
-              <div class="certification-category">
-                <div id="hackathon-standalone" class="certs-container"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="guest-lectures">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>My <span style="color: #00AEEF">Guest Lectures</span></h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-experience" data-section="workshops-conducted">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1><span style="color: #00AEEF">Workshops</span> Conducted</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section class="colorlib-blogs no-print" data-section="blogs">
-          <div class="colorlib-narrow-content">
-            <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-              <div class="about-desc">
-                <a href="https://vinaysomawat.medium.com/" target="_blank" style="color: inherit">
-                  <h1>
-                    Latest <span style="color: #f9bf3f">Blogs</span>
-                    <i class="fa fa-external-link" aria-hidden="true" style="font-size: 30px"></i>
-                  </h1>
-                </a>
-              </div>
-            </div>
-            <ul id="accordion" class="accordion animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-              <li class="open">
-                <ul id="blogs" class="submenu" style="
-                    display: flex;
-                    padding: 10px;
-                    flex-direction: column;
-                    gap: 10px;
-                  ">
-                  <div class="blog-card"
-                    style="display: flex; flex-direction: column; border-radius: 12px; padding: 16px; font-size: 14px; background: linear-gradient(135deg, #4CCEFF, #00AEEF); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; min-height: 150px; cursor: pointer;">
-                    <a href="https://vinaysomawat.medium.com/optimizing-function-performance-in-javascript-with-memoization-69ff5b03b56f?source=rss-f850c4a0cecf------2"
-                      target="_blank" style="text-decoration: none; color: black; display: block;">
-                      <h4 class="blog-heading" style="margin: 0px 0px 8px; font-size: 18px; font-weight: bold;">
-                        Optimizing Function Performance in JavaScript with Memoization</h4>
-                      <p class="publish-date" style="margin: 0px 0px 12px; font-size: 12px; color: rgb(85, 85, 85);">4
-                        months ago</p>
-                      <p class="blog-description" style="margin: 0px 0px 12px; font-size: 12px; color: rgb(0, 0, 0);">In
-                        JavaScript, functions often perform repetitive tasks with the same input values. These repeated
-                        computations can slow down an application’s performance, especially when the function is
-                        resource-intensive. One effective solution to this problem is <strong>memoization</strong>.</p>
-                      <div style="display: flex; gap: 8px; margin-top: 12px;"><span class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">jsinterviews</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">memoization</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">caching</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">javascript</span>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="blog-card"
-                    style="display: flex; flex-direction: column; border-radius: 12px; padding: 16px; font-size: 14px; background: linear-gradient(135deg, #4CCEFF, #00AEEF); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; min-height: 150px; cursor: pointer;">
-                    <a href="https://vinaysomawat.medium.com/executing-promises-in-batches-with-javascript-de2bbcb9d341?source=rss-f850c4a0cecf------2"
-                      target="_blank" style="text-decoration: none; color: black; display: block;">
-                      <h4 class="blog-heading" style="margin: 0px 0px 8px; font-size: 18px; font-weight: bold;">
-                        Executing Promises in Batches with JavaScript</h4>
-                      <p class="publish-date" style="margin: 0px 0px 12px; font-size: 12px; color: rgb(85, 85, 85);">4
-                        months ago</p>
-                      <p class="blog-description" style="margin: 0px 0px 12px; font-size: 12px; color: rgb(0, 0, 0);">
-                        When working with asynchronous operations in JavaScript, such as API calls, there are times when
-                        you need to limit the number of concurrent operations to prevent overloading your system or
-                        third-party services. A common scenario is executing a large number of promises in manageable
-                        batches. In this post, we’ll explore how to achieve this by writing a simple yet effective
-                        `throttleAsync` function.</p>
-                      <div style="display: flex; gap: 8px; margin-top: 12px;"><span class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">interview-questions</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">asynchronous</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">frontend</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">javascript</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">frontend-interviews</span>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="blog-card"
-                    style="display: flex; flex-direction: column; border-radius: 12px; padding: 16px; font-size: 14px; background: linear-gradient(135deg, #4CCEFF, #00AEEF); box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; min-height: 150px; cursor: pointer;">
-                    <a href="https://vinaysomawat.medium.com/how-to-create-your-own-localstorage-with-expiry-time-in-javascript-02ed77d5b4f4?source=rss-f850c4a0cecf------2"
-                      target="_blank" style="text-decoration: none; color: black; display: block;">
-                      <h4 class="blog-heading" style="margin: 0px 0px 8px; font-size: 18px; font-weight: bold;">How to
-                        Create Your Own localStorage with Expiry Time in JavaScript</h4>
-                      <p class="publish-date" style="margin: 0px 0px 12px; font-size: 12px; color: rgb(85, 85, 85);">5
-                        months ago</p>
-                      <p class="blog-description" style="margin: 0px 0px 12px; font-size: 12px; color: rgb(0, 0, 0);">In
-                        web development, localStorage is a convenient way to store data in the browser. However, it
-                        doesn't support data expiration natively, meaning data stays in storage until explicitly
-                        removed. What if you want your stored data to expire automatically after a certain period? In
-                        this tutorial, I’ll show you how to create your own localStorage with an expiry time in
-                        JavaScript.</p>
-                      <div style="display: flex; gap: 8px; margin-top: 12px;"><span class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">frontend</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">interview</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">interview-questions</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">javascript</span><span
-                          class="badge"
-                          style="font-size: 12px; padding: 4px 8px; background-color: rgb(0, 122, 204); color: white; border-radius: 4px;">localstorage</span>
-                      </div>
-                    </a>
-                  </div>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </section> !-->
-      <section class="colorlib-contact" data-section="contact">
-        <div class="colorlib-narrow-content">
-          <div class="row row-bottom-padded-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft">
-            <div class="about-desc">
-              <h1>Contact</h1>
-            </div>
-            <p>
-              Feel free to email me at <strong>kamaleshkanna.skk@gmail.com</strong> for remote seisng & GIS works,
-              tech, development, designing, or just to say hello—I’d
-              love to hear from you!
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="colorlib-footer no-print" data-section="footer">
-        <div class="colorlib-narrow-content">
-          <footer class="footer" id="footer"><span class="col">
-              <p class="col-title">Links</p>
-              <nav class="col-list">
-                <ul>
-                  <li><a href="https://www.linkedin.com/in/kamalesh-kanna-s/" target="_blank">LinkedIn</a></li>
-                  <li><a href="https://www.researchgate.net/profile/Kamalesh-Kanna" target="_blank">ReserchGate</a>
-                  </li>
-                  <li><a href="https://github.com/KAPPI1925" target="_blank">GitHub</a></li>
-                  <li><a href="https://www.youtube.com/@MyDesktopTech" target="_blank">YouTube</a>
-                  </li>
-                  <li><a href="https://sites.google.com/view/mydesktoptamil/home" target="_blank">My Desktop Tech</a>
-                  </li>
-                  <li><a href="https://kamaleshkanna.medium.com/" target="_blank">Blog</a></li>
-                  <li><a href="https://www.instagram.com/kamaleshkanna_s/" target="_blank">Instagram</a></li>
-                  <li><a href="https://x.com/kamalesh0109" target="_blank">X</a></li>
-                </ul>
-              </nav>
-            </span>
-            <div class="copyright-text no-print">
-              <p>© My Desktop Tech 2018</p>
-              <p>🧭</p>
-            </div>
-          </footer>
-        </div>
-      </section>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ABOUT SECTION
+       ═══════════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About <span class="accent">Me</span></h2>
+        <span class="underline-animated"></span>
+      </div>
+      <div id="about-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       RESEARCH INTERESTS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="research">
+    <div class="container">
+      <div class="section-header">
+        <h2>Research <span class="accent">Interests</span></h2>
+        <span class="underline-animated"></span>
+        <p>Exploring the frontiers of geospatial science and technology</p>
+      </div>
+      <div class="research-grid" id="research-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PUBLICATIONS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="publications">
+    <div class="container">
+      <div class="section-header">
+        <h2>My <span class="accent">Publications</span></h2>
+        <span class="underline-animated"></span>
+        <p>Research contributions to remote sensing, GIS, and precision agriculture</p>
+      </div>
+      <div class="pub-tabs" id="pub-tabs"></div>
+      <div class="pub-container" id="pub-panels"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       EDUCATION
+       ═══════════════════════════════════════════════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <h2>My <span class="accent">Education</span></h2>
+        <span class="underline-animated"></span>
+        <p>Academic journey in agriculture and geospatial sciences</p>
+      </div>
+      <div id="education-timeline"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SKILLS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technical <span class="accent">Skills</span></h2>
+        <span class="underline-animated"></span>
+        <p>Tools and technologies I work with</p>
+      </div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       ACTIVITIES & CERTIFICATIONS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="activities">
+    <div class="container">
+      <div class="section-header">
+        <h2>Certifications & <span class="accent">Activities</span></h2>
+        <span class="underline-animated"></span>
+        <p>Courses, workshops, conferences, and professional development</p>
+      </div>
+      <div class="activities-tabs" id="activities-tabs"></div>
+      <div id="activities-panels"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       AWARDS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="awards">
+    <div class="container">
+      <div class="section-header">
+        <h2>Awards & <span class="accent">Recognition</span></h2>
+        <span class="underline-animated"></span>
+      </div>
+      <div class="awards-grid" id="awards-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT
+       ═══════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get in <span class="accent">Touch</span></h2>
+        <span class="underline-animated"></span>
+      </div>
+      <div class="contact-content" id="contact-content"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container" id="footer-content"></div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SCROLL TO TOP
+       ═══════════════════════════════════════════════════════ -->
+  <button class="scroll-top-btn" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CERTIFICATE LIGHTBOX MODAL
+       ═══════════════════════════════════════════════════════ -->
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <span class="lightbox-title"></span>
+        <span class="lightbox-counter"></span>
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="lightbox-body">
+        <button class="lightbox-nav prev" onclick="navigateLightbox(-1)" aria-label="Previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-image-wrapper"></div>
+        <button class="lightbox-nav next" onclick="navigateLightbox(1)" aria-label="Next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
     </div>
   </div>
-  </div>
 
-  <!-- Dark Mode Toggle Button -->
-  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-    <i class="fa fa-moon-o"></i>
-  </button>
+  <!-- ═══════════════════════════════════════════════════════
+       DATA FILES (loaded before app.js)
+       ═══════════════════════════════════════════════════════ -->
+  <script src="data/profile.js"></script>
+  <script src="data/publications.js"></script>
+  <script src="data/activities.js"></script>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
-    <i class="fa fa-chevron-up"></i>
-  </button>
+  <!-- ═══════════════════════════════════════════════════════
+       APPLICATION SCRIPTS
+       ═══════════════════════════════════════════════════════ -->
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 
 </html>
