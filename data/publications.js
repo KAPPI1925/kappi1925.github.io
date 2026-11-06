@@ -117,6 +117,29 @@ const PUBLICATIONS = {
   // ─── Book Chapters ───────────────────────────────────
   bookChapters: [
     {
+      title: "Computer Vision and Image Processing Techniques for Crop Monitoring and Disease Detection (Chapter 3)",
+      authors: "<b>Kamalesh Kanna Shanmuganathan</b> (co-author)",
+      year: "2027",
+      bookTitle: "Intelligent Agro-Technological Ecosystems: Architectures, Analytics, and Autonomous Innovations for Next-Generation Precision Agriculture",
+      publisher: "Intelligent Agro-Technological Ecosystems (eds. P. R. Anisha, Sarah Angeline, C. Kishor Kumar Reddy, Inam Ullah Khan, G. Tanusha) – NIPA, New Delhi (forthcoming)",
+      isbn: "978-81-674-2052-7 (Print) / 978-81-674-2053-4 (eBook)",
+      url: "https://www.nipaers.com/book/9788167420527/intelligent-agro-technological-ecosystems-architectures-analytics-and-autonomous-innovations-for-next-generation-precision-agriculture",
+      tags: ["Computer Vision", "Image Processing", "Crop Monitoring", "Disease Detection", "Precision Agriculture"],
+      coverImage: ""
+    },
+    {
+      title: "Maximising Crop Yield: AI Strategies for Improved Agricultural Output (Chapter 10)",
+      authors: "<b>Kamalesh Kanna Shanmuganathan</b>, Elanselvi A, Athira A Nair, Barathraj D, Keerthivasan Ragupathi",
+      year: "2027",
+      bookTitle: "Transforming Agriculture Through Artificial Intelligence: A New Era of Smart Farming",
+      publisher: "Transforming Agriculture Through Artificial Intelligence: A New Era of Smart Farming – NIPA, New Delhi, pp. 205–230",
+      isbn: "978-93-7219-738-9 (Print) / 978-93-7219-740-2 (eBook)",
+      url: "https://www.nipaers.com/book/9789372197389/transforming-agriculture-through-artificial-intelligence-a-new-era-of-smart-farming",
+      abstract: "This chapter reviews how artificial intelligence can raise crop productivity while reducing resource use. It covers AI models that combine soil, weather, crop-growth and remote sensing data for yield forecasting, fertiliser and water optimisation, genomic selection and market intelligence, and discusses the challenges of data availability, cost and model reliability.",
+      tags: ["Artificial Intelligence", "Crop Yield", "Yield Forecasting", "Smart Farming", "Remote Sensing"],
+      coverImage: ""
+    },
+    {
       title: "Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process",
       authors: "<b>Kamalesh Kanna Shanmuganathan</b>, Sivakumar Palraj, Athira A. Nair, V. P. Nithya Segar, Avinash Kanagaraj, Manimaran Gajendiran, Bharathi Mohandass",
       year: "2026",
