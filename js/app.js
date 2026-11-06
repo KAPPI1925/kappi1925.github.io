@@ -214,7 +214,33 @@
   }
 
   // ─── Counter Animations ─────────────────────────────────
-  function initCounterAnimations() {
+  // Citation metrics are refreshed weekly by .github/workflows/update-metrics.yml.
+  // Read straight from the repo (no Pages rebuild needed), then the local copy;
+  // if both fail, the numbers written in index.html are shown.
+  const METRICS_SOURCES = [
+    'https://raw.githubusercontent.com/KAPPI1925/kappi1925.github.io/main/data/metrics.json',
+    'data/metrics.json'
+  ];
+
+  async function loadMetrics() {
+    for (const url of METRICS_SOURCES) {
+      try {
+        const res = await fetch(url, { cache: 'no-cache' });
+        if (!res.ok) continue;
+        const m = await res.json();
+        const set = (id, v) => {
+          const el = document.getElementById(id);
+          if (el && Number.isFinite(v)) el.dataset.target = v;
+        };
+        set('stat-citations', Number(m.citations));
+        set('stat-hindex', Number(m.h_index));
+        return;
+      } catch (e) { /* try next source */ }
+    }
+  }
+
+  async function initCounterAnimations() {
+    await Promise.race([loadMetrics(), new Promise(r => setTimeout(r, 2500))]);
     const counters = document.querySelectorAll('.stat-number');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
