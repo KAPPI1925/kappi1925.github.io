@@ -141,6 +141,16 @@ const ACTIVITIES = {
     { title: "Viksit Rajasthan @2047 Quiz (MYBharat, Ministry of Youth Affairs & Sports)", year: "2026", certificatePath: "certifications/Others/2026 Viksit Rajasthan @2047 Quiz.png" }
   ],
 
+  // ─── Others (social service, cultural, early achievements) ─
+  others: [
+    { title: "Voluntary Blood Donation – Certificate of Appreciation (Govt. Blood Bank, Govt. Medical College & ESI Hospital, Coimbatore; TNSACS & TN State Blood Transfusion Council)", year: "2024", certificatePath: "certifications/Blood Donation/Blood Donation 2024_page_1.jpg" },
+    { title: "Voluntary Blood Donation – Certificate of Appreciation (Govt. Blood Bank; TNSACS & TN State Blood Transfusion Council)", year: "2019", certificatePath: "certifications/Blood Donation/Blood Donation 2023_page_1.jpg" },
+    { title: "Photography – Third Place, AMAZE Agrians '19 Inter-Collegiate Cultural Fest (Pushkaram College of Agriculture Sciences, Pudukkottai)", year: "2019", certificatePath: ["certifications/Others/Pushkaram photography.pdf_page_1.jpg", "certifications/Others/Pushkaram partic photography_page_1.jpg"] },
+    { title: "Karate – Yellow Belt, Certificate of Merit (Japan Shito-Ryu Karate School, Shukokai Izushi – India)", year: "2010", certificatePath: "certifications/Others/Karate_page_1.jpg" },
+    { title: "Abacus and Mental Arithmetic Programme – Second Level (S MAS Mental Abacus Education, India)", year: "2008", certificatePath: "certifications/Others/Abacus 2008_page_1.jpg" },
+    { title: "Abacus and Mental Arithmetic Programme – First Level (S MAS Mental Abacus Education, India)", year: "2007", certificatePath: "certifications/Others/Abacus 2007_page_1.jpg" }
+  ],
+
   // ─── Awards & Recognitions ──────────────────────────
   awards: [
     { title: "GeoHorizon'26 – 3 First Prizes & 2 Second Prizes (Anna University, Chennai)", year: "2026", certificatePath: ["certifications/Symposium/2026 CARTOLOGIC W.png", "certifications/Symposium/2026 GEOMYTH W.png", "certifications/Symposium/2026 IDEATHON W.png", "certifications/Symposium/2026 Geointel W.png", "certifications/Symposium/2026 MAP JAM W.png"] },

@@ -534,6 +534,7 @@
       { key: 'hackathons', label: 'Hackathons', icon: 'fa-code' },
       { key: 'competitions', label: 'Competitions', icon: 'fa-medal' },
       { key: 'quizzes', label: 'Quizzes', icon: 'fa-question-circle' },
+      { key: 'others', label: 'Others', icon: 'fa-star' },
       { key: 'memberships', label: 'Memberships', icon: 'fa-id-badge' }
     ];
 
