@@ -117,18 +117,30 @@
             <div class="stat-item">
               <div class="stat-number" id="stat-citations" data-target="58">0</div>
               <div class="stat-label">Citations</div>
+              <div class="stat-sub" id="stat-citations-since"></div>
             </div>
             <div class="stat-item">
               <div class="stat-number" id="stat-hindex" data-target="2">0</div>
               <div class="stat-label">h-Index</div>
+              <div class="stat-sub" id="stat-hindex-since"></div>
+            </div>
+            <div class="stat-item" id="stat-i10-item" hidden>
+              <div class="stat-number" id="stat-i10" data-target="0">0</div>
+              <div class="stat-label">i10-Index</div>
+              <div class="stat-sub" id="stat-i10-since"></div>
             </div>
           </div>
+          <div class="hero-cite-chart" id="hero-cite-chart" hidden></div>
           <div class="hero-actions">
             <a href="#publications" class="btn btn-primary">
               <i class="fas fa-file-alt"></i> View Publications
             </a>
             <a href="#contact" class="btn btn-outline">
               <i class="fas fa-envelope"></i> Get in Touch
+            </a>
+            <a href="https://scholar.google.com/citations?user=HGfTEjkAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline" id="scholar-profile-btn">
+              <i class="fas fa-graduation-cap"></i> Google Scholar
             </a>
           </div>
         </div>
@@ -303,6 +315,7 @@
        ═══════════════════════════════════════════════════════ -->
   <script src="js/particles.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/scholar.js"></script>
 
 </body>
 

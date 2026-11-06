@@ -1941,3 +1941,84 @@ button.pub-cert-btn {
 .medal-icon { color: var(--medal); margin-right: 4px; }
 .cert-view-btn.medal-btn { background: var(--medal-bg); border-color: var(--medal); color: var(--medal); }
 .cert-view-btn.medal-btn:hover { background: var(--medal); color: #000; }
+
+/* ─── Google Scholar add-ons (js/scholar.js) ───────────── */
+.stat-sub { font-size: 0.68rem; color: var(--text-muted); margin-top: 2px; font-family: 'JetBrains Mono', monospace; min-height: 1em; }
+.hero-cite-chart { margin: -12px 0 28px; animation: fadeSlideUp 0.6s ease both; }
+.hero-cite-chart[hidden] { display: none; }
+.cc-title { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 500; }
+.cc-title span { text-transform: none; letter-spacing: 0; opacity: 0.8; }
+.hero-cite-chart svg { overflow: visible; display: block; }
+.cc-bar { fill: var(--accent); opacity: 0.85; transition: opacity var(--transition-fast); }
+.hero-cite-chart g:hover .cc-bar { opacity: 1; }
+.cc-val { fill: var(--text-secondary); font: 600 11px 'JetBrains Mono', monospace; text-anchor: middle; }
+.cc-year { fill: var(--text-muted); font: 500 10px 'JetBrains Mono', monospace; text-anchor: middle; }
+
+.pub-sort { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: -20px 0 16px; font-size: 0.8rem; color: var(--text-muted); }
+.pub-sort-btn { background: none; border: 1px solid var(--border); color: var(--text-secondary); border-radius: var(--border-radius-full); padding: 4px 12px; font: 600 0.78rem inherit; font-family: inherit; cursor: pointer; transition: all var(--transition-fast); }
+.pub-sort-btn:hover { border-color: var(--accent); color: var(--accent); }
+.pub-sort-btn.active { background: var(--tag-bg); border-color: var(--accent); color: var(--accent); }
+
+.pub-cited-badge { font: 600 0.78rem 'JetBrains Mono', monospace; color: var(--gold); background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.35); padding: 3px 10px; border-radius: var(--border-radius-full); white-space: nowrap; text-decoration: none; transition: all var(--transition-fast); }
+.pub-cited-badge:hover { background: var(--gold); color: #000; }
+[data-theme="light"] .pub-cited-badge { color: #b7791f; border-color: rgba(183, 121, 31, 0.4); }
+.pub-scholar-record { font-size: 0.8rem; color: var(--text-secondary); margin: -4px 0 10px; }
+.pub-scholar-record i { color: var(--text-muted); margin-right: 4px; }
+.pub-spark { display: flex; align-items: flex-end; gap: 4px; height: 40px; margin-top: 12px; }
+.pub-spark-label { font-size: 0.7rem; color: var(--text-muted); align-self: center; margin-right: 6px; }
+.pub-spark-col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; width: 18px; }
+.pub-spark-bar { width: 12px; background: var(--accent); border-radius: 2px 2px 0 0; opacity: 0.8; }
+.pub-spark-year { font: 500 0.6rem 'JetBrains Mono', monospace; color: var(--text-muted); }
+.pub-card-actions { flex-wrap: wrap; }
+button.pub-cite-btn { background: none; border: none; padding: 0; font-family: inherit; cursor: pointer; }
+
+.pub-top-cited, .pub-coauthors { margin-bottom: 28px; }
+.pub-coauthors { margin-top: 36px; }
+.ptc-title { font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+.ptc-title i { color: var(--accent); margin-right: 6px; }
+.ptc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.ptc-card { text-align: left; display: flex; flex-direction: column; gap: 6px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--border-radius); padding: 16px; color: inherit; font-family: inherit; cursor: pointer; transition: all var(--transition-normal); }
+.ptc-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+.ptc-rank { font: 700 0.75rem 'JetBrains Mono', monospace; color: var(--accent); }
+.ptc-name { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); line-height: 1.4; }
+.ptc-venue { font-size: 0.75rem; color: var(--text-muted); font-style: italic; }
+.ptc-cites { font: 600 0.78rem 'JetBrains Mono', monospace; color: var(--gold); margin-top: auto; }
+[data-theme="light"] .ptc-cites { color: #b7791f; }
+@keyframes pubFlash { 0%, 100% { box-shadow: none; } 30% { box-shadow: 0 0 0 2px var(--accent), var(--shadow-glow); } }
+.pub-card.pub-flash { animation: pubFlash 1.6s ease; }
+
+.coauthor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.coauthor { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--border-radius); text-decoration: none; transition: border-color var(--transition-fast); }
+.coauthor:hover { border-color: var(--border-hover); }
+.coauthor-avatar { flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--tag-bg); color: var(--accent); font: 700 0.8rem 'JetBrains Mono', monospace; }
+.coauthor-text { display: flex; flex-direction: column; min-width: 0; }
+.coauthor-name { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); }
+.coauthor-aff { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.cite-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.75); display: none; align-items: center; justify-content: center; z-index: 10001; padding: 16px; }
+.cite-overlay.open { display: flex; }
+.cite-box { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--border-radius-lg); width: min(720px, 100%); max-height: 85vh; display: flex; flex-direction: column; box-shadow: var(--shadow-lg); }
+.cite-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border); font-weight: 700; color: var(--text-primary); }
+.cite-close { background: none; border: none; color: var(--text-muted); font-size: 1.1rem; cursor: pointer; }
+.cite-close:hover { color: var(--accent); }
+.cite-body { overflow-y: auto; padding: 12px 20px 16px; }
+.cite-row { display: grid; grid-template-columns: 90px 1fr auto; gap: 10px 14px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.cite-row > .cite-copy + .cite-copy { grid-column: 3; }
+.cite-style { font-size: 0.8rem; font-weight: 700; color: var(--accent); padding-top: 2px; }
+.cite-text { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; word-break: break-word; }
+.cite-bib { font: 0.75rem/1.5 'JetBrains Mono', monospace; white-space: pre-wrap; margin: 0; }
+.cite-copy { background: var(--tag-bg); border: 1px solid var(--accent); color: var(--accent); border-radius: var(--border-radius-full); padding: 4px 10px; font: 600 0.72rem inherit; font-family: inherit; cursor: pointer; white-space: nowrap; text-decoration: none; text-align: center; }
+.cite-copy:hover { background: var(--accent); color: #fff; }
+.cite-note { font-size: 0.72rem; color: var(--text-muted); margin-top: 10px; }
+@media (max-width: 560px) {
+  .cite-row { grid-template-columns: 1fr auto; }
+  .cite-style { grid-column: 1 / -1; }
+  .cite-row > .cite-copy + .cite-copy { grid-column: 2; }
+  .pub-sort { justify-content: center; margin-top: -16px; }
+  .pub-card-header { flex-wrap: wrap; }
+}
+@media (max-width: 1024px) {
+  .hero-cite-chart:not([hidden]) { display: flex; flex-direction: column; align-items: center; }
+}
+.hero-actions { flex-wrap: wrap; }
+.hero-actions .btn { white-space: nowrap; }

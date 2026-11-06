@@ -48,7 +48,7 @@ const PUBLICATIONS = {
     },
     {
       title: "Data Mining Techniques for LULC Analysis Using Sparse Labels and Multisource Data Integration for the Hilly Terrain of Nilgiris District, Tamil Nadu, India",
-      authors: "Kumaraperumal R, NivasRaj D, Pazhanivelan S, Jagadesh K, Duraisamy D, Muthumanickam D, Jagadeeswaran R, Karthikkumar A, <b>Kamalesh Kanna S</b>",
+      authors: "Kumaraperumal R, NivasRaj D, Pazhanivelan S, Jagadesh K, Duraisamy D, Muthumanickam D, Jagadeeswaran R, Karthikkumar A, <b>Kamalesh Kanna Shanmuganathan</b>",
       year: "2024",
       journal: "Earth Science Informatics, 18(1): 1–16",
       doi: "https://doi.org/10.1007/s12145-024-01586-y",
@@ -63,7 +63,7 @@ const PUBLICATIONS = {
   reviewArticles: [
     {
       title: "Geospatial Methods for SDG Aligned Natural Resource Management through Bibliometric and Systematic Review",
-      authors: "M. Ajay Prakash, K. P. Ragunath, S. Pazhanivelan, D. Muthumanickam, A. P. Sivamurugan, G. Vanitha, Fawaz Parapurath, <b>S. Kamalesh Kanna</b>, D. Sivakumar, Kumar Veluswamy",
+      authors: "M. Ajay Prakash, K. P. Ragunath, S. Pazhanivelan, D. Muthumanickam, A. P. Sivamurugan, G. Vanitha, Fawaz Parapurath, <b>Kamalesh Kanna Shanmuganathan</b>, D. Sivakumar, Kumar Veluswamy",
       year: "2026",
       journal: "Discover Sustainability (Springer Nature)",
       doi: "https://doi.org/10.1007/s43621-026-04510-0",
@@ -89,7 +89,7 @@ const PUBLICATIONS = {
   popularArticles: [
     {
       title: "YOLO in Floriculture: The Next Big Shift in Smart Flower Farming",
-      authors: "Keerthivasan Ragupathi, <b>Kamalesh Kanna S</b>, Nithish Kumar G, Akshya A",
+      authors: "Keerthivasan Ragupathi, <b>Kamalesh Kanna Shanmuganathan</b>, Nithish Kumar G, Akshya A",
       year: "2025",
       publisher: "Floriculture Today",
       url: "https://www.researchgate.net/publication/398995759_YOLO_in_Floriculture_The_Next_Big_Shift_in_Smart_Flower_Farming",
@@ -224,7 +224,7 @@ const PUBLICATIONS = {
   patents: [
     {
       title: "Soil Organic Matter Monitoring Device",
-      authors: "B. R. Iniyalakshimi, Avinash K, K. Chitra Devi, Bharathi M, <b>Kamalesh Kanna S</b>, Sivakumar P, Avinash C",
+      authors: "B. R. Iniyalakshimi, Avinash K, K. Chitra Devi, Bharathi M, <b>Kamalesh Kanna Shanmuganathan</b>, Sivakumar P, Avinash C",
       year: "2026",
       publisher: "Registered Design No. 491836-001 (Class 15-03), The Patent Office, Government of India · Registered 19 Feb 2026, certificate issued 27 May 2026",
       tags: ["Soil Organic Matter", "Sensor Device", "Design Registration"],

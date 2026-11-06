@@ -2,7 +2,7 @@ name: Update citation metrics
 
 on:
   schedule:
-    - cron: "30 2 * * 1"   # every Monday 02:30 UTC (08:00 IST)
+    - cron: "30 2 1 * *"   # 1st of every month, 02:30 UTC (08:00 IST)
   workflow_dispatch:        # "Run workflow" button in the Actions tab
     inputs:
       mode:
@@ -30,7 +30,7 @@ jobs:
           fi
       - name: Commit if changed
         run: |
-          git add -A data/metrics.json data/scholar_details.json data/scholar_cite.json 2>/dev/null || git add -A data/
+          git add -A data/metrics.json data/scholar_details.json data/scholar_links.json 2>/dev/null || git add -A data/
           if git diff --cached --quiet; then
             echo "No change in Scholar data."
           else

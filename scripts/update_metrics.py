@@ -1,14 +1,15 @@
 """Fetch Google Scholar data through SerpApi and write it for the website.
 
-Run by .github/workflows/update-metrics.yml (weekly). GitHub settings needed:
+Run by .github/workflows/update-metrics.yml on the 1st of every month. GitHub settings needed:
   secret   SERPAPI_KEY : SerpApi key (never commit it)
   variable SCHOLAR_ID  : the "user=" value of the Google Scholar profile URL
 
 Files written (only when something changed):
-  data/metrics.json         weekly  : totals, citations per year, article list, co-authors   (1 search)
-  data/scholar_details.json monthly : per-article record, citations per year, PDF links       (1 search per paper)
-  data/scholar_cite.json    once    : citation formats and free PDF links per paper            (2-4 searches per new paper)
-Details and citation formats are fetched only for Scholar articles whose title matches a paper in
+  data/metrics.json          monthly : totals, citations per year, article list, co-authors  (1 search)
+  data/scholar_details.json  monthly : per-article record, citations per year, PDF links      (1 search per paper)
+  data/scholar_links.json    once    : free PDF links per paper                               (1 search per new paper)
+Citation formats (APA, MLA, ...) are NOT taken from Scholar: the website builds them from data/publications.js.
+Details and links are fetched only for Scholar articles whose title matches a paper in
 data/publications.js, so wrong or duplicate Scholar entries cost nothing.
 If a request fails, the old file is kept so the website keeps the last good data.
 """
@@ -24,9 +25,8 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 DATA = os.path.join(ROOT, "data")
 METRICS = os.path.join(DATA, "metrics.json")
 DETAILS = os.path.join(DATA, "scholar_details.json")
-CITE = os.path.join(DATA, "scholar_cite.json")
-DETAILS_MAX_AGE_DAYS = 28
-OWNER_NAMES = ("Kanna", "Shanmuganathan", "Kamalesh")   # a citation record must name the owner, or it is not used
+LINKS = os.path.join(DATA, "scholar_links.json")
+DETAILS_MAX_AGE_DAYS = 25   # the job runs monthly, so details refresh every run
 
 KEY = os.environ.get("SERPAPI_KEY", "").strip()
 # Accept "HGfTEjkAAAAJ", "HGfTEjkAAAAJ&hl=en" or a full profile URL.
@@ -125,41 +125,19 @@ def fetch_details(cid):
     }
 
 
-def fetch_cite(x):
-    """Citation formats + free full-text links for one paper.
-
-    Scholar often holds several records of one paper, and some drop authors (one YOLO record leaves
-    out Kanna). Only a record whose APA text names the owner (OWNER_NAMES) is used; otherwise no formats.
-    BibTeX is built on the website from data/publications.js (Scholar's .bib links refuse GitHub's servers).
-    """
+def fetch_links(x):
+    """Free full-text (PDF) links for one paper: 1 search, done once per paper."""
     s = get({"engine": "google_scholar", "cluster": x["cites_id"]}) if x.get("cites_id") \
         else get({"engine": "google_scholar", "q": x["title"]})
-    hits = [r for r in s.get("organic_results", []) if same_title(r.get("title"), x["title"])]
-    if not hits:
-        print("No Scholar search match for", x["title"][:60])
-        return None
     pdf, seen = [], set()
-    for r in hits:
+    for r in s.get("organic_results", []):
+        if not same_title(r.get("title"), x["title"]):
+            continue
         for res in r.get("resources", []) or []:
             if res.get("link") and res["link"] not in seen:
                 seen.add(res["link"])
                 pdf.append({"title": res.get("title") or "", "file_format": res.get("file_format"), "link": res["link"]})
-    ct, tried = None, set()
-    for r in hits:
-        rid = r.get("result_id")
-        if not rid or rid in tried or len(tried) >= 3:
-            continue
-        tried.add(rid)
-        c = get({"engine": "google_scholar_cite", "q": rid})
-        apa = next((z.get("snippet", "") for z in c.get("citations", []) if z.get("title") == "APA"), "")
-        if any(n.lower() in apa.lower() for n in OWNER_NAMES):
-            ct = c
-            break
-        print("Skipped a record that leaves out the owner:", apa[:80])
-    if not ct:
-        return {"styles": [], "pdf": pdf}
-    return {"styles": [{"title": c.get("title"), "snippet": c.get("snippet")} for c in ct.get("citations", [])],
-            "pdf": pdf}
+    return {"pdf": pdf}
 
 
 def main() -> int:
@@ -238,22 +216,17 @@ def main() -> int:
     else:
         print(f"Details skipped (last refresh {age} days ago).")
 
-    # ---- once per paper: citation formats ----------------------------------
-    old_c = load(CITE, {"items": {}})
-    cites = dict(old_c.get("items", {}))
+    # ---- once per paper: free PDF links --------------------------------------
+    old_l = load(LINKS, {"items": {}})
+    links = dict(old_l.get("items", {}))
     for x in wanted:
-        have = cites.get(x["citation_id"])
-        # papers without usable formats are retried only on the monthly refresh
-        if have and (have.get("styles") or not refresh_all):
+        if x["citation_id"] in links:
             continue
         try:
-            rec = fetch_cite(x)
+            links[x["citation_id"]] = fetch_links(x)
         except Exception as e:
-            print("Cite failed for", x["title"][:60], "-", e)
-            continue
-        if rec:
-            cites[x["citation_id"]] = rec
-    save(CITE, {"items": cites}, old_c)
+            print("Links failed for", x["title"][:60], "-", e)
+    save(LINKS, {"items": links}, old_l)
 
     print("SerpApi searches used this run:", searches)
     return 0

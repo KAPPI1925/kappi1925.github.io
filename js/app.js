@@ -214,28 +214,50 @@
   }
 
   // ─── Counter Animations ─────────────────────────────────
-  // Citation metrics are refreshed weekly by .github/workflows/update-metrics.yml.
+  // Citation metrics are refreshed monthly by .github/workflows/update-metrics.yml.
   // Read straight from the repo (no Pages rebuild needed), then the local copy;
   // if both fail, the numbers written in index.html are shown.
-  const METRICS_SOURCES = [
-    'https://raw.githubusercontent.com/KAPPI1925/kappi1925.github.io/main/data/metrics.json',
-    'data/metrics.json'
+  // The same applies to scholar_details.json and scholar_links.json; js/scholar.js uses them.
+  const DATA_BASES = [
+    'https://raw.githubusercontent.com/KAPPI1925/kappi1925.github.io/main/data/',
+    'data/'
   ];
 
-  async function loadMetrics() {
-    for (const url of METRICS_SOURCES) {
+  async function fetchData(file) {
+    for (const base of DATA_BASES) {
       try {
-        const res = await fetch(url, { cache: 'no-cache' });
-        if (!res.ok) continue;
-        const m = await res.json();
-        const set = (id, v) => {
-          const el = document.getElementById(id);
-          if (el && Number.isFinite(v)) el.dataset.target = v;
-        };
-        set('stat-citations', Number(m.citations));
-        set('stat-hindex', Number(m.h_index));
-        return;
+        const res = await fetch(base + file, { cache: 'no-cache' });
+        if (res.ok) return await res.json();
       } catch (e) { /* try next source */ }
+    }
+    return null;
+  }
+
+  async function loadMetrics() {
+    const [metrics, details, links] = await Promise.all(
+      ['metrics.json', 'scholar_details.json', 'scholar_links.json'].map(fetchData));
+    window.SCHOLAR = { metrics, details, links };
+    document.dispatchEvent(new CustomEvent('scholar-data', { detail: window.SCHOLAR }));
+    const m = metrics;
+    if (!m) return;
+    const set = (id, v) => {
+      const el = document.getElementById(id);
+      if (el && v !== null && v !== undefined && Number.isFinite(Number(v))) { el.dataset.target = Number(v); return true; }
+      return false;
+    };
+    const since = (id, v) => {
+      const el = document.getElementById(id);
+      if (el && m.since_year && v !== null && v !== undefined) el.textContent = `${v} since ${m.since_year}`;
+    };
+    set('stat-citations', m.citations);
+    set('stat-hindex', m.h_index);
+    if (set('stat-i10', m.i10_index)) document.getElementById('stat-i10-item').hidden = false;
+    since('stat-citations-since', m.citations_since);
+    since('stat-hindex-since', m.h_index_since);
+    since('stat-i10-since', m.i10_index_since);
+    if (m.profile_url) {
+      const btn = document.getElementById('scholar-profile-btn');
+      if (btn) btn.href = m.profile_url;
     }
   }
 
@@ -465,7 +487,7 @@
       const certPaths = Array.isArray(item.certificatePath) ? item.certificatePath : (item.certificatePath ? [item.certificatePath] : []);
       const encodedCertPaths = certPaths.map(p => encodeURIComponent(p));
       return `
-        <div class="pub-card" style="animation-delay: ${i * 0.1}s">
+        <div class="pub-card" data-pub-key="${key}" data-pub-index="${i}" style="animation-delay: ${i * 0.1}s">
           <div class="pub-card-header">
             <h3>${item.title}</h3>
             <span class="pub-year">${item.year}</span>
