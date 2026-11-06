@@ -95,23 +95,82 @@
    "pdf": []
   },
   "HGfTEjkAAAAJ:PQYwNx7RetkC": {
-   "styles": [],
-   "bibtex": null,
+   "styles": [
+    {
+     "title": "MLA",
+     "snippet": "Vasanthakumar, M., et al. \"Beyond Parallel Trends: A Confounder-Adjusted, Spatially Explicit Test of Climate–Land-Use Associations in a Western Ghats-Adjacent Semi-Arid District, South India.\" Asian Journal of Geographical Research 9.4 (2026): 153-163."
+    },
+    {
+     "title": "APA",
+     "snippet": "Vasanthakumar, M., Sakthivel, R., Shanmuganathan, K. K., Siva, A. M., & Geethakarthi, A. (2026). Beyond Parallel Trends: A Confounder-Adjusted, Spatially Explicit Test of Climate–Land-Use Associations in a Western Ghats-Adjacent Semi-Arid District, South India. Asian Journal of Geographical Research, 9(4), 153-163."
+    },
+    {
+     "title": "Chicago",
+     "snippet": "Vasanthakumar, M., R. Sakthivel, Kamalesh Kanna Shanmuganathan, A. Mathesh Siva, and A. Geethakarthi. \"Beyond Parallel Trends: A Confounder-Adjusted, Spatially Explicit Test of Climate–Land-Use Associations in a Western Ghats-Adjacent Semi-Arid District, South India.\" Asian Journal of Geographical Research 9, no. 4 (2026): 153-163."
+    },
+    {
+     "title": "Harvard",
+     "snippet": "Vasanthakumar, M., Sakthivel, R., Shanmuganathan, K.K., Siva, A.M. and Geethakarthi, A., 2026. Beyond Parallel Trends: A Confounder-Adjusted, Spatially Explicit Test of Climate–Land-Use Associations in a Western Ghats-Adjacent Semi-Arid District, South India. Asian Journal of Geographical Research, 9(4), pp.153-163."
+    },
+    {
+     "title": "Vancouver",
+     "snippet": "Vasanthakumar M, Sakthivel R, Shanmuganathan KK, Siva AM, Geethakarthi A. Beyond Parallel Trends: A Confounder-Adjusted, Spatially Explicit Test of Climate–Land-Use Associations in a Western Ghats-Adjacent Semi-Arid District, South India. Asian Journal of Geographical Research. 2026 Sep 28;9(4):153-63."
+    }
+   ],
    "pdf": []
   },
   "HGfTEjkAAAAJ:Ui6Ig_dFDbcC": {
    "styles": [],
-   "bibtex": null,
    "pdf": []
   },
   "HGfTEjkAAAAJ:oR5SthnA400C": {
-   "styles": [],
-   "bibtex": null,
+   "styles": [
+    {
+     "title": "MLA",
+     "snippet": "Shanmuganathan, Kamalesh Kanna, et al. \"Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process.\" Geospatial Application of Coastal Hazards: Monitoring, Mitigation, Adaptation and Prediction. Cham: Springer Nature Switzerland, 2026. 163-189."
+    },
+    {
+     "title": "APA",
+     "snippet": "Shanmuganathan, K. K., Palraj, S., Nair, A. A., Segar, V. N., Kanagaraj, A., Gajendiran, M., & Mohandass, B. (2026). Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process. In Geospatial Application of Coastal Hazards: Monitoring, Mitigation, Adaptation and Prediction (pp. 163-189). Cham: Springer Nature Switzerland."
+    },
+    {
+     "title": "Chicago",
+     "snippet": "Shanmuganathan, Kamalesh Kanna, Sivakumar Palraj, Athira A. Nair, VP Nithya Segar, Avinash Kanagaraj, Manimaran Gajendiran, and Bharathi Mohandass. \"Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process.\" In Geospatial Application of Coastal Hazards: Monitoring, Mitigation, Adaptation and Prediction, pp. 163-189. Cham: Springer Nature Switzerland, 2026."
+    },
+    {
+     "title": "Harvard",
+     "snippet": "Shanmuganathan, K.K., Palraj, S., Nair, A.A., Segar, V.N., Kanagaraj, A., Gajendiran, M. and Mohandass, B., 2026. Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process. In Geospatial Application of Coastal Hazards: Monitoring, Mitigation, Adaptation and Prediction (pp. 163-189). Cham: Springer Nature Switzerland."
+    },
+    {
+     "title": "Vancouver",
+     "snippet": "Shanmuganathan KK, Palraj S, Nair AA, Segar VN, Kanagaraj A, Gajendiran M, Mohandass B. Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process. InGeospatial Application of Coastal Hazards: Monitoring, Mitigation, Adaptation and Prediction 2026 Jul 2 (pp. 163-189). Cham: Springer Nature Switzerland."
+    }
+   ],
    "pdf": []
   },
   "HGfTEjkAAAAJ:7q08wCQPkLwC": {
-   "styles": [],
-   "bibtex": null,
+   "styles": [
+    {
+     "title": "MLA",
+     "snippet": "Manimaran, G., et al. \"Soil Moisture Evaluation by Artificial Intelligence and Computer Vision.\" Artificial Intelligence and Computer Vision for Ecological Informatics. CRC Press, 2025. 274-293."
+    },
+    {
+     "title": "APA",
+     "snippet": "Manimaran, G., Avinash, K., Mageshen, V. R., Kamalesh, K. S., & Aswitha, K. (2025). Soil Moisture Evaluation by Artificial Intelligence and Computer Vision. In Artificial Intelligence and Computer Vision for Ecological Informatics (pp. 274-293). CRC Press."
+    },
+    {
+     "title": "Chicago",
+     "snippet": "Manimaran, G., K. Avinash, V. R. Mageshen, Kanna S. Kamalesh, and K. Aswitha. \"Soil Moisture Evaluation by Artificial Intelligence and Computer Vision.\" In Artificial Intelligence and Computer Vision for Ecological Informatics, pp. 274-293. CRC Press, 2025."
+    },
+    {
+     "title": "Harvard",
+     "snippet": "Manimaran, G., Avinash, K., Mageshen, V.R., Kamalesh, K.S. and Aswitha, K., 2025. Soil Moisture Evaluation by Artificial Intelligence and Computer Vision. In Artificial Intelligence and Computer Vision for Ecological Informatics (pp. 274-293). CRC Press."
+    },
+    {
+     "title": "Vancouver",
+     "snippet": "Manimaran G, Avinash K, Mageshen VR, Kamalesh KS, Aswitha K. Soil Moisture Evaluation by Artificial Intelligence and Computer Vision. InArtificial Intelligence and Computer Vision for Ecological Informatics 2025 Aug 27 (pp. 274-293). CRC Press."
+    }
+   ],
    "pdf": []
   },
   "HGfTEjkAAAAJ:BDTQWqO089sC": {
