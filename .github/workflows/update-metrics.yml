@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "30 2 * * 1"   # every Monday 02:30 UTC (08:00 IST)
   workflow_dispatch:        # "Run workflow" button in the Actions tab
+    inputs:
+      mode:
+        description: "normal / discover (print response shapes only)"
+        default: normal
 
 permissions:
   contents: write
@@ -17,7 +21,12 @@ jobs:
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           SCHOLAR_ID: ${{ vars.SCHOLAR_ID }}
-        run: python3 scripts/update_metrics.py
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "discover" ]; then
+            python3 scripts/scholar_discover.py
+          else
+            python3 scripts/update_metrics.py
+          fi
       - name: Commit if changed
         run: |
           if git diff --quiet -- data/metrics.json; then
