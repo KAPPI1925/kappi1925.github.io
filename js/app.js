@@ -666,15 +666,17 @@
     return `<ul class="cert-list">${arr.map(item => {
       const paths = Array.isArray(item.certificatePath) ? item.certificatePath : (item.certificatePath ? [item.certificatePath] : []);
       const encodedPaths = paths.map(p => encodeURIComponent(p));
+      const medal = ['gold', 'silver', 'bronze'].includes(item.medal) ? item.medal : '';
+      const medalLabel = { gold: 'First place', silver: 'Second place', bronze: 'Third place' }[medal] || '';
       return `
         <li class="cert-item">
           <div class="cert-item-header">
             <div class="cert-item-info">
-              <div class="cert-item-title">${item.title}</div>
+              <div class="cert-item-title">${medal ? `<i class="fas fa-medal medal-icon medal-${medal}" title="${medalLabel}"></i> ` : ''}${item.title}</div>
               <div class="cert-item-year">${item.year}</div>
             </div>
             ${paths.length > 0 ? `
-              <button class="cert-view-btn" data-images='${JSON.stringify(encodedPaths)}' data-title="${escapeAttr(item.title)}">
+              <button class="cert-view-btn${medal ? ` medal-btn medal-${medal}` : ''}" data-images='${JSON.stringify(encodedPaths)}' data-title="${escapeAttr(item.title)}">
                 <i class="fas fa-certificate"></i> View Certificate
               </button>
             ` : ''}

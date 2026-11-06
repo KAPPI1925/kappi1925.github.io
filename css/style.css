@@ -1930,3 +1930,14 @@ button.pub-cert-btn {
   font-family: inherit;
   cursor: pointer;
 }
+
+/* ─── Medal badges (1st / 2nd / 3rd place) ────────────── */
+.medal-gold   { --medal: #fbbf24; --medal-bg: rgba(251, 191, 36, 0.1); }
+.medal-silver { --medal: #a8b3c2; --medal-bg: rgba(168, 179, 194, 0.12); }
+.medal-bronze { --medal: #cd7f32; --medal-bg: rgba(205, 127, 50, 0.12); }
+[data-theme="light"] .medal-gold   { --medal: #b7791f; }
+[data-theme="light"] .medal-silver { --medal: #64748b; }
+[data-theme="light"] .medal-bronze { --medal: #a0522d; }
+.medal-icon { color: var(--medal); margin-right: 4px; }
+.cert-view-btn.medal-btn { background: var(--medal-bg); border-color: var(--medal); color: var(--medal); }
+.cert-view-btn.medal-btn:hover { background: var(--medal); color: #000; }
