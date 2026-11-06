@@ -7,7 +7,7 @@ Run by .github/workflows/update-metrics.yml (weekly). GitHub settings needed:
 Files written (only when something changed):
   data/metrics.json         weekly  : totals, citations per year, article list, co-authors   (1 search)
   data/scholar_details.json monthly : per-article record, citations per year, PDF links       (1 search per paper)
-  data/scholar_cite.json    once    : citation formats, BibTeX, free PDF links per paper      (2-4 searches per new paper)
+  data/scholar_cite.json    once    : citation formats and free PDF links per paper            (2-4 searches per new paper)
 Details and citation formats are fetched only for Scholar articles whose title matches a paper in
 data/publications.js, so wrong or duplicate Scholar entries cost nothing.
 If a request fails, the old file is kept so the website keeps the last good data.
@@ -26,7 +26,7 @@ METRICS = os.path.join(DATA, "metrics.json")
 DETAILS = os.path.join(DATA, "scholar_details.json")
 CITE = os.path.join(DATA, "scholar_cite.json")
 DETAILS_MAX_AGE_DAYS = 28
-OWNER_SURNAME = "Kanna"   # a citation record must contain this, or it is not used
+OWNER_NAMES = ("Kanna", "Shanmuganathan", "Kamalesh")   # a citation record must name the owner, or it is not used
 
 KEY = os.environ.get("SERPAPI_KEY", "").strip()
 # Accept "HGfTEjkAAAAJ", "HGfTEjkAAAAJ&hl=en" or a full profile URL.
@@ -129,7 +129,8 @@ def fetch_cite(x):
     """Citation formats + free full-text links for one paper.
 
     Scholar often holds several records of one paper, and some drop authors (one YOLO record leaves
-    out Kanna). Only a record whose APA text contains OWNER_SURNAME is used; otherwise no formats.
+    out Kanna). Only a record whose APA text names the owner (OWNER_NAMES) is used; otherwise no formats.
+    BibTeX is built on the website from data/publications.js (Scholar's .bib links refuse GitHub's servers).
     """
     s = get({"engine": "google_scholar", "cluster": x["cites_id"]}) if x.get("cites_id") \
         else get({"engine": "google_scholar", "q": x["title"]})
@@ -151,25 +152,14 @@ def fetch_cite(x):
         tried.add(rid)
         c = get({"engine": "google_scholar_cite", "q": rid})
         apa = next((z.get("snippet", "") for z in c.get("citations", []) if z.get("title") == "APA"), "")
-        if OWNER_SURNAME.lower() in apa.lower():
+        if any(n.lower() in apa.lower() for n in OWNER_NAMES):
             ct = c
             break
-        print("Skipped a record without", OWNER_SURNAME, "in its authors:", apa[:80])
+        print("Skipped a record that leaves out the owner:", apa[:80])
     if not ct:
-        return {"styles": [], "bibtex": None, "pdf": pdf}
-    bibtex = None
-    for link in ct.get("links", []):
-        if link.get("name") == "BibTeX" and link.get("link"):
-            try:  # the download link expires within minutes, so fetch the text now
-                req = urllib.request.Request(link["link"], headers={"User-Agent": "Mozilla/5.0"})
-                with urllib.request.urlopen(req, timeout=30) as r:
-                    txt = r.read().decode("utf-8", "replace").strip()
-                if txt.startswith("@"):
-                    bibtex = txt
-            except Exception as e:
-                print("BibTeX download failed for", x["title"][:60], "-", e)
+        return {"styles": [], "pdf": pdf}
     return {"styles": [{"title": c.get("title"), "snippet": c.get("snippet")} for c in ct.get("citations", [])],
-            "bibtex": bibtex, "pdf": pdf}
+            "pdf": pdf}
 
 
 def main() -> int:
@@ -252,7 +242,9 @@ def main() -> int:
     old_c = load(CITE, {"items": {}})
     cites = dict(old_c.get("items", {}))
     for x in wanted:
-        if x["citation_id"] in cites:
+        have = cites.get(x["citation_id"])
+        # papers without usable formats are retried only on the monthly refresh
+        if have and (have.get("styles") or not refresh_all):
             continue
         try:
             rec = fetch_cite(x)
