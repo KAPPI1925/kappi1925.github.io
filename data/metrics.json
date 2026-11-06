@@ -1,7 +1,166 @@
 {
-  "citations": 94,
-  "h_index": 2,
-  "i10_index": 1,
-  "source": "Google Scholar (via SerpApi)",
-  "updated": "2026-11-06"
+ "citations": 94,
+ "h_index": 2,
+ "i10_index": 1,
+ "since_year": 2021,
+ "citations_since": 94,
+ "h_index_since": 2,
+ "i10_index_since": 1,
+ "graph": [
+  {
+   "year": 2025,
+   "citations": 36
+  },
+  {
+   "year": 2026,
+   "citations": 57
+  }
+ ],
+ "profile_url": "https://scholar.google.com/citations?user=HGfTEjkAAAAJ&hl=en",
+ "articles": [
+  {
+   "title": "YOLO deep learning algorithm for object detection in agriculture: a review",
+   "citation_id": "HGfTEjkAAAAJ:j2GSQqY3pL0C",
+   "authors": "K Kanna, K Ramalingam, P Pazhanivelan, R Jagadeeswaran, PC Prabu",
+   "publication": "Journal of Agricultural Engineering 55 (4), 2024",
+   "year": "2024",
+   "cited_by": 84,
+   "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4006049037578166183",
+   "cites_id": "4006049037578166183"
+  },
+  {
+   "title": "Data mining techniques for LULC analysis using sparse labels and multisource data integration for the hilly terrain of Nilgiris district, Tamil Nadu, India",
+   "citation_id": "HGfTEjkAAAAJ:Ei5r6KrKXVQC",
+   "authors": "R Kumaraperumal, MN Raj, S Pazhanivelan, M Jagadesh, D Selvi, ...",
+   "publication": "Earth Science Informatics 18 (1), 13, 2025",
+   "year": "2025",
+   "cited_by": 9,
+   "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2360083267668448160",
+   "cites_id": "2360083267668448160"
+  },
+  {
+   "title": "Soil order classification using deep learning architecture and multimodal covariate integration",
+   "citation_id": "HGfTEjkAAAAJ:GO5CT2y9xrEC",
+   "authors": "NR Moorthi, K Ramalingam, M Dhanraju, J Ramasamy, P Prajesh, ...",
+   "publication": "2024 IEEE India Geoscience and Remote Sensing Symposium (InGARSS), 1-4, 2024",
+   "year": "2024",
+   "cited_by": 1,
+   "cited_by_link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15615248406335007035",
+   "cites_id": "15615248406335007035"
+  },
+  {
+   "title": "Beyond Parallel Trends: A Confounder-Adjusted, Spatially Explicit Test of Climate–Land-Use Associations in a Western Ghats-Adjacent Semi-Arid District, South India",
+   "citation_id": "HGfTEjkAAAAJ:PQYwNx7RetkC",
+   "authors": "M Vasanthakumar, R Sakthivel, KK Shanmuganathan, AM Siva, ...",
+   "publication": "Asian Journal of Geographical Research 9 (4), 153-163, 2026",
+   "year": "2026",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  },
+  {
+   "title": "Geospatial methods for SDG aligned natural resource management through bibliometric and systematic review",
+   "citation_id": "HGfTEjkAAAAJ:Ui6Ig_dFDbcC",
+   "authors": "MA Prakash, KP Ragunath, S Pazhanivelan, D Muthumanickam, ...",
+   "publication": "Discover Sustainability, 2026",
+   "year": "2026",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  },
+  {
+   "title": "Geospatial Methods for SDG-Aligned Land and Water Resource Management: A Bibliometric and Systematic Review of Research Trends (2021–2026)",
+   "citation_id": "HGfTEjkAAAAJ:6Dd5luMImnEC",
+   "authors": "A Prakash, KP Ragunath, S Pazhanivelan, D Muthumanickam, ...",
+   "publication": null,
+   "year": "2026",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  },
+  {
+   "title": "Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process",
+   "citation_id": "HGfTEjkAAAAJ:oR5SthnA400C",
+   "authors": "KK Shanmuganathan, S Palraj, AA Nair, VPN Segar, A Kanagaraj, ...",
+   "publication": "Geospatial Application of Coastal Hazards: Monitoring, Mitigation …, 2026",
+   "year": "2026",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  },
+  {
+   "title": "Soil Moisture Evaluation by Artificial Intelligence and Computer Vision",
+   "citation_id": "HGfTEjkAAAAJ:7q08wCQPkLwC",
+   "authors": "G Manimaran, K Avinash, VR Mageshen, KS Kamalesh, K Aswitha",
+   "publication": "Artificial Intelligence and Computer Vision for Ecological Informatics, 274-293, 2025",
+   "year": "2025",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  },
+  {
+   "title": "Assessment of land use and land cover mapping using object-based classification techniques for the eastern districts of Tamil Nadu",
+   "citation_id": "HGfTEjkAAAAJ:BDTQWqO089sC",
+   "authors": "R Kumaraperumal, S Pazhanivelan, D Muthumanickam, KP Ragunath, ...",
+   "publication": "Plant Science Today 12 (2), 2025",
+   "year": "2025",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  },
+  {
+   "title": "Global Agri Vision",
+   "citation_id": "HGfTEjkAAAAJ:IvSMUa3B7yYC",
+   "authors": "K Avinash, S Ahash, M Bharathi, J Lekhavarsinee, G Manimaran, ...",
+   "publication": null,
+   "year": "2023",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  },
+  {
+   "title": "Devasri Moovendran",
+   "citation_id": "HGfTEjkAAAAJ:BulkYocH2doC",
+   "authors": "A Palpandi, V Muruganantham",
+   "publication": null,
+   "year": "",
+   "cited_by": 0,
+   "cited_by_link": null,
+   "cites_id": null
+  }
+ ],
+ "co_authors": [
+  {
+   "name": "kumaraperumal ramalingam",
+   "affiliations": "Tamil Nadu Agricultural University",
+   "link": "https://scholar.google.com/citations?user=W3Ei-d8AAAAJ&hl=en"
+  },
+  {
+   "name": "Jagadeeswaran Ramasamy",
+   "affiliations": "Tamil Nadu Agricultural University",
+   "link": "https://scholar.google.com/citations?user=ff3sxpEAAAAJ&hl=en"
+  },
+  {
+   "name": "PRABU P.C",
+   "affiliations": "Associate Professor",
+   "link": "https://scholar.google.com/citations?user=7GtFmzEAAAAJ&hl=en"
+  },
+  {
+   "name": "Muthumanickam Dhanaraju",
+   "affiliations": "Professor (SS&AC)",
+   "link": "https://scholar.google.com/citations?user=DhwQZykAAAAJ&hl=en"
+  },
+  {
+   "name": "Sellaperumal Pazhanivelan",
+   "affiliations": "Tamilnadu Agricultural University",
+   "link": "https://scholar.google.com/citations?user=V17fVy4AAAAJ&hl=en"
+  },
+  {
+   "name": "Nivas Raj Moorthi",
+   "affiliations": "Senior Research Fellow",
+   "link": "https://scholar.google.com/citations?user=KQTIH08AAAAJ&hl=en"
+  }
+ ],
+ "source": "Google Scholar (via SerpApi)",
+ "updated": "2026-11-06"
 }

@@ -1,0 +1,145 @@
+{
+ "items": {
+  "HGfTEjkAAAAJ:j2GSQqY3pL0C": {
+   "styles": [
+    {
+     "title": "MLA",
+     "snippet": "Kanna S, Kamalesh, Kumaraperumal Ramalingam, and Prabu PC. \"YOLO deep learning algorithm for object detection in agriculture: a review.\" Journal of Agricultural Engineering (1974-7071) 55.4 (2024): 1."
+    },
+    {
+     "title": "APA",
+     "snippet": "Kanna S, K., Ramalingam, K., & PC, P. (2024). YOLO deep learning algorithm for object detection in agriculture: a review. Journal of Agricultural Engineering (1974-7071), 55(4), 1."
+    },
+    {
+     "title": "Chicago",
+     "snippet": "Kanna S, Kamalesh, Kumaraperumal Ramalingam, and Prabu PC. \"YOLO deep learning algorithm for object detection in agriculture: a review.\" Journal of Agricultural Engineering (1974-7071) 55, no. 4 (2024): 1."
+    },
+    {
+     "title": "Harvard",
+     "snippet": "Kanna S, K., Ramalingam, K. and PC, P., 2024. YOLO deep learning algorithm for object detection in agriculture: a review. Journal of Agricultural Engineering (1974-7071), 55(4), p.1."
+    },
+    {
+     "title": "Vancouver",
+     "snippet": "Kanna S K, Ramalingam K, PC P. YOLO deep learning algorithm for object detection in agriculture: a review. Journal of Agricultural Engineering (1974-7071). 2024 Oct 1;55(4):1."
+    }
+   ],
+   "bibtex": null,
+   "pdf": [
+    {
+     "title": "agroengineering.org",
+     "file_format": "PDF",
+     "link": "https://www.agroengineering.org/jae/article/download/1641/1256"
+    },
+    {
+     "title": "semanticscholar.org",
+     "file_format": "PDF",
+     "link": "https://pdfs.semanticscholar.org/e29b/548bba86271e67da4dbcafde786b181eb464.pdf"
+    },
+    {
+     "title": "agroengineering.org",
+     "file_format": "PDF",
+     "link": "https://www.agroengineering.org/jae/article/download/1641/1256/11360"
+    }
+   ]
+  },
+  "HGfTEjkAAAAJ:Ei5r6KrKXVQC": {
+   "styles": [
+    {
+     "title": "MLA",
+     "snippet": "Kumaraperumal, Ramalingam, et al. \"Data mining techniques for LULC analysis using sparse labels and multisource data integration for the hilly terrain of Nilgiris district, Tamil Nadu, India.\" Earth Science Informatics 18.1 (2025): 13."
+    },
+    {
+     "title": "APA",
+     "snippet": "Kumaraperumal, R., Raj, M. N., Pazhanivelan, S., Jagadesh, M., Selvi, D., Muthumanickam, D., ... & Kanna, S. K. (2025). Data mining techniques for LULC analysis using sparse labels and multisource data integration for the hilly terrain of Nilgiris district, Tamil Nadu, India. Earth Science Informatics, 18(1), 13."
+    },
+    {
+     "title": "Chicago",
+     "snippet": "Kumaraperumal, Ramalingam, Moorthi Nivas Raj, Sellaperumal Pazhanivelan, M. Jagadesh, Duraisamy Selvi, Dhanaraju Muthumanickam, Ramasamy Jagadeeswaran, A. Karthikkumar, and S. Kamalesh Kanna. \"Data mining techniques for LULC analysis using sparse labels and multisource data integration for the hilly terrain of Nilgiris district, Tamil Nadu, India.\" Earth Science Informatics 18, no. 1 (2025): 13."
+    },
+    {
+     "title": "Harvard",
+     "snippet": "Kumaraperumal, R., Raj, M.N., Pazhanivelan, S., Jagadesh, M., Selvi, D., Muthumanickam, D., Jagadeeswaran, R., Karthikkumar, A. and Kanna, S.K., 2025. Data mining techniques for LULC analysis using sparse labels and multisource data integration for the hilly terrain of Nilgiris district, Tamil Nadu, India. Earth Science Informatics, 18(1), p.13."
+    },
+    {
+     "title": "Vancouver",
+     "snippet": "Kumaraperumal R, Raj MN, Pazhanivelan S, Jagadesh M, Selvi D, Muthumanickam D, Jagadeeswaran R, Karthikkumar A, Kanna SK. Data mining techniques for LULC analysis using sparse labels and multisource data integration for the hilly terrain of Nilgiris district, Tamil Nadu, India. Earth Science Informatics. 2025 Jan;18(1):13."
+    }
+   ],
+   "bibtex": null,
+   "pdf": []
+  },
+  "HGfTEjkAAAAJ:GO5CT2y9xrEC": {
+   "styles": [
+    {
+     "title": "MLA",
+     "snippet": "Moorthi, Nivas Raj, et al. \"Soil order classification using deep learning architecture and multimodal covariate integration.\" 2024 IEEE India Geoscience and Remote Sensing Symposium (InGARSS). IEEE, 2024."
+    },
+    {
+     "title": "APA",
+     "snippet": "Moorthi, N. R., Ramalingam, K., Dhanraju, M., Ramasamy, J., Prajesh, P., & Kanna, S. K. (2024, December). Soil order classification using deep learning architecture and multimodal covariate integration. In 2024 IEEE India Geoscience and Remote Sensing Symposium (InGARSS) (pp. 1-4). IEEE."
+    },
+    {
+     "title": "Chicago",
+     "snippet": "Moorthi, Nivas Raj, Kumaraperumal Ramalingam, Muthumanickam Dhanraju, Jagadeeswaran Ramasamy, Pj Prajesh, and S. Kamalesh Kanna. \"Soil order classification using deep learning architecture and multimodal covariate integration.\" In 2024 IEEE India Geoscience and Remote Sensing Symposium (InGARSS), pp. 1-4. IEEE, 2024."
+    },
+    {
+     "title": "Harvard",
+     "snippet": "Moorthi, N.R., Ramalingam, K., Dhanraju, M., Ramasamy, J., Prajesh, P. and Kanna, S.K., 2024, December. Soil order classification using deep learning architecture and multimodal covariate integration. In 2024 IEEE India Geoscience and Remote Sensing Symposium (InGARSS) (pp. 1-4). IEEE."
+    },
+    {
+     "title": "Vancouver",
+     "snippet": "Moorthi NR, Ramalingam K, Dhanraju M, Ramasamy J, Prajesh P, Kanna SK. Soil order classification using deep learning architecture and multimodal covariate integration. In2024 IEEE India Geoscience and Remote Sensing Symposium (InGARSS) 2024 Dec 2 (pp. 1-4). IEEE."
+    }
+   ],
+   "bibtex": null,
+   "pdf": []
+  },
+  "HGfTEjkAAAAJ:PQYwNx7RetkC": {
+   "styles": [],
+   "bibtex": null,
+   "pdf": []
+  },
+  "HGfTEjkAAAAJ:Ui6Ig_dFDbcC": {
+   "styles": [],
+   "bibtex": null,
+   "pdf": []
+  },
+  "HGfTEjkAAAAJ:oR5SthnA400C": {
+   "styles": [],
+   "bibtex": null,
+   "pdf": []
+  },
+  "HGfTEjkAAAAJ:7q08wCQPkLwC": {
+   "styles": [],
+   "bibtex": null,
+   "pdf": []
+  },
+  "HGfTEjkAAAAJ:BDTQWqO089sC": {
+   "styles": [
+    {
+     "title": "MLA",
+     "snippet": "Kumaraperumal, R., et al. \"Assessment of land use and land cover mapping using object-based classification techniques for the eastern districts of Tamil Nadu.\" Plant Science Today 12.2 (2025)."
+    },
+    {
+     "title": "APA",
+     "snippet": "Kumaraperumal, R., Pazhanivelan, S., Muthumanickam, D., Ragunath, K. P., Selvakumar, S., & Kamaleshkanna, S. (2025). Assessment of land use and land cover mapping using object-based classification techniques for the eastern districts of Tamil Nadu. Plant Science Today, 12(2)."
+    },
+    {
+     "title": "Chicago",
+     "snippet": "Kumaraperumal, R., S. Pazhanivelan, D. Muthumanickam, K. P. Ragunath, S. Selvakumar, and S. Kamaleshkanna. \"Assessment of land use and land cover mapping using object-based classification techniques for the eastern districts of Tamil Nadu.\" Plant Science Today 12, no. 2 (2025)."
+    },
+    {
+     "title": "Harvard",
+     "snippet": "Kumaraperumal, R., Pazhanivelan, S., Muthumanickam, D., Ragunath, K.P., Selvakumar, S. and Kamaleshkanna, S., 2025. Assessment of land use and land cover mapping using object-based classification techniques for the eastern districts of Tamil Nadu. Plant Science Today, 12(2)."
+    },
+    {
+     "title": "Vancouver",
+     "snippet": "Kumaraperumal R, Pazhanivelan S, Muthumanickam D, Ragunath KP, Selvakumar S, Kamaleshkanna S. Assessment of land use and land cover mapping using object-based classification techniques for the eastern districts of Tamil Nadu. Plant Science Today. 2025;12(2)."
+    }
+   ],
+   "bibtex": null,
+   "pdf": []
+  }
+ },
+ "updated": "2026-11-06"
+}
