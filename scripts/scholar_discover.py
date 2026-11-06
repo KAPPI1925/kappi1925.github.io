@@ -3,7 +3,7 @@ against real keys. Writes nothing. Run from the workflow with mode=discover."""
 import json, os, urllib.parse, urllib.request
 
 KEY = os.environ["SERPAPI_KEY"].strip()
-AUTHOR = os.environ["SCHOLAR_ID"].strip()
+AUTHOR = os.environ["SCHOLAR_ID"].strip().split("&")[0]
 
 
 def get(params):
@@ -35,7 +35,7 @@ print("ALL ARTICLE TITLES:")
 for x in arts:
     print(" -", x.get("year"), "|", x.get("cited_by", {}).get("value"), "|", x.get("title"), "|", x.get("publication"))
 if arts:
-    top = arts[0]
+    top = arts[1]
     show("view_citation", get({"engine": "google_scholar_author", "author_id": AUTHOR, "hl": "en",
                                "view_op": "view_citation", "citation_id": top["citation_id"]}))
     cid = top.get("cited_by", {}).get("cites_id")
