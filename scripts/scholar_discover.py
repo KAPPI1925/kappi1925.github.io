@@ -9,7 +9,7 @@ AUTHOR = os.environ["SCHOLAR_ID"].strip().split("&")[0]
 def get(params):
     params = dict(params, api_key=KEY)
     url = "https://serpapi.com/search.json?" + urllib.parse.urlencode(params)
-    with urllib.request.urlopen(url, timeout=90) as r:
+    with urllib.request.urlopen(url, timeout=240) as r:
         return json.load(r)
 
 
@@ -35,12 +35,18 @@ print("ALL ARTICLE TITLES:")
 for x in arts:
     print(" -", x.get("year"), "|", x.get("cited_by", {}).get("value"), "|", x.get("title"), "|", x.get("publication"))
 if arts:
-    top = arts[1]
-    show("view_citation", get({"engine": "google_scholar_author", "author_id": AUTHOR, "hl": "en",
-                               "view_op": "view_citation", "citation_id": top["citation_id"]}))
-    cid = top.get("cited_by", {}).get("cites_id")
-    s = get({"engine": "google_scholar", "cluster": cid, "hl": "en"}) if cid else get({"engine": "google_scholar", "q": top["title"], "hl": "en"})
-    show("scholar_search", s)
-    org = s.get("organic_results") or []
-    if org:
-        show("cite", get({"engine": "google_scholar_cite", "q": org[0]["result_id"], "hl": "en"}))
+    top = arts[0]
+    for name, params in [
+        ("view_citation", {"engine": "google_scholar_author", "author_id": AUTHOR, "hl": "en",
+                           "view_op": "view_citation", "citation_id": top["citation_id"]}),
+        ("scholar_search", {"engine": "google_scholar", "cluster": top["cited_by"]["cites_id"], "hl": "en"}),
+    ]:
+        try:
+            d = get(params)
+            show(name, d)
+            if name == "scholar_search":
+                org = d.get("organic_results") or []
+                if org:
+                    show("cite", get({"engine": "google_scholar_cite", "q": org[0]["result_id"], "hl": "en"}))
+        except Exception as e:
+            print("FAILED", name, repr(e))
