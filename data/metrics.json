@@ -1,6 +1,7 @@
 {
-  "citations": 58,
+  "citations": 94,
   "h_index": 2,
-  "source": "manual (before automation)",
+  "i10_index": 1,
+  "source": "Google Scholar (via SerpApi)",
   "updated": "2026-11-06"
 }
