@@ -380,6 +380,7 @@
       { key: 'bookChapters', label: 'Book Chapters', icon: 'fa-book' },
       { key: 'books', label: 'Books', icon: 'fa-bookmark' },
       { key: 'conferencePapers', label: 'Conference Papers', icon: 'fa-users' },
+      { key: 'patents', label: 'Patents & Designs', icon: 'fa-lightbulb' },
       { key: 'reviewerRoles', label: 'Reviewer Roles', icon: 'fa-user-check' }
     ];
 
@@ -410,8 +411,14 @@
       if (target) target.classList.add('active');
     });
 
-    // Abstract toggles
+    // Abstract toggles & certificate buttons
     panelContainer.addEventListener('click', (e) => {
+      const certBtn = e.target.closest('.pub-cert-btn');
+      if (certBtn) {
+        const images = JSON.parse(certBtn.dataset.images);
+        if (images && images.length > 0 && images[0]) openLightbox(images, certBtn.dataset.title);
+        return;
+      }
       const toggle = e.target.closest('.pub-abstract-toggle');
       if (!toggle) return;
       const card = toggle.closest('.pub-card');
@@ -429,7 +436,8 @@
     }
     return items.map((item, i) => {
       const venue = item.journal || item.publisher || item.conference || '';
-      const doiUrl = item.doi || item.url || '#';
+      const certPaths = Array.isArray(item.certificatePath) ? item.certificatePath : (item.certificatePath ? [item.certificatePath] : []);
+      const encodedCertPaths = certPaths.map(p => encodeURIComponent(p));
       return `
         <div class="pub-card" style="animation-delay: ${i * 0.1}s">
           <div class="pub-card-header">
@@ -451,6 +459,7 @@
           <div class="pub-card-actions">
             ${item.url && item.url !== '#' ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="pub-link"><i class="fas fa-external-link-alt"></i> View Publication</a>` : ''}
             ${item.doi ? `<a href="${item.doi}" target="_blank" rel="noopener noreferrer" class="pub-link"><i class="fas fa-doi"></i> DOI</a>` : ''}
+            ${certPaths.length > 0 ? `<button type="button" class="pub-link pub-cert-btn" data-images='${JSON.stringify(encodedCertPaths)}' data-title="${escapeAttr(item.title)}"><i class="fas fa-certificate"></i> View Certificate</button>` : ''}
           </div>
         </div>
       `;
@@ -523,6 +532,8 @@
       { key: 'webinars', label: 'Webinars', icon: 'fa-video' },
       { key: 'invitedTalks', label: 'Invited Talks', icon: 'fa-microphone-alt' },
       { key: 'hackathons', label: 'Hackathons', icon: 'fa-code' },
+      { key: 'competitions', label: 'Competitions', icon: 'fa-medal' },
+      { key: 'quizzes', label: 'Quizzes', icon: 'fa-question-circle' },
       { key: 'memberships', label: 'Memberships', icon: 'fa-id-badge' }
     ];
 

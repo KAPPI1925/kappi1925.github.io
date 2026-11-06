@@ -54,7 +54,14 @@ const ACTIVITIES = {
       { title: "MATLAB Simulink Onramp", year: "2025", certificatePath: "certifications/Course and Softwares/MatLab/2. Simulink Onramp_page_1.jpg" },
       { title: "Machine Learning Onramp", year: "2025", certificatePath: "certifications/Course and Softwares/MatLab/3. Machine Learning Onramp_page_1.jpg" }
     ],
+    "FAO / UN & Government Programmes": [
+      { title: "Satellite-Based Air Quality Monitoring and Analysis (IITM Pune – EIACP, MoEF&CC)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 Satellite-Based Air Quality Monitoring and Analysis.png" },
+      { title: "Agrifood Systems Solutions for Halting Deforestation (FAO eLearning Academy)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 Agrifood systems solutions for halting deforestation.jpg" },
+      { title: "World Trade Organization Agreement on Agriculture (FAO eLearning Academy)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 World Trade Organization Agreement on Agriculture.jpg" }
+    ],
     "Self-Paced / Job Simulations": [
+      { title: "Data Science using Python in an AI-Driven Environment – Masterclass (Scaler)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 Data Science using Python in an Al-Driven Environment.png" },
+      { title: "Build Your First RAG System in Python – Masterclass (Scaler)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 Build your first RAG system in Python.png" },
       { title: "Roadmap to Become a Machine Learning Engineer (Scaler)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/Scalar - Roadmap to Machine Learning Engineer.png" },
       { title: "GenAI Powered Data Analytics Job Simulation (TATA)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/TATA - GenAI Data Anlaysis_page_1.jpg" },
       { title: "AI Upskilling Certificate (Qualcomm Academy)", year: "2026", certificatePath: "certifications/Course and Softwares/Course Certificates/Online course Certificates/2026 - Qualcomm - AI-Upskilling-certificate_page_1.jpg" },
@@ -80,12 +87,14 @@ const ACTIVITIES = {
 
   // ─── Trainings ───────────────────────────────────────
   trainings: [
+    { title: "DGCA-approved Remote Pilot Certification Course – Rotorcraft VLOS, Small Class (TNAU RPTO)", year: "2024", certificatePath: "certifications/Course and Softwares/Course - DGCA - Drone Certificate_page_1.jpg" },
     { title: "Bhuvan Overview (ISRO \u2013 NRSC)", year: "2025", certificatePath: "certifications/Training/Bhuvan Overview_page_1.jpg" },
     { title: "Data Analysis with MS-Excel (TNAU \u2013 PS&IT)", year: "2023", certificatePath: "certifications/Training/Training - TNAU - Excel_page_1.jpg" }
   ],
 
   // ─── Webinars ────────────────────────────────────────
   webinars: [
+    { title: "From Campus Code to Cloud Deployment: Bridging the Academia–Industry Divide with GeoAI (Srushti-Drushti Geospatial Foundation & Advances in Geographical Research)", year: "2026", certificatePath: "certifications/Webniar/2026 From Campus Code to Cloud Deployment Bridging the Academia-Industry Divide with GeoAI.jpg" },
     { title: "Pharmacovigilance \u2013 Department of Industrial Biotechnology and Faculty of Agricultural Science (Bharath University)", year: "2020", certificatePath: "certifications/Webniar/Webinar - Bharath university - Biotech_page_1.jpg" }
   ],
 
@@ -114,8 +123,27 @@ const ACTIVITIES = {
     { title: "Drone Phenomics Hackathon", year: "2026", certificatePath: ["certifications/Hackathon/Hackathon Fairground 2026.jpg", "certifications/Hackathon/Hackathon Fairground 2026 group.jpeg"] }
   ],
 
+  // ─── Competitions (symposia, contests) ──────────────
+  competitions: [
+    { title: "Cartologic – First Prize (GeoHorizon'26, SGE & Institute of Remote Sensing, Anna University, Chennai)", year: "2026", certificatePath: "certifications/Symposium/2026 CARTOLOGIC W.png" },
+    { title: "Geo Myth – First Prize (GeoHorizon'26, Anna University, Chennai)", year: "2026", certificatePath: "certifications/Symposium/2026 GEOMYTH W.png" },
+    { title: "SPX-Ignite Ideathon – First Prize (GeoHorizon'26, Anna University, Chennai)", year: "2026", certificatePath: "certifications/Symposium/2026 IDEATHON W.png" },
+    { title: "Geo Intel – Second Prize (GeoHorizon'26, Anna University, Chennai)", year: "2026", certificatePath: "certifications/Symposium/2026 Geointel W.png" },
+    { title: "Map Jam – Second Prize (GeoHorizon'26, Anna University, Chennai)", year: "2026", certificatePath: "certifications/Symposium/2026 MAP JAM W.png" },
+    { title: "Poster Presentation – Participation (GeoHorizon'26, Anna University, Chennai)", year: "2026", certificatePath: "certifications/Symposium/2026 Poster presetation P.png" },
+    { title: "National Level Article Writing Competition – 74th Independence Day (All India Agricultural Students Association, Tamil Nadu)", year: "2020", certificatePath: "certifications/Course and Softwares/Course Certificates/CERTINAP7_page_1.jpg" }
+  ],
+
+  // ─── Quizzes ─────────────────────────────────────────
+  quizzes: [
+    { title: "Know More about DFPD – II (MYBharat, Ministry of Youth Affairs & Sports)", year: "2026", certificatePath: "certifications/Others/2026 Know more about DFPD - II.png" },
+    { title: "National Organ Donation Awareness Quiz (MYBharat, Ministry of Youth Affairs & Sports)", year: "2026", certificatePath: "certifications/Others/2026 National Organ Donation Awareness Quiz.png" },
+    { title: "Viksit Rajasthan @2047 Quiz (MYBharat, Ministry of Youth Affairs & Sports)", year: "2026", certificatePath: "certifications/Others/2026 Viksit Rajasthan @2047 Quiz.png" }
+  ],
+
   // ─── Awards & Recognitions ──────────────────────────
   awards: [
+    { title: "GeoHorizon'26 – 3 First Prizes & 2 Second Prizes (Anna University, Chennai)", year: "2026", certificatePath: ["certifications/Symposium/2026 CARTOLOGIC W.png", "certifications/Symposium/2026 GEOMYTH W.png", "certifications/Symposium/2026 IDEATHON W.png", "certifications/Symposium/2026 Geointel W.png", "certifications/Symposium/2026 MAP JAM W.png"] },
     { title: "ICMAAS 2025 \u2013 Young Academician Award", year: "2025", certificatePath: "certifications/Awards/ICMAAS 2025 - Young Academician Award.jpg" },
     { title: "SimplyGIS \u2013 Champion", year: "2025", certificatePath: "certifications/Awards/SimplyGIS - Champion Kamalesh Kanna S.jpg" }
   ],

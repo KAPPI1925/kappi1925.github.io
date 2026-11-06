@@ -25,6 +25,17 @@ const PUBLICATIONS = {
   // ─── Research Articles ────────────────────────────────
   researchArticles: [
     {
+      title: "Beyond Parallel Trends: A Confounder-Adjusted, Spatially Explicit Test of Climate–Land-Use Associations in a Western Ghats-Adjacent Semi-Arid District, South India",
+      authors: "M. Vasanthakumar, R. Sakthivel, <b>Kamalesh Kanna Shanmuganathan</b>, A. Mathesh Siva, A. Geethakarthi",
+      year: "2026",
+      journal: "Asian Journal of Geographical Research, 9(4): 153–163",
+      doi: "https://doi.org/10.9734/ajgr/2026/v9i4475",
+      url: "https://www.researchgate.net/publication/414900871_Beyond_Parallel_Trends_A_Confounder-Adjusted_Spatially_Explicit_Test_of_Climate-Land-Use_Associations_in_a_Western_Ghats-Adjacent_Semi-Arid_District_South_India",
+      abstract: "This study tests whether land-use/land-cover change and climate trends in Erode District, Tamil Nadu (a semi-arid district adjacent to the Western Ghats) remain associated after accounting for topographic and anthropogenic confounders. Sentinel-2 imagery for 2016 and 2024 was classified with Random Forest (overall accuracy 75.7% and 74.8%). Climate trends at 156 gridded nodes (1990–2025) were evaluated with autocorrelation-aware Mann-Kendall tests; minimum temperature rose significantly at all nodes. Logistic regression on a 1 km grid showed that the agriculture-to-built-up transition stayed significantly associated with the local minimum-temperature trend after adjusting for elevation, slope, distance to road and population, offering a replicable, non-causal testing framework.",
+      tags: ["LULC Change", "Climate Trends", "Mann-Kendall", "Sentinel-2", "Spatial Statistics"],
+      coverImage: ""
+    },
+    {
       title: "Assessment of Land Use and Land Cover Mapping Using Object-Based Classification Techniques for the Eastern Districts of Tamil Nadu",
       authors: "Karthikkumar A, R Kumaraperumal, S Pazhanivelan, D Muthumanickam, K P Ragunath, S Selvakumar, <b>Kamalesh Kanna Shanmuganathan</b>",
       year: "2025",
@@ -50,6 +61,17 @@ const PUBLICATIONS = {
 
   // ─── Review Articles ──────────────────────────────────
   reviewArticles: [
+    {
+      title: "Geospatial Methods for SDG Aligned Natural Resource Management through Bibliometric and Systematic Review",
+      authors: "M. Ajay Prakash, K. P. Ragunath, S. Pazhanivelan, D. Muthumanickam, A. P. Sivamurugan, G. Vanitha, Fawaz Parapurath, <b>S. Kamalesh Kanna</b>, D. Sivakumar, Kumar Veluswamy",
+      year: "2026",
+      journal: "Discover Sustainability (Springer Nature)",
+      doi: "https://doi.org/10.1007/s43621-026-04510-0",
+      url: "https://link.springer.com/article/10.1007/s43621-026-04510-0",
+      abstract: "A bibliometric analysis of 335 articles (2021–2026) combined with a PRISMA-based systematic review of 59 studies maps global research on geospatial methods for land and water resource management. Groundwater potential mapping was the most studied application, and machine learning consistently outperformed the widely used AHP (mean ROC-AUC 0.860 vs 0.748). Model accuracy was poorly predicted by the number of thematic input layers, and 92% of comparative studies found that urban and agricultural expansion reduces groundwater or water-body extent, supporting SDG 6 and SDG 15 monitoring. Real-time monitoring, Explainable AI and climate-resilient frameworks are identified as priorities.",
+      tags: ["Bibliometrics", "Systematic Review", "SDGs", "Groundwater", "Machine Learning", "GIS"],
+      coverImage: ""
+    },
     {
       title: "YOLO Deep Learning Algorithm for Object Detection in Agriculture: A Review",
       authors: "<b>Kamalesh Kanna Shanmuganathan</b>, Kumaraperumal Ramalingam, Sellaperumal Pazhanivelan, Ramasamy Jagadeeswaran, P. C. Prabu",
@@ -94,6 +116,19 @@ const PUBLICATIONS = {
 
   // ─── Book Chapters ───────────────────────────────────
   bookChapters: [
+    {
+      title: "Coastal Vulnerability Mapping Using Multi-criteria Decision Making (MCDM) Process",
+      authors: "<b>Kamalesh Kanna Shanmuganathan</b>, Sivakumar Palraj, Athira A. Nair, V. P. Nithya Segar, Avinash Kanagaraj, Manimaran Gajendiran, Bharathi Mohandass",
+      year: "2026",
+      bookTitle: "Geospatial Application of Coastal Hazards",
+      publisher: "Springer Water, Springer Nature (Cham), pp. 163–189",
+      isbn: "978-3-032-20075-4",
+      doi: "https://doi.org/10.1007/978-3-032-20076-1_8",
+      url: "https://link.springer.com/chapter/10.1007/978-3-032-20076-1_8",
+      abstract: "Low-lying coastal areas are increasingly exposed to erosion, flooding, sea-level rise and extreme events, worsened by tourism, industry, agriculture and urbanisation. This chapter reviews multi-criteria decision-making methods (fuzzy logic, the Analytical Hierarchy Process and Weighted Linear Combination) and their integration with GIS for coastal vulnerability assessment and mapping, showing how spatial analysis and decision-support tools improve the precision of vulnerability assessments for coastal management and resilience planning.",
+      tags: ["Coastal Vulnerability", "MCDM", "AHP", "GIS", "Climate Hazards"],
+      coverImage: ""
+    },
     {
       title: "Remote Sensing Applications in Sustainable Agriculture and Food Systems",
       authors: "Devasri Moovendran, Arunpandi Palpandi, <b>Kamalesh Kanna Shanmuganathan</b>, Vasanthakumar Muruganantham",
@@ -156,7 +191,21 @@ const PUBLICATIONS = {
       journal: "Journal of the Indian Society of Remote Sensing (Springer)",
       year: "2025",
       url: "https://orcid.org/0009-0003-8971-9221",
-      description: "Contributing to quality assessment and advancement of remote sensing research publications."
+      description: "Contributing to quality assessment and advancement of remote sensing research publications.",
+      abstract: "Recognised by Springer Nature with a reviewer certificate for reviewing 7 manuscripts in 2025 for the Journal of the Indian Society of Remote Sensing.",
+      certificatePath: "certifications/Reviewer certificate/Spinger 2025 reviewer certificate_page_1.jpg"
+    }
+  ],
+
+  // ─── Patents & Design Registrations ─────────────────
+  patents: [
+    {
+      title: "Soil Organic Matter Monitoring Device",
+      authors: "B. R. Iniyalakshimi, Avinash K, K. Chitra Devi, Bharathi M, <b>Kamalesh Kanna S</b>, Sivakumar P, Avinash C",
+      year: "2026",
+      publisher: "Registered Design No. 491836-001 (Class 15-03), The Patent Office, Government of India · Registered 19 Feb 2026, certificate issued 27 May 2026",
+      tags: ["Soil Organic Matter", "Sensor Device", "Design Registration"],
+      certificatePath: "certifications/Patent/2026 SOIL ORGANIC MATTER MONITORING DEVICE.jpg"
     }
   ]
 };
