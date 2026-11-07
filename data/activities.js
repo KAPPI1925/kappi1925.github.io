@@ -23,11 +23,6 @@ const ACTIVITIES = {
   "webCourses": {
     "ESRI": [
       {
-        "title": "test",
-        "year": "2026",
-        "certificatePath": "certifications/Course and Softwares/ESRI/Figure 12.1.jpg"
-      },
-      {
         "title": "Getting Started with Spatial Analysis",
         "year": "2025",
         "certificatePath": "certifications/Course and Softwares/ESRI/Web Course - ESRI - Getting Started with Spatial Analysis_page_1.jpg"
