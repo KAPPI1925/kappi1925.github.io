@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Site Admin</title>
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--text:#16202a;--muted:#5d6b78;--line:#d9e0e6;--accent:#0e7c86;--accent2:#0a5f67;--danger:#c0392b;--ok:#1e8449;--input:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#000;--card:#0f0f0f;--text:#e8eef2;--muted:#93a1ad;--line:#262b30;--accent:#2bb3bf;--accent2:#1d8d97;--danger:#ff6b5b;--ok:#4cc38a;--input:#050505}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--input)}
+textarea{min-height:70px;resize:vertical}
+button{cursor:pointer;border:1px solid var(--line);background:var(--card);padding:8px 14px;border-radius:8px}
+button:hover{border-color:var(--accent)}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+button.primary:hover{background:var(--accent2)}
+button.danger{color:var(--danger)}
+button.small{padding:3px 9px;font-size:.8rem}
+button:disabled{opacity:.5;cursor:not-allowed}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header h1{font-size:1.05rem;margin:0;flex:1}
+#pending{font-size:.85rem;color:var(--muted)}
+nav{display:flex;gap:6px;flex-wrap:wrap;padding:12px 16px 0;max-width:1000px;margin:0 auto}
+nav button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1000px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.card h2,.card h3{margin:0 0 10px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+label{display:block;font-size:.8rem;color:var(--muted);margin:8px 0 3px}
+.hint{font-size:.82rem;color:var(--muted)}
+.msg{padding:10px 12px;border-radius:8px;margin:10px 0;font-size:.9rem;border:1px solid var(--line)}
+.msg.err{border-color:var(--danger);color:var(--danger)}.msg.ok{border-color:var(--ok);color:var(--ok)}
+.lock{max-width:440px;margin:8vh auto;padding:0 16px}
+.item{border:1px solid var(--line);border-radius:10px;margin:8px 0;background:var(--bg)}
+.item>summary{cursor:pointer;padding:9px 12px;display:flex;gap:8px;align-items:center;list-style:none}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary .t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item>summary .y{color:var(--muted);font-size:.8rem}
+.item .body{padding:4px 12px 12px;border-top:1px solid var(--line)}
+.sect{border:1px solid var(--line);border-radius:10px;margin:10px 0;padding:0 12px 10px;background:var(--card)}
+.sect>summary{cursor:pointer;font-weight:600;padding:10px 0}
+.strrow{display:flex;gap:6px;margin:4px 0}
+.chip{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:99px;font-size:.78rem;margin:2px}
+.sub{margin:6px 0 6px 10px;padding-left:10px;border-left:2px solid var(--line)}
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px}
+.files .f{border:1px solid var(--line);border-radius:10px;padding:8px;text-align:center;font-size:.72rem;word-break:break-all;background:var(--bg)}
+.files img{width:72px;height:72px;object-fit:contain}
+.files .gone{opacity:.4;text-decoration:line-through}
+ul.sum{margin:6px 0 6px 18px;padding:0}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.dz{border:2px dashed var(--line);border-radius:10px;padding:16px;text-align:center;color:var(--muted);cursor:pointer}
+.dz.over{border-color:var(--accent)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script src="js/admin.js"></script>
+</body>
+</html>
