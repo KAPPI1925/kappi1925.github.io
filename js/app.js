@@ -393,6 +393,7 @@
               </a>
             `).join('')}
           </div>
+          <div class="badge-marquee" id="badge-marquee" hidden aria-label="Badges"></div>
         </div>
       </div>
     `;

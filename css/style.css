@@ -2170,3 +2170,45 @@ button.pub-cite-btn { background: none; border: none; padding: 0; font-family: i
 @media (max-width: 768px) {
   .lightbox-body.pdf-open { padding: 0; }
 }
+
+/* ─── Badge marquee (About section, js/badges.js) ─── */
+.badge-marquee {
+  margin-top: 22px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.badge-track {
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: badgeMove var(--badge-time, 60s) linear infinite;
+}
+.badge-marquee:hover .badge-track { animation-play-state: paused; }
+.badge-item {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 84px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.68rem;
+  text-align: center;
+  line-height: 1.25;
+}
+.badge-item img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+.badge-item:hover img { transform: scale(1.12); }
+@keyframes badgeMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--badge-shift, -50%)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge-track { animation-duration: calc(var(--badge-time, 60s) * 3); }
+}

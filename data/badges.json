@@ -1,0 +1,24 @@
+{
+  "github": [
+    {
+      "name": "Pull Shark",
+      "image": "https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png",
+      "url": "https://github.com/KAPPI1925?achievement=pull-shark"
+    },
+    {
+      "name": "YOLO",
+      "image": "https://github.githubassets.com/assets/yolo-default-be0bbff04951.png",
+      "url": "https://github.com/KAPPI1925?achievement=yolo"
+    }
+  ],
+  "local": [
+    {
+      "name": "AoA",
+      "image": "certifications/badges/AoA.png"
+    },
+    {
+      "name": "Halting Deforestion",
+      "image": "certifications/badges/Halting Deforestion.png"
+    }
+  ]
+}

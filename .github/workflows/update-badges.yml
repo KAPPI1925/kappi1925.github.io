@@ -1,0 +1,32 @@
+name: Update badges
+
+on:
+  schedule:
+    - cron: "15 3 * * *"      # every day, 03:15 UTC - picks up new GitHub achievements
+  push:
+    paths:
+      - "certifications/badges/**"   # you added or removed a badge image
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  badges:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build data/badges.json
+        run: python3 scripts/update_badges.py
+      - name: Commit if changed
+        run: |
+          git add data/badges.json
+          if git diff --cached --quiet; then
+            echo "No badge change."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update badges"
+            git pull --rebase
+            git push
+          fi
