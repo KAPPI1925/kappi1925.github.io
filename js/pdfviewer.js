@@ -12,6 +12,9 @@
   'use strict';
 
   const BASE = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+  // Integrity hashes (SHA-384) of the exact files: the browser refuses them if they ever change.
+  const LIB_SRI = 'sha384-/1qUCSGwTur9vjf/z9lmu/eCUYbpOTgSjmpbMQZ1/CtX2v/WcAIKqRv+U1DUCG6e';
+  const WORKER_SRI = 'sha384-SnzOobpRMLXZ52iJvZm/C0fYw0OQemTXzTjIsdsfMcrCtCEe9qgzxTd3RSklO5x2';
   let libPromise = null;
 
   function loadLib() {
@@ -20,11 +23,21 @@
       libPromise = new Promise((resolve, reject) => {
         const s = document.createElement('script');
         s.src = BASE + 'pdf.min.js';
-        s.onload = () => {
-          window.pdfjsLib.GlobalWorkerOptions.workerSrc = BASE + 'pdf.worker.min.js';
-          resolve(window.pdfjsLib);
+        s.integrity = LIB_SRI;
+        s.crossOrigin = 'anonymous';
+        s.referrerPolicy = 'no-referrer';
+        s.onload = async () => {
+          try {
+            // Workers cannot carry an integrity attribute, so fetch the worker with one
+            // and start it from a local blob.
+            const r = await fetch(BASE + 'pdf.worker.min.js', { integrity: WORKER_SRI, mode: 'cors', credentials: 'omit' });
+            if (!r.ok) throw new Error('worker');
+            const blob = await r.blob();
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = URL.createObjectURL(new Blob([blob], { type: 'text/javascript' }));
+            resolve(window.pdfjsLib);
+          } catch (e) { libPromise = null; reject(new Error('PDF.js worker failed its integrity check')); }
         };
-        s.onerror = () => { libPromise = null; reject(new Error('PDF.js could not be loaded')); };
+        s.onerror = () => { libPromise = null; reject(new Error('PDF.js could not be loaded (or failed its integrity check)')); };
         document.head.appendChild(s);
       });
     }
