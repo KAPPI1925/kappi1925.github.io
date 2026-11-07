@@ -42,6 +42,7 @@ const ACTIVITIES = {
       { title: "Automated Feature Extraction from High Resolution Images", year: "2023", certificatePath: "certifications/Course and Softwares/ISRO/Web Course - ISRO - Automated Feature Extraction from HR_page_1.jpg" }
     ],
     "MOOC Programs": [
+      { title: "Make an Impact with Enterprise GIS (ESRI)", year: "2026", certificatePath: "certifications/Course and Softwares/MOOC/2026 - MOOC - Make an Impact with Enterprise GIS_Certificate.jpg" },
       { title: "GIS for Climate Action (ESRI)", year: "2026", certificatePath: "certifications/Course and Softwares/MOOC/2026 - MOOC - ESRI - GIS for Climate Action.jpg" },
       { title: "The ArcGIS Imagery MOOC: Foundations and Frontiers (ESRI)", year: "2025", certificatePath: "certifications/Course and Softwares/MOOC/MOOC - ESRI - The ArcGIS Imagery MOOC Foundations and Frontiers_page_1.jpg" },
       { title: "Earth Observation for Climate Action (ISRO)", year: "2025", certificatePath: "certifications/Course and Softwares/MOOC/MOOC - ISRO - Earth Observation for Climate Action_page_1.jpg" },
