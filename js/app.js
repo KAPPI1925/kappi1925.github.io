@@ -669,6 +669,7 @@
 
     // Memberships: simple list
     if (key === 'memberships') {
+      if (!data.length) return '<div class="empty-state"><i class="fas fa-id-badge"></i><p>Membership details will be added soon.</p></div>';
       return `<ul class="cert-list">${data.map(item => `
         <li class="cert-item">
           <div class="cert-item-header" style="cursor:default">

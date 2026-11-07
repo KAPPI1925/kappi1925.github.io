@@ -160,8 +160,7 @@ const ACTIVITIES = {
   ],
 
   // ─── Memberships ─────────────────────────────────────
-  memberships: [
-    { title: "Geographical Society of India", year: "2025\u2013Present" },
-    { title: "Indian Society of Remote Sensing", year: "2024\u2013Present" }
-  ]
+  // Add a membership here with its certificate when it is available, e.g.
+  // { title: "Society name", year: "2026–Present", certificatePath: "certifications/..." }
+  memberships: []
 };
