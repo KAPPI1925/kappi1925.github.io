@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1415" width="2000" height="1415" role="img" aria-label="11th AGSC 2026 - participation certificate awaited">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdfbfb"/>
+      <stop offset="1" stop-color="#f3eeee"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0589a"/>
+      <stop offset="1" stop-color="#e8336f"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbb040"/>
+      <stop offset="1" stop-color="#f26a3d"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b5fc7"/>
+      <stop offset="1" stop-color="#2b2d6e"/>
+    </linearGradient>
+    <clipPath id="page"><rect width="2000" height="1415"/></clipPath>
+  </defs>
+  <g clip-path="url(#page)">
+    <rect width="2000" height="1415" fill="url(#bg)"/>
+    <rect x="40" y="0" width="16" height="1415" fill="#f5b82e"/>
+
+    <!-- decorative shapes in the style of the 8th AGSC certificate -->
+    <g transform="translate(190 0)">
+    <g transform="translate(1450 -80) rotate(45)" opacity="0.95">
+      <rect x="0" y="0" width="560" height="560" fill="none" stroke="url(#pink)" stroke-width="70"/>
+    </g>
+    <g transform="translate(1700 150) rotate(45)">
+      <rect x="0" y="0" width="420" height="420" fill="url(#orange)" opacity="0.85"/>
+    </g>
+    <g transform="translate(1560 560) rotate(45)">
+      <rect x="0" y="0" width="520" height="520" fill="url(#navy)" opacity="0.9"/>
+    </g>
+    <g transform="translate(1460 1010) rotate(45)">
+      <rect x="0" y="0" width="520" height="520" fill="url(#orange)" opacity="0.9"/>
+    </g>
+    </g>
+
+    <!-- header -->
+    <text x="185" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="1" fill="#e8336f">TAMIL NADU AGRICULTURAL UNIVERSITY</text>
+    <text x="185" y="355" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="46" fill="#e8336f">SCHOOL OF POST GRADUATE STUDIES</text>
+    <text x="185" y="395" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="22" fill="#2b2d6e">COIMBATORE</text>
+
+    <!-- status -->
+    <rect x="185" y="470" width="1060" height="8" rx="4" fill="#f5b82e"/>
+    <text x="185" y="600" font-family="Georgia, 'Times New Roman', serif" font-size="92" fill="#2b2d6e">Certificate awaited</text>
+    <text x="185" y="670" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="6" fill="#2b2d6e">PLACEHOLDER - NOT YET RECEIVED</text>
+    <rect x="185" y="705" width="1060" height="8" rx="4" fill="#f5b82e"/>
+
+    <!-- facts (from the conference proceedings PDF) -->
+    <text x="185" y="810" font-family="Arial, Helvetica, sans-serif" font-size="38" fill="#2b2d6e">11th Agricultural Graduate Students Conference (AGSC 2026)</text>
+    <text x="185" y="870" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#f26a3d">Next-Generation Agriculture: Climate Action,</text>
+    <text x="185" y="912" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#f26a3d">Sustainability and Technological Innovation</text>
+    <text x="185" y="985" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#2b2d6e">School of Post Graduate Studies, Tamil Nadu Agricultural University,</text>
+    <text x="185" y="1027" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#2b2d6e">Coimbatore - August 20 and 21, 2026</text>
+    <text x="185" y="1100" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#2b2d6e">Abstract ID: AGSC26-02-260</text>
+
+    <text x="185" y="1250" font-family="Arial, Helvetica, sans-serif" font-size="28" font-style="italic" fill="#555a8f">The participation certificate will replace this page once it is issued.</text>
+    <text x="185" y="1290" font-family="Arial, Helvetica, sans-serif" font-size="28" font-style="italic" fill="#555a8f">The conference proceedings PDF is shown next.</text>
+  </g>
+</svg>

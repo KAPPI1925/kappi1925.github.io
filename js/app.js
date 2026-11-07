@@ -810,6 +810,7 @@
   }
 
   function closeLightbox() {
+    if (lightboxState.destroyPdf) { lightboxState.destroyPdf(); lightboxState.destroyPdf = null; }
     document.getElementById('lightbox-overlay').classList.remove('active');
     document.body.style.overflow = '';
   }
@@ -837,7 +838,18 @@
     prevBtn.style.display = total > 1 ? '' : 'none';
     nextBtn.style.display = total > 1 ? '' : 'none';
 
-    imgWrapper.innerHTML = `<img src="${src}" alt="${lightboxState.title}" 
+    if (lightboxState.destroyPdf) { lightboxState.destroyPdf(); lightboxState.destroyPdf = null; }
+    const body = overlay.querySelector('.lightbox-body');
+    let plain = src;
+    try { plain = decodeURIComponent(src); } catch (e) { /* keep as is */ }
+    if (/\.pdf($|[?#])/i.test(plain) && window.PdfViewer) {
+      body.classList.add('pdf-open');
+      lightboxState.destroyPdf = window.PdfViewer.mount(imgWrapper, encodeURI(plain));
+      return;
+    }
+    body.classList.remove('pdf-open');
+    imgWrapper.classList.remove('pdf-mode');
+    imgWrapper.innerHTML = `<img src="${src}" alt="${lightboxState.title}"
       onerror="this.parentElement.innerHTML='<div class=\\'lightbox-fallback\\'><i class=\\'fas fa-image\\'></i><p>Certificate image not available</p></div>'">`;
   }
 

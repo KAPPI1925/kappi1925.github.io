@@ -108,6 +108,7 @@ const ACTIVITIES = {
 
   // ─── Conferences ─────────────────────────────────────
   conferences: [
+    { title: "Next-Generation Agriculture: Climate Action, Sustainability and Technological Innovation (TNAU – 11th AGSC) – Abstract: UAV-Based Crop Count Identification in a Commercial Potato Field Using Deep Learning and GIS", year: "2026", certificatePath: ["certifications/Conference/AGSC 2026 certificate - awaited.svg", "certifications/Conference/AGSC 2026.pdf"] },
     { title: "Sustainable Agriculture and Farmers Well-being: Digitalize, Diversify, Decarbonise and Develop (TNAU \u2013 10th AGSC) [Poster Presentation]", year: "2025", certificatePath: "certifications/conferences/sustainable-agriculture.jpg" },
     { title: "9th Agricultural Graduate Student Conference (TNAU)", year: "2024", certificatePath: "certifications/conferences/agsc-9.jpg" },
     { title: "Globalization of Agriculture: Food, Feed & Fuel (TNAU \u2013 8th AGSC)", year: "2023", certificatePath: "certifications/Conference/Conference AGSC - 8th AGSC_page_1.jpg" }
