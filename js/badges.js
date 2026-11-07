@@ -36,12 +36,13 @@
     const track = host.firstChild;
     const set = list.join('');
     track.innerHTML = set;
-    // repeat the set until one half is wider than the box, then duplicate for a seamless loop
-    const need = host.clientWidth * 1.2 || 600;
-    let guard = 0;
-    while (track.scrollWidth < need && guard++ < 20) track.innerHTML += set;
-    const half = track.innerHTML;
-    track.innerHTML = half + half;
+    // every badge once; only animate when the badges fill the whole row
+    if (track.scrollWidth <= host.clientWidth) {
+      host.classList.add('static');
+      return;
+    }
+    host.classList.remove('static');
+    track.innerHTML = set + set; // second copy only for a seamless loop
     const w = track.scrollWidth / 2;
     track.style.setProperty('--badge-shift', '-' + w + 'px');
     track.style.setProperty('--badge-time', Math.max(20, w / SPEED) + 's');
