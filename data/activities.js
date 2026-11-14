@@ -272,6 +272,11 @@ const ACTIVITIES = {
   ],
   "webinars": [
     {
+      "title": "EO&GEO Series: Satellite-Based Land-Use/Land-Cover Change and Biodiversity Monitoring in India: From Earth Observation to Policy Action",
+      "year": "2026",
+      "certificatePath": "certifications/Webniar/Kamalesh Kanna_Event Attendance_Topics-55.png"
+    },
+    {
       "title": "From Campus Code to Cloud Deployment: Bridging the Academia–Industry Divide with GeoAI (Srushti-Drushti Geospatial Foundation & Advances in Geographical Research)",
       "year": "2026",
       "certificatePath": "certifications/Webniar/2026 From Campus Code to Cloud Deployment Bridging the Academia-Industry Divide with GeoAI.jpg"
