@@ -311,6 +311,11 @@ const ACTIVITIES = {
   ],
   "conferences": [
     {
+      "title": "Tamil Nadu LandUse 2025",
+      "year": "2025",
+      "certificatePath": "certifications/Conference/TN LandUse 2025.pdf"
+    },
+    {
       "title": "Next-Generation Agriculture: Climate Action, Sustainability and Technological Innovation (TNAU – 11th AGSC) – Abstract: UAV-Based Crop Count Identification in a Commercial Potato Field Using Deep Learning and GIS",
       "year": "2026",
       "certificatePath": [
