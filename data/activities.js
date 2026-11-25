@@ -55,6 +55,11 @@ const ACTIVITIES = {
     ],
     "ISRO / IIRS": [
       {
+        "title": "AIML for Hydro-Informatics",
+        "year": "2026",
+        "certificatePath": "certifications/Course and Softwares/2026 Web Course - ISRO - AIML for Hydro-Informatics 2026.pdf"
+      },
+      {
         "title": "Primer on Interferometric SAR Remote Sensing (IIRS–NASA)",
         "year": "2025",
         "certificatePath": "certifications/Course and Softwares/ISRO/Internaational Web Course - ISRO, GoI, NASA - Primer on Interferometric SAR Remote Sensing_page_1.jpg"
